@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "BCB",
+    " P "
+  ],
+  "key": {
+    "S": {
+      "item": "turorudi:glaze"
+    },
+    "C": {
+      "item": "turorudi:turorudi"
+    },
+    "P": {
+      "item": "turorudi:package_svitlogorie"
+    },
+    "B": {
+      "item": "turorudi:coconut"
+    }
+  },
+  "result": {
+    "item": "turorudi:svitlogorie_coconut_glaze"
+  }
+}

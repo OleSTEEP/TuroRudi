@@ -1,0 +1,42 @@
+{
+  "block.turorudi.milk_fat_block": "Блок молочного жира",
+  "block.turorudi.turorudi_block": "Сырковый блок",
+  "block.turorudi.turorudi_bad_block": "Плохой сырковый блок",
+  "item.turorudi.chocolate": "Шоколад",
+  "item.turorudi.chocolate_milk": "Молочный шоколад",
+  "item.turorudi.chocolate_white": "Белый шоколад",
+  "item.turorudi.coconut": "Кокос",
+  "item.turorudi.curd": "Творог",
+  "item.turorudi.curd_bad": "Плохой творог",
+  "item.turorudi.glaze": "Глазурь",
+  "item.turorudi.milk_condensed_bucket": "Ведро варёного сгущёного молока",
+  "item.turorudi.milk_fat": "Молочный жир",
+  "item.turorudi.lemon": "Лимон",
+  "item.turorudi.turorudi": "Сырок",
+  "item.turorudi.turorudi_bad": "Плохой сырок",
+
+  "item.turorudi.svitlogorie": "Свитлогорье",
+  "item.turorudi.svitlogorie_cocoa": "Свитлогорье с какао",
+  "item.turorudi.svitlogorie_coconut": "Свитлогорье с кокосом",
+  "item.turorudi.svitlogorie_coconut_glaze": "Свитлогорье с кокосом в глазури",
+  "item.turorudi.svitlogorie_glaze": "Свитлогорье в карамельной глазури",
+  "item.turorudi.svitlogorie_lemon": "Свитлогорье с лимоном",
+  "item.turorudi.svitlogorie_potato": "Свитлогорье Картошка",
+  "item.turorudi.svitlogorie_strawberry": "Свитлогорье c клубникой",
+
+  "item.turorudi.alexandrov5": "Б.Ю. Александров 5%",
+  "item.turorudi.alexandrov26": "Б.Ю. Александров 26%",
+  "item.turorudi.alexandrov_chocoless": "Б.Ю. Александров сырок",
+  "item.turorudi.alexandrov_condensed": "Б.Ю. Александров с молоком сгущёным варёным",
+  "item.turorudi.alexandrov_milk5": "Б.Ю. Александров в молочном шоколаде 5%",
+  "item.turorudi.alexandrov_milk26": "Б.Ю. Александров в молочном шоколаде 26%",
+  "item.turorudi.alexandrov_potato": "Б.Ю. Александров Картошка",
+  "item.turorudi.alexandrov_souffle": "Б.Ю. Александров суфле в тёмном шоколаде",
+  "item.turorudi.alexandrov_souffle_milk": "Б.Ю. Александров суфле в молочном шоколаде",
+  "item.turorudi.alexandrov_white": "Б.Ю. Александров в белом шоколаде",
+
+  "item.turorudi.package_alexandrov": "Упаковка Б.Ю. Александров",
+  "item.turorudi.package_svitlogorie": "Упаковка Свитлогорье",
+
+  "itemGroup.turotab": "TuroRudi"
+}

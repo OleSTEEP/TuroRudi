@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "turorudi:block/turorudi_bad_block"
+  }
+}

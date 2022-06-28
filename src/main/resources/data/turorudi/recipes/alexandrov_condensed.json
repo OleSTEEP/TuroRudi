@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "BCB",
+    " P "
+  ],
+  "key": {
+    "S": {
+      "item": "turorudi:chocolate"
+    },
+    "C": {
+      "item": "turorudi:turorudi"
+    },
+    "P": {
+      "item": "turorudi:package_alexandrov"
+    },
+    "B": {
+      "item": "turorudi:milk_condensed_bucket"
+    }
+  },
+  "result": {
+    "item": "turorudi:alexandrov_condensed"
+  }
+}

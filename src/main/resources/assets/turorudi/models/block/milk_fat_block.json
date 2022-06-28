@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "turorudi:block/milk_fat_block"
+  }
+}

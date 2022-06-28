@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:milk_bucket"
+  },
+  "result": "turorudi:milk_fat",
+  "count": 2,
+  "experience": 0.35,
+  "cookingtime": 200
+}

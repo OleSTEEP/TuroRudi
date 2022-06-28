@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "LCL",
+    " P "
+  ],
+  "key": {
+    "S": {
+      "item": "turorudi:chocolate"
+    },
+    "C": {
+      "item": "turorudi:turorudi"
+    },
+    "P": {
+      "item": "turorudi:package_svitlogorie"
+    },
+    "L": {
+      "item": "turorudi:lemon"
+    }
+  },
+  "result": {
+    "item": "turorudi:svitlogorie_lemon"
+  }
+}

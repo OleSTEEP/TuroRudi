@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MCM"
+  ],
+  "key": {
+    "M": {
+      "item": "turorudi:milk_fat"
+    },
+    "C": {
+      "item": "minecraft:cocoa_beans"
+    }
+  },
+  "result": {
+    "item": "turorudi:chocolate_milk"
+  }
+}

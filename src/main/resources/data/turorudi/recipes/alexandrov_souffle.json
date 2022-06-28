@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    " C ",
+    " P "
+  ],
+  "key": {
+    "S": {
+      "item": "turorudi:chocolate"
+    },
+    "C": {
+      "item": "turorudi:milk_fat_block"
+    },
+    "P": {
+      "item": "turorudi:package_alexandrov"
+    }
+  },
+  "result": {
+    "item": "turorudi:alexandrov_souffle"
+  }
+}

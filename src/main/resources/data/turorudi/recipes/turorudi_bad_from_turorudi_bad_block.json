@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "turorudi:turorudi_block_bad"
+    }
+  ],
+  "result": {
+    "item": "turorudi:turorudi_bad",
+    "count": 9
+  }
+}

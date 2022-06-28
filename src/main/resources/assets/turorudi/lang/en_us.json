@@ -1,0 +1,42 @@
+{
+  "block.turorudi.milk_fat_block": "Milk fat block",
+  "block.turorudi.turorudi_block": "Block of TuroRudi",
+  "block.turorudi.turorudi_bad_block": "Block of bad TuroRudi",
+  "item.turorudi.chocolate": "Chocolate",
+  "item.turorudi.chocolate_milk": "Milk chocolate",
+  "item.turorudi.chocolate_white": "White chocolate",
+  "item.turorudi.coconut": "Coconut",
+  "item.turorudi.curd": "Curd",
+  "item.turorudi.curd_bad": "Bad curd",
+  "item.turorudi.glaze": "Glaze",
+  "item.turorudi.milk_condensed_bucket": "Bucket of condensed milk",
+  "item.turorudi.milk_fat": "Milk fat",
+  "item.turorudi.lemon": "Lemon",
+  "item.turorudi.turorudi": "TuroRudi",
+  "item.turorudi.turorudi_bad": "Bad TuroRudi",
+
+  "item.turorudi.svitlogorie": "Svitlogorie",
+  "item.turorudi.svitlogorie_cocoa": "Svitlogorie with cocoa",
+  "item.turorudi.svitlogorie_coconut": "Svitlogorie with coconut",
+  "item.turorudi.svitlogorie_coconut_glaze": "Svitlogorie with coconut in glaze",
+  "item.turorudi.svitlogorie_glaze": "Svitlogorie with caramel graze",
+  "item.turorudi.svitlogorie_lemon": "Svitlogorie with lemon",
+  "item.turorudi.svitlogorie_potato": "Svitlogorie Potato",
+  "item.turorudi.svitlogorie_strawberry": "Svitlogorie with strawberry",
+
+  "item.turorudi.alexandrov5": "B.YU. Alexandrov 5%",
+  "item.turorudi.alexandrov26": "B.YU. Alexandrov 26%",
+  "item.turorudi.alexandrov_chocoless": "B.YU. Alexandrov turorudi",
+  "item.turorudi.alexandrov_condensed": "B.YU. Alexandrov with condensed milk",
+  "item.turorudi.alexandrov_milk5": "B.YU. Alexandrov in milk chocolate 5%",
+  "item.turorudi.alexandrov_milk26": "B.YU. Alexandrov in milk chocolate 26%",
+  "item.turorudi.alexandrov_potato": "B.YU. Alexandrov Potato",
+  "item.turorudi.alexandrov_souffle": "B.YU. Alexandrov souffle in dark chocolate",
+  "item.turorudi.alexandrov_souffle_milk": "B.YU. Alexandrov souffle in milk chocolate",
+  "item.turorudi.alexandrov_white": "B.YU. Alexandrov in white chocolate",
+
+  "item.turorudi.package_alexandrov": "B.YU. Alexandrov package",
+  "item.turorudi.package_svitlogorie": "Svitlogorie package",
+
+  "itemGroup.turotab": "TuroRudi"
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " C ",
+    " P "
+  ],
+  "key": {
+    "C": {
+      "item": "turorudi:turorudi"
+    },
+    "P": {
+      "item": "turorudi:package_alexandrov"
+    }
+  },
+  "result": {
+    "item": "turorudi:alexandrov_chocoless"
+  }
+}

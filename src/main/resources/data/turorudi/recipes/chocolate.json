@@ -1,15 +1,17 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CMC"
+  ],
+  "key": {
+    "M": {
       "item": "turorudi:milk_fat"
     },
-    {
+    "C": {
       "item": "minecraft:cocoa_beans"
     }
-  ],
+  },
   "result": {
-    "item": "turorudi:chocolate",
-    "count": 1
+    "item": "turorudi:chocolate"
   }
 }

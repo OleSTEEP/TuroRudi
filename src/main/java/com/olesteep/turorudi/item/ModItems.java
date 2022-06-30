@@ -22,6 +22,9 @@ public class ModItems {
     public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB)));
 
+    public static final RegistryObject<Item> CHOCOLATE_BAD = ITEMS.register("chocolate_bad",
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB)));
+
     public static final RegistryObject<Item> CHOCOLATE_MILK = ITEMS.register("chocolate_milk",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB)));
 

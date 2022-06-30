@@ -12,7 +12,7 @@ public class Svitlogories {
             DeferredRegister.create(ForgeRegistries.ITEMS, TuroRudi.MOD_ID);
 
     public static final RegistryObject<Item> SVITL_VANILLA = ITEMS.register("svitlogorie",
-            () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB).food(ModFoods.TURO_VANILLA)));
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB).food(ModFoods.TURO_VANILLA_BAD)));
 
     public static final RegistryObject<Item> SVITL_COCOA = ITEMS.register("svitlogorie_cocoa",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB).food(ModFoods.TURO_COCOA)));

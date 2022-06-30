@@ -10,6 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class Svitlogories {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, TuroRudi.MOD_ID);
+
     public static final RegistryObject<Item> SVITL_VANILLA = ITEMS.register("svitlogorie",
             () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB).food(ModFoods.TURO_VANILLA)));
 

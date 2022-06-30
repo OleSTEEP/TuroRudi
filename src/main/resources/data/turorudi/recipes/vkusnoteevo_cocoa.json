@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "SCS",
+    " P "
+  ],
+  "key": {
+    "S": {
+      "item": "turorudi:chocolate"
+    },
+    "C": {
+      "item": "turorudi:turorudi"
+    },
+    "P": {
+      "item": "turorudi:package_vkusnoteevo"
+    }
+  },
+  "result": {
+    "item": "turorudi:vkusnoteevo_cocoa"
+  }
+}

@@ -5,6 +5,7 @@ import com.olesteep.turorudi.fluid.ModFluids;
 import com.olesteep.turorudi.item.Alexandrovs;
 import com.olesteep.turorudi.item.Svitlogories;
 import com.olesteep.turorudi.item.ModItems;
+import com.olesteep.turorudi.item.Vkusnoteevo;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -24,12 +25,12 @@ public class TuroRudi {
     public TuroRudi() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModFluids.register(eventBus);
+        ModItems.register(eventBus);
         Alexandrovs.register(eventBus);
         Svitlogories.register(eventBus);
-
-        ModFluids.register(eventBus);
+        Vkusnoteevo.register(eventBus);
 
         eventBus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);

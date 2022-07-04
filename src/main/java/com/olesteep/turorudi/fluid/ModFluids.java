@@ -1,7 +1,7 @@
 package com.olesteep.turorudi.fluid;
 
 import com.olesteep.turorudi.TuroRudi;
-import com.olesteep.turorudi.item.ModItems;
+import com.olesteep.turorudi.item.TuroItems;
 import com.olesteep.turorudi.block.ModBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
@@ -37,7 +37,7 @@ public class ModFluids {
             () -> MILK_COND_FLUID.get(), () -> MILK_COND_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
             .density(15).luminosity(2).viscosity(5).sound(SoundEvents.HONEY_DRINK).overlay(WATER_OVERLAY_RL)
             .color(0xbf7a3816)).slopeFindDistance(2).levelDecreasePerBlock(2)
-            .block(() -> ModFluids.MILK_COND_BLOCK.get()).bucket(() -> ModItems.MILK_COND_BUCKET.get());
+            .block(() -> ModFluids.MILK_COND_BLOCK.get()).bucket(() -> TuroItems.MILK_COND_BUCKET.get());
 
     public static final RegistryObject<LiquidBlock> MILK_COND_BLOCK = ModBlocks.BLOCKS.register("milk_cond",
             () -> new LiquidBlock(() -> ModFluids.MILK_COND_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)

@@ -2,9 +2,9 @@ package com.olesteep.turorudi;
 
 import com.olesteep.turorudi.block.ModBlocks;
 import com.olesteep.turorudi.fluid.ModFluids;
-import com.olesteep.turorudi.item.Alexandrovs;
+import com.olesteep.turorudi.item.Alexandrov;
 import com.olesteep.turorudi.item.Svitlogories;
-import com.olesteep.turorudi.item.ModItems;
+import com.olesteep.turorudi.item.TuroItems;
 import com.olesteep.turorudi.item.Vkusnoteevo;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -27,8 +27,8 @@ public class TuroRudi {
 
         ModBlocks.register(eventBus);
         ModFluids.register(eventBus);
-        ModItems.register(eventBus);
-        Alexandrovs.register(eventBus);
+        TuroItems.register(eventBus);
+        Alexandrov.register(eventBus);
         Svitlogories.register(eventBus);
         Vkusnoteevo.register(eventBus);
 

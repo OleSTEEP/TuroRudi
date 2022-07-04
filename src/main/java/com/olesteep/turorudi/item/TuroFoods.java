@@ -4,7 +4,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
-public class ModFoods {
+public class TuroFoods {
     public static final FoodProperties TURO_BASE = (new FoodProperties.Builder()).nutrition(4).saturationMod(1.2F).build();
 
     public static final FoodProperties TURO_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();

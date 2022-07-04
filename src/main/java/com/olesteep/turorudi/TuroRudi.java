@@ -1,10 +1,10 @@
 package com.olesteep.turorudi;
 
-import com.olesteep.turorudi.block.ModBlocks;
-import com.olesteep.turorudi.fluid.ModFluids;
-import com.olesteep.turorudi.item.Alexandrovs;
-import com.olesteep.turorudi.item.Svitlogories;
-import com.olesteep.turorudi.item.ModItems;
+import com.olesteep.turorudi.block.TuroBlocks;
+import com.olesteep.turorudi.fluid.TuroFluids;
+import com.olesteep.turorudi.item.Alexandrov;
+import com.olesteep.turorudi.item.Svitlogorie;
+import com.olesteep.turorudi.item.TuroItems;
 import com.olesteep.turorudi.item.Vkusnoteevo;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -25,11 +25,11 @@ public class TuroRudi {
     public TuroRudi() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ModBlocks.register(eventBus);
-        ModFluids.register(eventBus);
-        ModItems.register(eventBus);
-        Alexandrovs.register(eventBus);
-        Svitlogories.register(eventBus);
+        TuroBlocks.register(eventBus);
+        TuroFluids.register(eventBus);
+        TuroItems.register(eventBus);
+        Alexandrov.register(eventBus);
+        Svitlogorie.register(eventBus);
         Vkusnoteevo.register(eventBus);
 
         eventBus.addListener(this::setup);
@@ -38,9 +38,9 @@ public class TuroRudi {
 
     private void clientSetup(final FMLCommonSetupEvent event) {
 
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.MILK_COND_BLOCK.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.MILK_COND_FLUID.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModFluids.MILK_COND_FLOWING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_FLUID.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_FLOWING.get(), RenderType.translucent());
 
     }
 

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "turorudi:alexandrov26"
+    },
+    "title": {
+      "translate": "advancements.turorudi.root.title"
+    },
+    "description": {
+      "translate": "advancements.turorudi.root.description"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false,
+    "background": "textures/block/stone.png"
+  },
+  "criteria": {
+    "consumed_item": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {}
+    }
+  },
+  "requirements": [
+    [
+      "consumed_item"
+    ]
+  ]
+}

@@ -1,4 +1,13 @@
 {
+  "advancements.turorudi.get_milk_bucket.title": "Молочный комбинат",
+  "advancements.turorudi.get_milk_bucket.description": "Начните ваше путешествие в мир молочной продукции получив молоко",
+  "advancements.turorudi.craft_turorudi.title": "Сыровар... Стоп, кто?",
+  "advancements.turorudi.craft_turorudi.description": "Создайте хороший сырок",
+  "advancements.turorudi.get_cherry.title": "На вкус реально как вишня",
+  "advancements.turorudi.get_cherry.description": "Получите вишню",
+  "advancements.turorudi.root.title": "TuroRudi",
+  "advancements.turorudi.root.description": "Мир молочных вкусняшек",
+
   "block.turorudi.milk_fat_block": "Блок молочного жира",
   "block.turorudi.turorudi_block": "Сырковый блок",
   "block.turorudi.turorudi_bad_block": "Плохой сырковый блок",

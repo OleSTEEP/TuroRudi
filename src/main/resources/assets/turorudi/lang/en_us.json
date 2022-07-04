@@ -1,4 +1,13 @@
 {
+  "advancements.turorudi.get_milk_bucket.title": "Dairy plant",
+  "advancements.turorudi.get_milk_bucket.description": "Start your dairy journey with milk",
+  "advancements.turorudi.craft_turorudi.title": "A TuroRudier... Stop, who?",
+  "advancements.turorudi.craft_turorudi.description": "Craft good TuroRudi",
+  "advancements.turorudi.get_cherry.title": "Tastes just like a cherry",
+  "advancements.turorudi.get_cherry.description": "Get a cherry",
+  "advancements.turorudi.root.title": "TuroRudi",
+  "advancements.turorudi.root.description": "World of dairy",
+
   "block.turorudi.milk_fat_block": "Milk fat block",
   "block.turorudi.turorudi_block": "Block of TuroRudi",
   "block.turorudi.turorudi_bad_block": "Block of bad TuroRudi",

@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:iron_nuget"
+      "item": "minecraft:iron_nugget"
     },
     {
       "item": "minecraft:blue_dye"

@@ -2,10 +2,7 @@ package com.olesteep.turorudi;
 
 import com.olesteep.turorudi.block.TuroBlocks;
 import com.olesteep.turorudi.fluid.TuroFluids;
-import com.olesteep.turorudi.item.Alexandrov;
-import com.olesteep.turorudi.item.Svitlogorie;
-import com.olesteep.turorudi.item.TuroItems;
-import com.olesteep.turorudi.item.Vkusnoteevo;
+import com.olesteep.turorudi.item.*;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +28,7 @@ public class TuroRudi {
         Alexandrov.register(eventBus);
         Svitlogorie.register(eventBus);
         Vkusnoteevo.register(eventBus);
+        Vologosha.register(eventBus);
 
         eventBus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);

@@ -10,16 +10,16 @@
       "item": "turorudi:chocolate"
     },
     "C": {
-      "item": "turorudi:turorudi"
+      "item": "turorudi:turorudi_bad"
     },
     "P": {
-      "item": "turorudi:package_vkusnoteevo"
+      "item": "turorudi:package_vologosha"
     },
     "B": {
-      "item": "minecraft:cocoa_beans"
+      "item": "turorudi:orange"
     }
   },
   "result": {
-    "item": "turorudi:vkusnoteevo_cocoa"
+    "item": "turorudi:vologosha_orange"
   }
 }

@@ -5,11 +5,11 @@
       "item": "minecraft:iron_nuget"
     },
     {
-      "item": "minecraft:blue_dye"
+      "item": "minecraft:red_dye"
     }
   ],
   "result": {
-    "item": "turorudi:package_vkusnoteevo",
+    "item": "turorudi:package_vologosha",
     "count": 1
   }
 }

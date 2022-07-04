@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     " S ",
-    "SCS",
+    "BCB",
     " P "
   ],
   "key": {
@@ -14,6 +14,9 @@
     },
     "P": {
       "item": "turorudi:package_svitlogorie"
+    },
+    "B": {
+      "item": "minecraft:cocoa_beans"
     }
   },
   "result": {

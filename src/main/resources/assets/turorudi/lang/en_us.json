@@ -2,7 +2,9 @@
   "block.turorudi.milk_fat_block": "Milk fat block",
   "block.turorudi.turorudi_block": "Block of TuroRudi",
   "block.turorudi.turorudi_bad_block": "Block of bad TuroRudi",
+  "item.turorudi.blueberry": "Blueberry",
   "item.turorudi.chocolate": "Chocolate",
+  "item.turorudi.cherry": "Cherry",
   "item.turorudi.chocolate_bad": "Bad chocolate",
   "item.turorudi.chocolate_milk": "Milk chocolate",
   "item.turorudi.chocolate_white": "White chocolate",
@@ -13,6 +15,7 @@
   "item.turorudi.milk_condensed_bucket": "Bucket of condensed milk",
   "item.turorudi.milk_fat": "Milk fat",
   "item.turorudi.lemon": "Lemon",
+  "item.turorudi.orange": "Orange",
   "item.turorudi.turorudi": "TuroRudi",
   "item.turorudi.turorudi_bad": "Bad TuroRudi",
 
@@ -37,12 +40,21 @@
   "item.turorudi.svitlogorie_strawberry": "Svitlogorie with strawberry",
 
   "item.turorudi.vkusnoteevo": "Vkusnoteevo",
-  "item.turorudi.vkusnoteevo_condensed": "Vkusnoteevo with condensed milk",
   "item.turorudi.vkusnoteevo_cocoa": "Vkusnoteevo with cocoa",
+  "item.turorudi.vkusnoteevo_condensed": "Vkusnoteevo with condensed milk",
+
+  "item.turorudi.vologosha": "Vologosha",
+  "item.turorudi.vologosha_blueberry": "Vologosha with condensed milk",
+  "item.turorudi.vologosha_cherry": "Vologosha with condensed milk",
+  "item.turorudi.vologosha_cocoa": "Vologosha with cocoa",
+  "item.turorudi.vologosha_condensed": "Vologosha with condensed milk",
+  "item.turorudi.vologosha_orange": "Vologosha with cocoa",
+  "item.turorudi.vologosha_strawberry": "Vologosha with cocoa",
 
   "item.turorudi.package_alexandrov": "B.YU. Alexandrov package",
   "item.turorudi.package_svitlogorie": "Svitlogorie package",
   "item.turorudi.package_vkusnoteevo": "Vkusnoteevo package",
+  "item.turorudi.package_vologosha": "Vologosha package",
 
   "itemGroup.turotab": "TuroRudi"
 }

@@ -2,6 +2,8 @@
   "block.turorudi.milk_fat_block": "Блок молочного жира",
   "block.turorudi.turorudi_block": "Сырковый блок",
   "block.turorudi.turorudi_bad_block": "Плохой сырковый блок",
+  "item.turorudi.blueberry": "Черника",
+  "item.turorudi.cherry": "Вишня",
   "item.turorudi.chocolate": "Шоколад",
   "item.turorudi.chocolate_bad": "Плохой шоколад",
   "item.turorudi.chocolate_milk": "Молочный шоколад",
@@ -13,6 +15,7 @@
   "item.turorudi.milk_condensed_bucket": "Ведро варёного сгущёного молока",
   "item.turorudi.milk_fat": "Молочный жир",
   "item.turorudi.lemon": "Лимон",
+  "item.turorudi.orange": "Апельсин",
   "item.turorudi.turorudi": "Сырок",
   "item.turorudi.turorudi_bad": "Плохой сырок",
 
@@ -37,12 +40,21 @@
   "item.turorudi.svitlogorie_strawberry": "Свитлогорье c клубникой",
 
   "item.turorudi.vkusnoteevo": "Вкуснотеево",
-  "item.turorudi.vkusnoteevo_condensed": "Вкуснотеево с молоком сгущёным варёным",
   "item.turorudi.vkusnoteevo_cocoa": "Вкуснотеево с какао",
+  "item.turorudi.vkusnoteevo_condensed": "Вкуснотеево с молоком сгущёным варёным",
+
+  "item.turorudi.vologosha": "Вологоша",
+  "item.turorudi.vologosha_blueberry": "Вологоша с черникой",
+  "item.turorudi.vologosha_cherry": "Вологоша с вишней",
+  "item.turorudi.vologosha_cocoa": "Вологоша с какао",
+  "item.turorudi.vologosha_condensed": "Вологоша с молоком сгущёным",
+  "item.turorudi.vologosha_orange": "Вологоша с апельсином",
+  "item.turorudi.vologosha_strawberry": "Вологоша с клубникой",
 
   "item.turorudi.package_alexandrov": "Упаковка Б.Ю. Александров",
   "item.turorudi.package_svitlogorie": "Упаковка Свитлогорье",
   "item.turorudi.package_vkusnoteevo": "Упаковка Вкуснотеево",
+  "item.turorudi.package_vologosha": "Упаковка Вологоша",
 
   "itemGroup.turotab": "TuroRudi"
 }

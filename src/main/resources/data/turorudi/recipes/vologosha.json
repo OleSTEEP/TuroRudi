@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     " S ",
-    "BCB",
+    " C ",
     " P "
   ],
   "key": {
@@ -10,16 +10,13 @@
       "item": "turorudi:chocolate"
     },
     "C": {
-      "item": "turorudi:turorudi"
+      "item": "turorudi:turorudi_bad"
     },
     "P": {
-      "item": "turorudi:package_vkusnoteevo"
-    },
-    "B": {
-      "item": "minecraft:cocoa_beans"
+      "item": "turorudi:package_vologosha"
     }
   },
   "result": {
-    "item": "turorudi:vkusnoteevo_cocoa"
+    "item": "turorudi:vologosha"
   }
 }

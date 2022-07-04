@@ -12,17 +12,17 @@ public class Vkusnoteevo {
             DeferredRegister.create(ForgeRegistries.ITEMS, TuroRudi.MOD_ID);
 
     public static final RegistryObject<Item> VKUSN_VANILLA = ITEMS.register("vkusnoteevo",
-            () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA)));
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB).food(ModFoods.TURO_VANILLA)));
 
     public static final RegistryObject<Item> VKUSN_COCOA = ITEMS.register("vkusnoteevo_cocoa",
-            () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_COCOA)));
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB).food(ModFoods.TURO_COCOA)));
 
     public static final RegistryObject<Item> VKUSN_COND = ITEMS.register("vkusnoteevo_condensed",
-            () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_COND)));
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB).food(ModFoods.TURO_COND)));
 
 
     public static final RegistryObject<Item> PACKAGE_VKUSN = ITEMS.register("package_vkusnoteevo",
-            () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB)));
+            () -> new Item(new Item.Properties().tab(ModCreativeTab.TUROTAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

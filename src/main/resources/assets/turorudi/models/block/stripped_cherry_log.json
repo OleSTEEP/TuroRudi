@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "turorudi:block/stripped_cherry_log_top",
+    "side": "turorudi:block/stripped_cherry_log"
+  }
+}

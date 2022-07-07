@@ -1,5 +1,6 @@
 package com.olesteep.turorudi;
 
+import com.olesteep.turorudi.block.CherryTree;
 import com.olesteep.turorudi.block.TuroBlocks;
 import com.olesteep.turorudi.fluid.TuroFluids;
 import com.olesteep.turorudi.item.*;
@@ -22,6 +23,7 @@ public class TuroRudi {
     public TuroRudi() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        CherryTree.register(eventBus);
         TuroBlocks.register(eventBus);
         TuroFluids.register(eventBus);
         TuroItems.register(eventBus);
@@ -35,11 +37,12 @@ public class TuroRudi {
     }
 
     private void clientSetup(final FMLCommonSetupEvent event) {
-
         ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_BLOCK.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_FLUID.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_FLOWING.get(), RenderType.translucent());
 
+        ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_SAPLING.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event) {

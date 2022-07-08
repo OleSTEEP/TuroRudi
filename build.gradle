@@ -16,7 +16,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '1.0'
+version = '0.1'
 group = 'com.olesteep.turorudi' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'turorudi'
 
@@ -106,7 +106,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'examplemod'
+            property 'forge.enabledGameTestNamespaces', 'turorudi'
 
             mods {
                 turorudi {
@@ -171,11 +171,11 @@ jar {
     manifest {
         attributes([
                 "Specification-Title"     : "turorudi",
-                "Specification-Vendor"    : "examplemodsareus",
+                "Specification-Vendor"    : "turorudisareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "examplemodsareus",
+                "Implementation-Vendor"   : "turorudisareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }

@@ -23,12 +23,12 @@ public class LemonBush {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<Block> LEMON_PLANT = registerBlock("lemon_bush",
+    public static final RegistryObject<Block> LEMON_BUSH = registerBlock("lemon_bush",
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
                     BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH).noOcclusion()), TuroCreativeTab.TUROTAB);
 
-    public static final RegistryObject<Block> POTTED_LEMON_PLANT = registerBlockWithoutBlockItem("potted_lemon_bush",
-            () -> new FlowerPotBlock(null, LemonBush.LEMON_PLANT,
+    public static final RegistryObject<Block> POTTED_LEMON_BUSH = registerBlockWithoutBlockItem("potted_lemon_bush",
+            () -> new FlowerPotBlock(null, LemonBush.LEMON_BUSH,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION).noOcclusion()));
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {

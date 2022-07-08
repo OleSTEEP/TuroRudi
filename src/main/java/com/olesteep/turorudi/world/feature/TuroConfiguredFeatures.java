@@ -1,6 +1,7 @@
 package com.olesteep.turorudi.world.feature;
 
 import com.olesteep.turorudi.block.CherryTree;
+import com.olesteep.turorudi.block.LemonBush;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -9,6 +10,8 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.RandomPatchConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration.TreeConfigurationBuilder;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
@@ -20,7 +23,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import java.util.List;
 import java.util.OptionalInt;
 
-public class TuroConfiguredFeature {
+public class TuroConfiguredFeatures {
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> CHERRY_TREE =
             FeatureUtils.register("cherry", Feature.TREE, new TreeConfigurationBuilder(
                             BlockStateProvider.simple(CherryTree.CHERRY_LOG.get()),
@@ -35,6 +38,11 @@ public class TuroConfiguredFeature {
             FeatureUtils.register("cherry_spawn", Feature.RANDOM_SELECTOR,
                             new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(CHERRY_CHECKED,
                                     0.5F)), CHERRY_CHECKED));
+
+    public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> LEMON_BUSH =
+            FeatureUtils.register("flower_lemon_bush", Feature.FLOWER,
+                    new RandomPatchConfiguration(16, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                            new SimpleBlockConfiguration(BlockStateProvider.simple(LemonBush.LEMON_BUSH.get())))));
 
 
 }

@@ -46,13 +46,13 @@ public class TuroRudi {
         ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_SAPLING.get(), RenderType.cutout());
 
-        ItemBlockRenderTypes.setRenderLayer(LemonBush.LEMON_PLANT.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(LemonBush.POTTED_LEMON_PLANT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(LemonBush.LEMON_BUSH.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(LemonBush.POTTED_LEMON_BUSH.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(LemonBush.LEMON_PLANT.getId(), LemonBush.POTTED_LEMON_PLANT);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(LemonBush.LEMON_BUSH.getId(), LemonBush.POTTED_LEMON_BUSH);
         });
     }
 }

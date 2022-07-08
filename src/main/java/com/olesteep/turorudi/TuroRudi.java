@@ -11,17 +11,13 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
-import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.slf4j.Logger;
 
 @Mod("turorudi")
 public class TuroRudi {
     public static final String MOD_ID = "turorudi";
-
-    private static final Logger LOGGER = LogUtils.getLogger();
 
     public TuroRudi() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -37,6 +33,8 @@ public class TuroRudi {
         Vologosha.register(eventBus);
 
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 

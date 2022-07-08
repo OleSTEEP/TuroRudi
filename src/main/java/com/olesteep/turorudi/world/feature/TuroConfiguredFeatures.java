@@ -2,6 +2,7 @@ package com.olesteep.turorudi.world.feature;
 
 import com.olesteep.turorudi.block.CherryTree;
 import com.olesteep.turorudi.block.LemonBush;
+import com.olesteep.turorudi.block.OrangeTree;
 import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -43,6 +44,21 @@ public class TuroConfiguredFeatures {
             FeatureUtils.register("flower_lemon_bush", Feature.FLOWER,
                     new RandomPatchConfiguration(16, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                             new SimpleBlockConfiguration(BlockStateProvider.simple(LemonBush.LEMON_BUSH.get())))));
+
+    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> ORANGE_TREE =
+            FeatureUtils.register("orange", Feature.TREE, new TreeConfigurationBuilder(
+                    BlockStateProvider.simple(OrangeTree.ORANGE_LOG.get()),
+                    new FancyTrunkPlacer(3, 11, 0),
+                    BlockStateProvider.simple(OrangeTree.ORANGE_LEAVES.get()),
+                    new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
+                    new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4))).build());
+
+    public static final Holder<PlacedFeature> ORANGE_CHECKED = PlacementUtils.register("orange_checked", ORANGE_TREE,
+            PlacementUtils.filteredByBlockSurvival(OrangeTree.ORANGE_SAPLING.get()));
+    public static final Holder<ConfiguredFeature<RandomFeatureConfiguration, ?>> ORANGE_SPAWN =
+            FeatureUtils.register("orange_spawn", Feature.RANDOM_SELECTOR,
+                    new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(ORANGE_CHECKED,
+                            0.5F)), ORANGE_CHECKED));
 
 
 }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "turorudi:cherry_logs"
+    }
+  ],
+  "result": {
+    "item": "turorudi:cherry_planks",
+    "count": 4
+  }
+}

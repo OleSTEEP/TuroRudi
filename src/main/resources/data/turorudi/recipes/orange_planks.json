@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "turorudi:orange_logs"
+    }
+  ],
+  "result": {
+    "item": "turorudi:orange_planks",
+    "count": 4
+  }
+}

@@ -1,6 +1,7 @@
 package com.olesteep.turorudi.block.custom;
 
 import com.olesteep.turorudi.block.CherryTree;
+import com.olesteep.turorudi.block.OrangeTree;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.player.Player;
@@ -44,6 +45,12 @@ public class TuroFlammableRotatedPillarBlock extends RotatedPillarBlock {
             }
             if (state.is(CherryTree.CHERRY_WOOD.get())) {
                 return CherryTree.STRIPPED_CHERRY_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if (state.is(OrangeTree.ORANGE_LOG.get())) {
+                return OrangeTree.STRIPPED_ORANGE_LOG.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
+            }
+            if (state.is(OrangeTree.ORANGE_WOOD.get())) {
+                return OrangeTree.STRIPPED_ORANGE_WOOD.get().defaultBlockState().setValue(AXIS, state.getValue(AXIS));
             }
         }
 

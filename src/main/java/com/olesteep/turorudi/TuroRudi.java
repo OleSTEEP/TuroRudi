@@ -1,11 +1,14 @@
 package com.olesteep.turorudi;
 
 import com.olesteep.turorudi.block.CherryTree;
+import com.olesteep.turorudi.block.LemonBush;
 import com.olesteep.turorudi.block.TuroBlocks;
 import com.olesteep.turorudi.fluid.TuroFluids;
 import com.olesteep.turorudi.item.*;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import com.mojang.logging.LogUtils;
@@ -24,6 +27,7 @@ public class TuroRudi {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         CherryTree.register(eventBus);
+        LemonBush.register(eventBus);
         TuroBlocks.register(eventBus);
         TuroFluids.register(eventBus);
         TuroItems.register(eventBus);
@@ -43,10 +47,15 @@ public class TuroRudi {
 
         ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_SAPLING.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(LemonBush.LEMON_PLANT.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(LemonBush.POTTED_LEMON_PLANT.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        LOGGER.info("PREINIT");
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(LemonBush.LEMON_PLANT.getId(), LemonBush.POTTED_LEMON_PLANT);
+        });
     }
 }
 

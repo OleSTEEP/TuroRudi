@@ -5,9 +5,31 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class TuroFoods {
-    public static final FoodProperties TURO_BASE = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).build();
+    public static final FoodProperties BLBERRY = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
 
-    public static final FoodProperties TURO_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.6F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
+    public static final FoodProperties CHERRY = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
+
+    public static final FoodProperties CHOCOLATE = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.15F).build();
+
+    public static final FoodProperties CHOCOLATE_BAD = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.15F).effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0), 1.0F).build();
+
+    public static final FoodProperties COCO = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
+
+    public static final FoodProperties CURD = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
+
+    public static final FoodProperties CURD_BAD = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).effect(new MobEffectInstance(MobEffects.CONFUSION, 300, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
+
+    public static final FoodProperties GLAZE = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.15F).build();
+
+    public static final FoodProperties MILK_FAT = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.15F).effect(new MobEffectInstance(MobEffects.HUNGER, 200, 0), 0.3F).build();
+
+    public static final FoodProperties LEMON = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 2), 1.0F).build();
+
+    public static final FoodProperties ORANGE = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
+
+    public static final FoodProperties TURO_BASE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.5F).build();
+
+    public static final FoodProperties TURO_BAD = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
 
     public static final FoodProperties TURO_VANILLA = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 2400, 1), 1.0F).build();
 

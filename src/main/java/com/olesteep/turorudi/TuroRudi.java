@@ -56,9 +56,7 @@ public class TuroRudi {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(LemonBush.LEMON_BUSH.getId(), LemonBush.POTTED_LEMON_BUSH);
-        });
+        event.enqueueWork(() -> ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(LemonBush.LEMON_BUSH.getId(), LemonBush.POTTED_LEMON_BUSH));
     }
 }
 

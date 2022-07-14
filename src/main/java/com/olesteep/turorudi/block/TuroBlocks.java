@@ -4,7 +4,6 @@ import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.item.TuroCreativeTab;
 import com.olesteep.turorudi.item.TuroItems;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -22,28 +21,27 @@ public class TuroBlocks {
 
     public static final RegistryObject<Block> MILK_FAT_BLOCK = registerBlock("milk_fat_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.CAKE)
-                    .strength(3f)), TuroCreativeTab.TUROTAB);
+                    .strength(3f)));
 
     public static final RegistryObject<Block> TURO_BLOCK = registerBlock("turorudi_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.CAKE)
-                    .strength(3f)), TuroCreativeTab.TUROTAB);
+                    .strength(3f)));
 
     public static final RegistryObject<Block> TURO_BAD_BLOCK = registerBlock("turorudi_bad_block",
             () -> new Block(BlockBehaviour.Properties.of(Material.CAKE)
-                    .strength(3f)), TuroCreativeTab.TUROTAB);
+                    .strength(3f)));
 
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
+    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tab);
+        registerBlockItem(name, toReturn);
         return toReturn;
     }
 
-    private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
-                                                                           CreativeModeTab tab) {
+    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
 
-        return TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(tab)));
+        TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties().tab(TuroCreativeTab.TUROTAB)));
     }
 
     public static void register(IEventBus eventBus) {

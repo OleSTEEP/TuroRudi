@@ -5,7 +5,6 @@ import com.olesteep.turorudi.item.TuroCreativeTab;
 import com.olesteep.turorudi.item.TuroItems;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -23,29 +22,28 @@ public class LemonBush {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<Block> LEMON_BUSH = registerBlock("lemon_bush",
+    public static final RegistryObject<Block> LEMON_BUSH = registerBlock(
             () -> new FlowerBlock(MobEffects.LEVITATION, 8,
-                    BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH).noOcclusion()), TuroCreativeTab.TUROTAB);
+                    BlockBehaviour.Properties.copy(Blocks.ROSE_BUSH).noOcclusion()));
 
-    public static final RegistryObject<Block> POTTED_LEMON_BUSH = registerBlockWithoutBlockItem("potted_lemon_bush",
+    public static final RegistryObject<Block> POTTED_LEMON_BUSH = registerBlockWithoutBlockItem(
             () -> new FlowerPotBlock(null, LemonBush.LEMON_BUSH,
                     BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION).noOcclusion()));
 
-    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
-        return BLOCKS.register(name, block);
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(Supplier<T> block) {
+        return BLOCKS.register("potted_lemon_bush", block);
     }
 
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn, tab);
+    private static <T extends Block> RegistryObject<T> registerBlock(Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register("lemon_bush", block);
+        registerBlockItem(toReturn);
         return toReturn;
     }
 
-    private static <T extends Block>RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
-                                                                           CreativeModeTab tab) {
+    private static <T extends Block> void registerBlockItem(RegistryObject<T> block) {
 
-        return TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(tab)));
+        TuroItems.ITEMS.register("lemon_bush", () -> new BlockItem(block.get(),
+                new Item.Properties().tab(TuroCreativeTab.TUROTAB)));
     }
 
     public static void register(IEventBus eventBus) {

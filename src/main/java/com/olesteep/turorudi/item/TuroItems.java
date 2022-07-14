@@ -1,9 +1,13 @@
 package com.olesteep.turorudi.item;
 
 import com.olesteep.turorudi.TuroRudi;
+import com.olesteep.turorudi.block.BlueBerryBush;
 import com.olesteep.turorudi.fluid.TuroFluids;
+import com.olesteep.turorudi.world.level.block.BlueBerryBushBlock;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -20,7 +24,7 @@ public class TuroItems {
             () -> new Item(new Item.Properties().food(TuroFoods.TURO_BAD).tab(TuroCreativeTab.TUROTAB)));
 
     public static final RegistryObject<Item> BLBERRY = ITEMS.register("blueberry",
-            () -> new Item(new Item.Properties().food(TuroFoods.BLBERRY).tab(TuroCreativeTab.TUROTAB)));
+            () -> new ItemNameBlockItem(BlueBerryBush.BLBERRY_BUSH.get(), (new Item.Properties()).food(TuroFoods.BLBERRY).tab(TuroCreativeTab.TUROTAB)));
 
     public static final RegistryObject<Item> CHERRY = ITEMS.register("cherry",
             () -> new Item(new Item.Properties().food(TuroFoods.CHERRY).tab(TuroCreativeTab.TUROTAB)));

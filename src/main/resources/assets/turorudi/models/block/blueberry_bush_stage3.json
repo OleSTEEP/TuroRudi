@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "turorudi:block/blueberry_bush_stage3"
+  }
+}

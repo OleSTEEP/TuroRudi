@@ -27,10 +27,12 @@ public class TuroFluids {
 
 
     public static final RegistryObject<FlowingFluid> MILK_COND_FLUID
-            = FLUIDS.register("milk_condensed_fluid", () -> new ForgeFlowingFluid.Source(TuroFluids.MILK_COND_PROPERTIES));
+            = FLUIDS.register("milk_condensed_fluid",
+            () -> new ForgeFlowingFluid.Source(TuroFluids.MILK_COND_PROPERTIES));
 
     public static final RegistryObject<FlowingFluid> MILK_COND_FLOWING
-            = FLUIDS.register("milk_condensed_flowing", () -> new ForgeFlowingFluid.Flowing(TuroFluids.MILK_COND_PROPERTIES));
+            = FLUIDS.register("milk_condensed_flowing",
+            () -> new ForgeFlowingFluid.Flowing(TuroFluids.MILK_COND_PROPERTIES));
 
 
     public static final ForgeFlowingFluid.Properties MILK_COND_PROPERTIES = new ForgeFlowingFluid.Properties(

@@ -18,7 +18,9 @@ import java.util.function.Supplier;
 public class BlueBerryBush {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<Block> BLBERRY_BUSH = registerBlock(() -> new SweetBerryBushBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH)));
+    public static final RegistryObject<Block> BLBERRY_BUSH = registerBlock(
+            () -> new SweetBerryBushBlock(BlockBehaviour.Properties.of(Material.PLANT).randomTicks().noCollission()
+                    .sound(SoundType.SWEET_BERRY_BUSH)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(Supplier<T> block) {

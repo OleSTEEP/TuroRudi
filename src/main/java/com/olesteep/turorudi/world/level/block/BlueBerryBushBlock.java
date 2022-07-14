@@ -61,7 +61,8 @@ public class BlueBerryBushBlock extends BushBlock implements BonemealableBlock {
 
     public void randomTick(BlockState p_57286_, ServerLevel p_57287_, BlockPos p_57288_, Random p_57289_) {
         int i = p_57286_.getValue(AGE);
-        if (i < 3 && p_57287_.getRawBrightness(p_57288_.above(), 0) >= 9 && net.minecraftforge.common.ForgeHooks.onCropsGrowPre(p_57287_, p_57288_, p_57286_,p_57289_.nextInt(5) == 0)) {
+        if (i < 3 && p_57287_.getRawBrightness(p_57288_.above(), 0) >= 9 && net.minecraftforge.common.ForgeHooks
+                .onCropsGrowPre(p_57287_, p_57288_, p_57286_,p_57289_.nextInt(5) == 0)) {
             p_57287_.setBlock(p_57288_, p_57286_.setValue(AGE, Integer.valueOf(i + 1)), 2);
             net.minecraftforge.common.ForgeHooks.onCropsGrowPost(p_57287_, p_57288_, p_57286_);
         }
@@ -82,7 +83,8 @@ public class BlueBerryBushBlock extends BushBlock implements BonemealableBlock {
         }
     }
 
-    public InteractionResult use(BlockState p_57275_, Level p_57276_, BlockPos p_57277_, Player p_57278_, InteractionHand p_57279_, BlockHitResult p_57280_) {
+    public InteractionResult use(BlockState p_57275_, Level p_57276_, BlockPos p_57277_, Player p_57278_,
+                                 InteractionHand p_57279_, BlockHitResult p_57280_) {
         int i = p_57275_.getValue(AGE);
         boolean flag = i == 3;
         if (!flag && p_57278_.getItemInHand(p_57279_).is(Items.BONE_MEAL)) {
@@ -90,7 +92,8 @@ public class BlueBerryBushBlock extends BushBlock implements BonemealableBlock {
         } else if (i > 1) {
             int j = 1 + p_57276_.random.nextInt(2);
             popResource(p_57276_, p_57277_, new ItemStack(TuroItems.BLBERRY.get(), j + (flag ? 1 : 0)));
-            p_57276_.playSound((Player)null, p_57277_, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + p_57276_.random.nextFloat() * 0.4F);
+            p_57276_.playSound((Player)null, p_57277_, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS,
+                    1.0F, 0.8F + p_57276_.random.nextFloat() * 0.4F);
             p_57276_.setBlock(p_57277_, p_57275_.setValue(AGE, Integer.valueOf(1)), 2);
             return InteractionResult.sidedSuccess(p_57276_.isClientSide);
         } else {

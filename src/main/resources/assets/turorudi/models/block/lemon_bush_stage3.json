@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "turorudi:block/lemon_bush"
+    "cross": "turorudi:block/lemon_bush_stage3"
   }
 }

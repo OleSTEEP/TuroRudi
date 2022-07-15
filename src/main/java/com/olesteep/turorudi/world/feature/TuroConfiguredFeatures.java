@@ -51,10 +51,12 @@ public class TuroConfiguredFeatures {
                             new RandomFeatureConfiguration(List.of(new WeightedPlacedFeature(CHERRY_CHECKED,
                                     0.5F)), CHERRY_CHECKED));
 
-    public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> LEMON_BUSH =
-            FeatureUtils.register("flower_lemon_bush", Feature.FLOWER,
-                    new RandomPatchConfiguration(16, 3, 1, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                            new SimpleBlockConfiguration(BlockStateProvider.simple(LemonBush.LEMON_BUSH.get())))));
+    public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> PATCH_LEMON_BUSH =
+            FeatureUtils.register("patch_lemon_bush", Feature.RANDOM_PATCH,
+                    FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                            BlockStateProvider.simple(LemonBush.LEMON_BUSH.get()
+                                    .defaultBlockState()
+                                    .setValue(SweetBerryBushBlock.AGE, Integer.valueOf(3)))), List.of(Blocks.GRASS_BLOCK)));
 
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> ORANGE_TREE =
             FeatureUtils.register("orange", Feature.TREE, new TreeConfigurationBuilder(

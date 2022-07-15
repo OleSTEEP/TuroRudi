@@ -18,7 +18,7 @@ public class TuroPlacedFeatures {
                     PlacementUtils.countExtra(0, 0.05f, 1)));
 
     public static final Holder<PlacedFeature> LEMON_BUSH_PLACED = PlacementUtils.register("lemon_bush_placed",
-            TuroConfiguredFeatures.LEMON_BUSH, RarityFilter.onAverageOnceEvery(16),
+            TuroConfiguredFeatures.PATCH_LEMON_BUSH, RarityFilter.onAverageOnceEvery(16),
             InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
     public static final Holder<PlacedFeature> ORANGE_PLACED = PlacementUtils.register("orange_placed",

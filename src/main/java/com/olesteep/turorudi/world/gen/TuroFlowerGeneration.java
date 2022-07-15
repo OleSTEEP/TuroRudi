@@ -25,5 +25,12 @@ public class TuroFlowerGeneration {
 
             base.add(TuroPlacedFeatures.LEMON_BUSH_PLACED);
         }
+
+        if(types.contains(BiomeDictionary.Type.COLD)) {
+            List<Holder<PlacedFeature>> base =
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+
+            base.add(TuroPlacedFeatures.BLBERRY_BUSH_PLACED);
+        }
     }
 }

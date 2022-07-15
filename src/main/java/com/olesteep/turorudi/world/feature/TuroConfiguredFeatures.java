@@ -1,5 +1,6 @@
 package com.olesteep.turorudi.world.feature;
 
+import com.olesteep.turorudi.block.BlueBerryBush;
 import com.olesteep.turorudi.block.CherryTree;
 import com.olesteep.turorudi.block.LemonBush;
 import com.olesteep.turorudi.block.OrangeTree;
@@ -7,6 +8,8 @@ import net.minecraft.core.Holder;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SweetBerryBushBlock;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -25,6 +28,14 @@ import java.util.List;
 import java.util.OptionalInt;
 
 public class TuroConfiguredFeatures {
+    public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> PATCH_BLBERRY_BUSH =
+            FeatureUtils.register("patch_blueberry_bush", Feature.RANDOM_PATCH,
+                    FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
+                            BlockStateProvider.simple(BlueBerryBush.BLBERRY_BUSH.get()
+                                    .defaultBlockState()
+                                    .setValue(SweetBerryBushBlock.AGE, Integer.valueOf(3)))), List.of(Blocks.GRASS_BLOCK)));
+
+
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> CHERRY_TREE =
             FeatureUtils.register("cherry", Feature.TREE, new TreeConfigurationBuilder(
                             BlockStateProvider.simple(CherryTree.CHERRY_LOG.get()),

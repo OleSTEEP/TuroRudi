@@ -28,6 +28,7 @@
   "block.turorudi.stripped_orange_log": "Stripped Orange Log",
   "block.turorudi.stripped_orange_wood": "Stripped Orange Wood",
   "fluid.turorudi.milk_condensed_fluid": "Condensed milk",
+  "item.turorudi.apricot": "Apricot",
   "item.turorudi.blueberry": "Blueberry",
   "item.turorudi.cherry": "Cherry",
   "item.turorudi.chocolate": "Chocolate",
@@ -55,6 +56,11 @@
   "item.turorudi.alexandrov_souffle": "B.YU. Alexandrov souffle in dark chocolate",
   "item.turorudi.alexandrov_souffle_milk": "B.YU. Alexandrov souffle in milk chocolate",
   "item.turorudi.alexandrov_white": "B.YU. Alexandrov in white chocolate",
+
+  "item.turorudi.pottyos": "Pöttyös Túró Rudi",
+  "item.turorudi.pottyos_apricot": "Pöttyös Túró Rudi with apricot",
+  "item.turorudi.pottyos_strawberry": "Pöttyös Túró Rudi with strawberry",
+  "item.turorudi.package_pottyos": "Pöttyös Túró Rudi package",
 
   "item.turorudi.svitlogorie": "Svitlogorie",
   "item.turorudi.svitlogorie_cocoa": "Svitlogorie with cocoa",

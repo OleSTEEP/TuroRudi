@@ -28,6 +28,7 @@ public class TuroRudi {
         TuroFluids.register(eventBus);
         TuroItems.register(eventBus);
         Alexandrov.register(eventBus);
+        Pottyos.register(eventBus);
         Svitlogorie.register(eventBus);
         Vkusnoteevo.register(eventBus);
         Vologosha.register(eventBus);

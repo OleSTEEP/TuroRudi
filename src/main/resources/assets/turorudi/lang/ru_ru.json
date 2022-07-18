@@ -28,6 +28,7 @@
   "block.turorudi.stripped_orange_log": "Обтёсанное бревно апельсинового дерева",
   "block.turorudi.stripped_orange_wood": "Обтёсанное апельсиновое дерево",
   "fluid.turorudi.milk_condensed_fluid": "Сгущёное молоко",
+  "item.turorudi.apricot": "Абрикос",
   "item.turorudi.blueberry": "Черника",
   "item.turorudi.cherry": "Вишня",
   "item.turorudi.chocolate": "Шоколад",
@@ -55,6 +56,11 @@
   "item.turorudi.alexandrov_souffle": "Б.Ю. Александров суфле в тёмном шоколаде",
   "item.turorudi.alexandrov_souffle_milk": "Б.Ю. Александров суфле в молочном шоколаде",
   "item.turorudi.alexandrov_white": "Б.Ю. Александров в белом шоколаде",
+
+  "item.turorudi.pottyos": "Pöttyös Túró Rudi",
+  "item.turorudi.pottyos_apricot": "Pöttyös Túró Rudi с абрикосом",
+  "item.turorudi.pottyos_strawberry": "Pöttyös Túró Rudi с клубникой",
+  "item.turorudi.package_pottyos": "Упаковка Pöttyös Túró Rudi",
 
   "item.turorudi.svitlogorie": "Свитлогорье",
   "item.turorudi.svitlogorie_cocoa": "Свитлогорье с какао",

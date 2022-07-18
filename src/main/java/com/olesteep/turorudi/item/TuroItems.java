@@ -21,6 +21,9 @@ public class TuroItems {
     public static final RegistryObject<Item> TURORUDI_BAD = ITEMS.register("turorudi_bad",
             () -> new Item(new Item.Properties().food(TuroFoods.TURO_BAD).tab(TuroCreativeTab.TUROTAB)));
 
+    public static final RegistryObject<Item> APRICOT = ITEMS.register("apricot",
+            () -> new Item(new Item.Properties().food(TuroFoods.TURO_BAD).tab(TuroCreativeTab.TUROTAB)));
+
     public static final RegistryObject<Item> BLBERRY = ITEMS.register("blueberry",
             () -> new ItemNameBlockItem(BlueBerryBush.BLBERRY_BUSH.get(),
                     (new Item.Properties()).food(TuroFoods.BLBERRY).tab(TuroCreativeTab.TUROTAB)));

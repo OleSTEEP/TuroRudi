@@ -1,7 +1,7 @@
 # TuroRudi
 TuroRudi - Minecraft mod that adds to the game TuroRudies
 
-Game version - 1.18.1 - 1.19
+Game version - 1.18.x
 
 ### Credits
 * Mojang

@@ -5,6 +5,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 
 public class TuroFoods {
+    public static final FoodProperties APRICOT = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.3F).build();
     public static final FoodProperties BLBERRY = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
     public static final FoodProperties CHERRY = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
     public static final FoodProperties CHOCOLATE = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.15F).build();

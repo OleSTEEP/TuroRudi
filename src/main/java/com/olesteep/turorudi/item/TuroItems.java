@@ -1,6 +1,7 @@
 package com.olesteep.turorudi.item;
 
 import com.olesteep.turorudi.TuroRudi;
+import com.olesteep.turorudi.block.ApricotBush;
 import com.olesteep.turorudi.block.BlueBerryBush;
 import com.olesteep.turorudi.fluid.TuroFluids;
 import net.minecraft.world.item.BucketItem;
@@ -22,7 +23,8 @@ public class TuroItems {
             () -> new Item(new Item.Properties().food(TuroFoods.TURO_BAD).tab(TuroCreativeTab.TUROTAB)));
 
     public static final RegistryObject<Item> APRICOT = ITEMS.register("apricot",
-            () -> new Item(new Item.Properties().food(TuroFoods.TURO_BAD).tab(TuroCreativeTab.TUROTAB)));
+            () -> new ItemNameBlockItem(ApricotBush.APRICOT_BUSH.get(),
+                    (new Item.Properties()).food(TuroFoods.APRICOT).tab(TuroCreativeTab.TUROTAB)));
 
     public static final RegistryObject<Item> BLBERRY = ITEMS.register("blueberry",
             () -> new ItemNameBlockItem(BlueBerryBush.BLBERRY_BUSH.get(),

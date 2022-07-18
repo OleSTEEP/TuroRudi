@@ -1,10 +1,7 @@
 package com.olesteep.turorudi.event;
 
 import com.olesteep.turorudi.TuroRudi;
-import com.olesteep.turorudi.block.BlueBerryBush;
-import com.olesteep.turorudi.block.CherryTree;
-import com.olesteep.turorudi.block.LemonBush;
-import com.olesteep.turorudi.block.OrangeTree;
+import com.olesteep.turorudi.block.*;
 import com.olesteep.turorudi.fluid.TuroFluids;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -21,6 +18,8 @@ public class TuroEventClientBusEvents {
         ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_BLOCK.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_FLUID.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_FLOWING.get(), RenderType.translucent());
+
+        ItemBlockRenderTypes.setRenderLayer(ApricotBush.APRICOT_BUSH.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(BlueBerryBush.BLBERRY_BUSH.get(), RenderType.cutout());
 

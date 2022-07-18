@@ -20,6 +20,7 @@ public class TuroRudi {
     public TuroRudi() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ApricotBush.register(eventBus);
         BlueBerryBush.register(eventBus);
         CherryTree.register(eventBus);
         LemonBush.register(eventBus);

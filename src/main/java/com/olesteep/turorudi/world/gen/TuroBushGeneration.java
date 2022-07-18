@@ -14,23 +14,24 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
-public class TuroFlowerGeneration {
-    public static void generateFlowers(final BiomeLoadingEvent event) {
+public class TuroBushGeneration {
+    public static void generateBushes(final BiomeLoadingEvent event) {
         ResourceKey<Biome> key = ResourceKey.create(Registry.BIOME_REGISTRY, Objects.requireNonNull(event.getName()));
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
-
-        if(types.contains(BiomeDictionary.Type.HOT)) {
-            List<Holder<PlacedFeature>> base =
-                    event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
-
-            base.add(TuroPlacedFeatures.LEMON_BUSH_PLACED);
-        }
 
         if(types.contains(BiomeDictionary.Type.COLD)) {
             List<Holder<PlacedFeature>> base =
                     event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(TuroPlacedFeatures.BLBERRY_BUSH_PLACED);
+        }
+
+        if(types.contains(BiomeDictionary.Type.HOT)) {
+            List<Holder<PlacedFeature>> base =
+                    event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+
+            base.add(TuroPlacedFeatures.LEMON_BUSH_PLACED);
+            base.add(TuroPlacedFeatures.APRICOT_BUSH_PLACED);
         }
     }
 }

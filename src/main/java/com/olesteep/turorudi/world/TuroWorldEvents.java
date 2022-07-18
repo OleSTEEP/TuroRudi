@@ -1,7 +1,7 @@
 package com.olesteep.turorudi.world;
 
 import com.olesteep.turorudi.TuroRudi;
-import com.olesteep.turorudi.world.gen.TuroFlowerGeneration;
+import com.olesteep.turorudi.world.gen.TuroBushGeneration;
 import com.olesteep.turorudi.world.gen.TuroTreeGeneration;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,6 +12,6 @@ public class TuroWorldEvents {
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
         TuroTreeGeneration.generateTrees(event);
-        TuroFlowerGeneration.generateFlowers(event);
+        TuroBushGeneration.generateBushes(event);
     }
 }

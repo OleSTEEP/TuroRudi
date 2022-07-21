@@ -14,6 +14,9 @@ public class Vologosha {
     public static final RegistryObject<Item> VOLOG_VANILLA = ITEMS.register("vologosha",
             () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA_BAD)));
 
+    public static final RegistryObject<Item> VOLOG_BANANA = ITEMS.register("vologosha_banana",
+            () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_BANANA_BAD)));
+
     public static final RegistryObject<Item> VOLOG_BLBERRY = ITEMS.register("vologosha_blueberry",
             () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_BLBERRY_BAD)));
 

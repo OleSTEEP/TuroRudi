@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "BCB",
+    " P "
+  ],
+  "key": {
+    "S": {
+      "item": "turorudi:chocolate_bad"
+    },
+    "C": {
+      "item": "turorudi:turorudi_bad"
+    },
+    "P": {
+      "item": "turorudi:package_vologosha"
+    },
+    "B": {
+      "tag": "turorudi:banana"
+    }
+  },
+  "result": {
+    "item": "turorudi:vologosha_banana"
+  }
+}

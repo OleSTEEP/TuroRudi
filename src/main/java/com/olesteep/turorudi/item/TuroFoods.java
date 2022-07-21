@@ -6,6 +6,7 @@ import net.minecraft.world.food.FoodProperties;
 
 public class TuroFoods {
     public static final FoodProperties APRICOT = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.3F).build();
+    public static final FoodProperties BANANA = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.3F).build();
     public static final FoodProperties BLBERRY = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
     public static final FoodProperties CHERRY = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.1F).build();
     public static final FoodProperties CHOCOLATE = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.15F).build();
@@ -25,10 +26,11 @@ public class TuroFoods {
     public static final FoodProperties TURO_VANILLA_MILK = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 2400, 1), 1.0F).build();
     public static final FoodProperties TURO_VANILLA_FAT_MILK = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.4F).effect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 3000, 1), 1.0F).build();
     public static final FoodProperties TURO_APRICOT = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 2400, 1), 1.0F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 2), 1.0F).build();
+    public static final FoodProperties TURO_BANANA = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2400, 1), 1.0F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 2), 1.0F).build();
     public static final FoodProperties TURO_BLBERRY = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 2400, 1), 1.0F).build();
     public static final FoodProperties TURO_CHERRY = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.REGENERATION, 3400, 1), 1.0F).build();
     public static final FoodProperties TURO_COCOA = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 1), 1.0F).build();
-    public static final FoodProperties TURO_COCO = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2400, 1), 1.0F).build();
+    public static final FoodProperties TURO_COCO = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.DIG_SPEED, 2400, 2), 1.0F).build();
     public static final FoodProperties TURO_COCO_GLAZE = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.DIG_SPEED, 2400, 1), 1.0F).build();
     public static final FoodProperties TURO_COND = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.SLOW_FALLING, 2400, 1), 1.0F).build();
     public static final FoodProperties TURO_GLAZE = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.ABSORPTION, 2400, 1), 1.0F).build();
@@ -45,9 +47,10 @@ public class TuroFoods {
     public static final FoodProperties TURO_VANILLA_MILK_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_VANILLA_FAT_MILK_BAD = (new FoodProperties.Builder()).nutrition(6).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 1500, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_BLBERRY_BAD = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
+    public static final FoodProperties TURO_BANANA_BAD = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_CHERRY_BAD = (new FoodProperties.Builder()).nutrition(6).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.REGENERATION, 1700, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_COCOA_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
-    public static final FoodProperties TURO_COCO_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
+    public static final FoodProperties TURO_COCO_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.DIG_SPEED, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_COCO_GLAZE_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.DIG_SPEED, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_COND_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.SLOW_FALLING, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_GLAZE_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();

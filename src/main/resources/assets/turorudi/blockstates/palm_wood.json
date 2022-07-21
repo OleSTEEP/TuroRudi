@@ -1,0 +1,17 @@
+
+{
+  "variants": {
+    "axis=x": {
+      "model": "turorudi:block/palm_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "turorudi:block/palm_wood"
+    },
+    "axis=z": {
+      "model": "turorudi:block/palm_wood",
+      "x": 90
+    }
+  }
+}

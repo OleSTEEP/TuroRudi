@@ -25,6 +25,7 @@ public class TuroRudi {
         CherryTree.register(eventBus);
         LemonBush.register(eventBus);
         OrangeTree.register(eventBus);
+        PalmTree.register(eventBus);
         TuroBlocks.register(eventBus);
         TuroFluids.register(eventBus);
         TuroItems.register(eventBus);

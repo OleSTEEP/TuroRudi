@@ -3,10 +3,12 @@ package com.olesteep.turorudi.item;
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.block.ApricotBush;
 import com.olesteep.turorudi.block.BlueBerryBush;
+import com.olesteep.turorudi.block.TuroBlocks;
 import com.olesteep.turorudi.fluid.TuroFluids;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -49,7 +51,8 @@ public class TuroItems {
             () -> new Item(new Item.Properties().food(TuroFoods.CHOCOLATE).tab(TuroCreativeTab.TUROTAB)));
 
     public static final RegistryObject<Item> COCO = ITEMS.register("coconut",
-            () -> new Item(new Item.Properties().food(TuroFoods.COCO).tab(TuroCreativeTab.TUROTAB)));
+            () -> new ItemNameBlockItem(TuroBlocks.COCONUT_BLOCK.get(),
+                    new Item.Properties().food(TuroFoods.COCO).tab(TuroCreativeTab.TUROTAB)));
 
     public static final RegistryObject<Item> CURD = ITEMS.register("curd",
             () -> new Item(new Item.Properties().food(TuroFoods.CURD).tab(TuroCreativeTab.TUROTAB)));

@@ -23,6 +23,8 @@ public class TuroEventClientBusEvents {
 
         ItemBlockRenderTypes.setRenderLayer(BlueBerryBush.BLBERRY_BUSH.get(), RenderType.cutout());
 
+        ItemBlockRenderTypes.setRenderLayer(TuroBlocks.COCONUT_BLOCK.get(), RenderType.cutout());
+
         ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_SAPLING.get(), RenderType.cutout());
 
@@ -30,5 +32,8 @@ public class TuroEventClientBusEvents {
 
         ItemBlockRenderTypes.setRenderLayer(OrangeTree.ORANGE_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(OrangeTree.ORANGE_SAPLING.get(), RenderType.cutout());
+
+        ItemBlockRenderTypes.setRenderLayer(PalmTree.PALM_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(PalmTree.PALM_SAPLING.get(), RenderType.cutout());
     }
 }

@@ -50,7 +50,7 @@ public class TuroItems {
     public static final RegistryObject<Item> CHOCOLATE_WHITE = ITEMS.register("chocolate_white",
             () -> new Item(new Item.Properties().food(TuroFoods.CHOCOLATE).tab(TuroCreativeTab.TUROTAB)));
 
-    public static final RegistryObject<Item> COCO = ITEMS.register("coconut",
+    public static final RegistryObject<Item> COCO = ITEMS.register("coconut_item",
             () -> new ItemNameBlockItem(TuroBlocks.COCONUT_BLOCK.get(),
                     new Item.Properties().food(TuroFoods.COCO).tab(TuroCreativeTab.TUROTAB)));
 

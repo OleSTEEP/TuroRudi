@@ -13,7 +13,7 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "turorudi:coconut_block",
+                  "block": "turorudi:coconut",
                   "properties": {
                     "age": "2"
                   }
@@ -26,7 +26,7 @@
               "function": "minecraft:explosion_decay"
             }
           ],
-          "name": "turorudi:coconut"
+          "name": "turorudi:coconut_item"
         }
       ]
     }

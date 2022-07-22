@@ -25,7 +25,7 @@ public class TuroBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
 
-    public static final RegistryObject<Block> COCONUT_BLOCK = registerBlockWithoutItem(BLOCKS, "coconut_block",
+    public static final RegistryObject<Block> COCONUT_BLOCK = registerBlockWithoutItem(BLOCKS, "coconut",
             () -> new CocoaBlock(BlockBehaviour.Properties.copy(Blocks.COCOA)) {
         @Override
         public boolean canSurvive(@NotNull BlockState blockState, @NotNull LevelReader levelReader, @NotNull BlockPos blockPos) {

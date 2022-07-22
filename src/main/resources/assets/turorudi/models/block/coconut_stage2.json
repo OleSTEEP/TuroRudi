@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "turorudi:block/coconut_block_stage2",
-        "coconut": "turorudi:block/coconut_block_stage2"
+        "particle": "turorudi:block/coconut_stage2",
+        "coconut": "turorudi:block/coconut_stage2"
     },
     "elements": [
         {   "from": [ 4, 3, 7 ],

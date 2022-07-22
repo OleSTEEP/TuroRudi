@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "turorudi:item/banana"
+    "layer0": "turorudi:item/banana_item"
   }
 }

@@ -3,6 +3,8 @@ package com.olesteep.turorudi.block;
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.tags.TuroBlockTags;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -30,6 +32,17 @@ public class TuroBlocks {
             BlockState blockstate = levelReader.getBlockState(blockPos.relative(blockState.getValue(FACING)));
             return blockstate.is(TuroBlockTags.PALM_LOGS);
         }
+
+
+            });
+
+    public static final RegistryObject<Block> BANANA_BLOCK = registerBlockWithoutItem(BLOCKS, "banana",
+            () -> new CocoaBlock(BlockBehaviour.Properties.copy(Blocks.COCOA)) {
+                @Override
+                public boolean canSurvive(@NotNull BlockState blockState, @NotNull LevelReader levelReader, @NotNull BlockPos blockPos) {
+                    BlockState blockstate = levelReader.getBlockState(blockPos.relative(blockState.getValue(FACING)));
+                    return blockstate.is(TuroBlockTags.PALM_LOGS);
+                }
             });
 
     public static final RegistryObject<Block> MILK_FAT_BLOCK = registerBlock(BLOCKS, "milk_fat_block",

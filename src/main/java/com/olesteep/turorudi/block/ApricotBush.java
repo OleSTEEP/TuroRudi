@@ -46,7 +46,6 @@ public class ApricotBush {
                                               @NotNull Player player,
                                               @NotNull InteractionHand interactionHand,
                                               @NotNull BlockHitResult blockHitResult) {
-
             int i = blockState.getValue(AGE);
             boolean flag = i == 3;
             if (!flag && player.getItemInHand(interactionHand).is(Items.BONE_MEAL)) {

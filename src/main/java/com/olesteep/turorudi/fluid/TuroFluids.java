@@ -17,14 +17,14 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static com.olesteep.turorudi.event.BlockRegisters.registerBlock;
+
 public class TuroFluids {
     public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("block/water_still");
     public static final ResourceLocation WATER_FLOWING_RL = new ResourceLocation("block/water_flow");
     public static final ResourceLocation WATER_OVERLAY_RL = new ResourceLocation("block/water_overlay");
 
-    public static final DeferredRegister<Fluid> FLUIDS
-            = DeferredRegister.create(ForgeRegistries.FLUIDS, TuroRudi.MOD_ID);
-
+    public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, TuroRudi.MOD_ID);
 
     public static final RegistryObject<FlowingFluid> MILK_COND_FLUID
             = FLUIDS.register("milk_condensed_fluid",
@@ -41,13 +41,11 @@ public class TuroFluids {
             .color(0xbf7a3816)).slopeFindDistance(2).levelDecreasePerBlock(2)
             .block(TuroFluids.MILK_COND_BLOCK).bucket(TuroItems.MILK_COND_BUCKET);
 
-    public static final RegistryObject<LiquidBlock> MILK_COND_BLOCK = TuroBlocks.BLOCKS.register("milk_cond",
+    public static final RegistryObject<LiquidBlock> MILK_COND_BLOCK = registerBlock(TuroBlocks.BLOCKS,"milk_cond",
             () -> new LiquidBlock(TuroFluids.MILK_COND_FLUID, BlockBehaviour.Properties.of(Material.WATER)
                     .noCollission().strength(100f).noDrops()));
 
-
-
-    public static void register(IEventBus eventBus) {
+public static void register(IEventBus eventBus) {
         FLUIDS.register(eventBus);
     }
 }

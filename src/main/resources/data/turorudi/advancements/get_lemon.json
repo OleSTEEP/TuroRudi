@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "turorudi:lemon"
+    },
+    "title": {
+      "translate": "advancements.turorudi.get_lemon.title"
+    },
+    "description": {
+      "translate": "advancements.turorudi.get_lemon.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "minecraft:husbandry/root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "turorudi:lemon"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

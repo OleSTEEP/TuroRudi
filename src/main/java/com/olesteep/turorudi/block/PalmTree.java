@@ -2,6 +2,7 @@ package com.olesteep.turorudi.block;
 
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.block.custom.TuroFlammableRotatedPillarBlock;
+import com.olesteep.turorudi.block.custom.TuroSaplingBlock;
 import com.olesteep.turorudi.world.feature.tree.CherryTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -9,7 +10,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.SaplingBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -72,8 +72,8 @@ public class PalmTree {
             });
 
     public static final RegistryObject<Block> PALM_SAPLING = registerBlock(BLOCKS, "palm_sapling",
-            () -> new SaplingBlock(new CherryTreeGrower(), BlockBehaviour.Properties.copy(Blocks.JUNGLE_SAPLING)) // Replace to PalmTreeGrower
-    );
+            () -> new TuroSaplingBlock(new CherryTreeGrower(), BlockBehaviour.Properties.copy(Blocks.JUNGLE_SAPLING), // Replace to PalmTreeGrower
+                    () -> Blocks.END_STONE));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

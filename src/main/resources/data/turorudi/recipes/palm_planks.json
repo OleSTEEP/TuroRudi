@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "turorudi:palm_logs"
+    }
+  ],
+  "result": {
+    "item": "turorudi:palm_planks",
+    "count": 4
+  }
+}

@@ -17,7 +17,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.olesteep.turorudi.event.BlockRegisters.registerBlock;
+import static com.olesteep.turorudi.event.BlockRegisters.registerBlockWithoutItem;
 
 public class TuroFluids {
     public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("block/water_still");
@@ -41,7 +41,7 @@ public class TuroFluids {
             .color(0xbf7a3816)).slopeFindDistance(2).levelDecreasePerBlock(2)
             .block(TuroFluids.MILK_COND_BLOCK).bucket(TuroItems.MILK_COND_BUCKET);
 
-    public static final RegistryObject<LiquidBlock> MILK_COND_BLOCK = registerBlock(TuroBlocks.BLOCKS,"milk_cond",
+    public static final RegistryObject<LiquidBlock> MILK_COND_BLOCK = registerBlockWithoutItem(TuroBlocks.BLOCKS,"milk_cond",
             () -> new LiquidBlock(TuroFluids.MILK_COND_FLUID, BlockBehaviour.Properties.of(Material.WATER)
                     .noCollission().strength(100f).noDrops()));
 

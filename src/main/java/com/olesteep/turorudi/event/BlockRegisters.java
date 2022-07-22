@@ -14,17 +14,16 @@ public class BlockRegisters {
 
     public static <T extends Block> RegistryObject<T> registerBlock(DeferredRegister<Block> BLOCKS, String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(BLOCKS, name, toReturn);
+        registerBlockItem(name, toReturn);
         return toReturn;
     }
 
-    public static <T extends Block> void registerBlockItem(DeferredRegister<Block> BLOCKS, String name, RegistryObject<T> block) {
+    public static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
         TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(),
                 new Item.Properties().tab(TuroCreativeTab.TUROTAB)));
     }
 
     public static <T extends Block> RegistryObject<T> registerBlockWithoutItem(DeferredRegister<Block> BLOCKS, String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        return toReturn;
+        return BLOCKS.register(name, block);
     }
 }

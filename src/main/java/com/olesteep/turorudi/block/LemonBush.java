@@ -20,8 +20,8 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
-import static com.olesteep.turorudi.event.BlockRegisters.registerBlock;
 import static com.olesteep.turorudi.event.BlockRegisters.registerBlockWithoutItem;
 
 public class LemonBush {
@@ -32,12 +32,17 @@ public class LemonBush {
                     .sound(SoundType.SWEET_BERRY_BUSH)) {
 
                 @Override
-                public ItemStack getCloneItemStack(BlockGetter block, BlockPos pos, BlockState state) {
+                public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter block, @NotNull BlockPos pos, @NotNull BlockState state) {
                     return new ItemStack(TuroItems.LEMON.get());
                 }
 
                 @Override
-                public InteractionResult use(BlockState blockState, Level level, BlockPos blockPos, Player player, InteractionHand interactionHand, BlockHitResult blockHitResult) {
+                public @NotNull InteractionResult use(@NotNull BlockState blockState,
+                                                      @NotNull Level level,
+                                                      @NotNull BlockPos blockPos,
+                                                      @NotNull Player player,
+                                                      @NotNull InteractionHand interactionHand,
+                                                      @NotNull BlockHitResult blockHitResult) {
                     int i = blockState.getValue(AGE);
                     boolean flag = i == 3;
                     if (!flag && player.getItemInHand(interactionHand).is(Items.BONE_MEAL)) {
@@ -45,8 +50,8 @@ public class LemonBush {
                     } else if (i > 1) {
                         int j = 1 + level.random.nextInt(2);
                         popResource(level, blockPos, new ItemStack(TuroItems.LEMON.get(), j + (flag ? 1 : 0)));
-                        level.playSound((Player)null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
-                        level.setBlock(blockPos, blockState.setValue(AGE, Integer.valueOf(1)), 2);
+                        level.playSound(null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+                        level.setBlock(blockPos, blockState.setValue(AGE, 1), 2);
                         return InteractionResult.sidedSuccess(level.isClientSide);
                     } else {
                         return super.use(blockState, level, blockPos, player, interactionHand, blockHitResult);

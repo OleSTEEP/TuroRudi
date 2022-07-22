@@ -7,7 +7,6 @@ import net.minecraft.world.level.block.Block;
 
 public class TuroBlockTags {
     public static final TagKey<Block> CHERRY_LOGS = create("cherry_logs");
-    public static final TagKey<Block> LEMON_LOGS = create("lemon_logs");
     public static final TagKey<Block> ORANGE_LOGS = create("orange_logs");
     public static final TagKey<Block> PALM_LOGS = create("palm_logs");
 

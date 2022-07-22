@@ -14,6 +14,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.NotNull;
 
 import static com.olesteep.turorudi.event.BlockRegisters.registerBlock;
 import static com.olesteep.turorudi.event.BlockRegisters.registerBlockWithoutItem;
@@ -25,7 +26,7 @@ public class TuroBlocks {
     public static final RegistryObject<Block> COCONUT_BLOCK = registerBlockWithoutItem(BLOCKS, "coconut_block",
             () -> new CocoaBlock(BlockBehaviour.Properties.copy(Blocks.COCOA)) {
         @Override
-        public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
+        public boolean canSurvive(@NotNull BlockState blockState, @NotNull LevelReader levelReader, @NotNull BlockPos blockPos) {
             BlockState blockstate = levelReader.getBlockState(blockPos.relative(blockState.getValue(FACING)));
             return blockstate.is(TuroBlockTags.PALM_LOGS);
         }

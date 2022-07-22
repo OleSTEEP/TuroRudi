@@ -30,7 +30,7 @@ public class TuroConfiguredFeatures {
                     FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
                             BlockStateProvider.simple(ApricotBush.APRICOT_BUSH.get()
                                     .defaultBlockState()
-                                    .setValue(SweetBerryBushBlock.AGE, Integer.valueOf(3)))), List.of(Blocks.GRASS_BLOCK)));
+                                    .setValue(SweetBerryBushBlock.AGE, 3))), List.of(Blocks.GRASS_BLOCK)));
 
 
     public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> PATCH_BLBERRY_BUSH =
@@ -38,7 +38,7 @@ public class TuroConfiguredFeatures {
                     FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
                             BlockStateProvider.simple(BlueBerryBush.BLBERRY_BUSH.get()
                                     .defaultBlockState()
-                                    .setValue(SweetBerryBushBlock.AGE, Integer.valueOf(3)))), List.of(Blocks.GRASS_BLOCK)));
+                                    .setValue(SweetBerryBushBlock.AGE, 3))), List.of(Blocks.GRASS_BLOCK)));
 
 
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> CHERRY_TREE =
@@ -61,7 +61,7 @@ public class TuroConfiguredFeatures {
                     FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(
                             BlockStateProvider.simple(LemonBush.LEMON_BUSH.get()
                                     .defaultBlockState()
-                                    .setValue(SweetBerryBushBlock.AGE, Integer.valueOf(3)))), List.of(Blocks.GRASS_BLOCK)));
+                                    .setValue(SweetBerryBushBlock.AGE, 3))), List.of(Blocks.GRASS_BLOCK)));
 
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> ORANGE_TREE =
             FeatureUtils.register("orange", Feature.TREE, new TreeConfigurationBuilder(

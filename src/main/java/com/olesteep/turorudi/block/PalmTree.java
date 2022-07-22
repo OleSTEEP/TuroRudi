@@ -20,8 +20,7 @@ import net.minecraftforge.registries.RegistryObject;
 import static com.olesteep.turorudi.event.BlockRegisters.registerBlock;
 
 public class PalmTree {
-    public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
     public static final RegistryObject<Block> PALM_LOG = registerBlock(BLOCKS, "palm_log",
             () -> new TuroFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.JUNGLE_LOG))

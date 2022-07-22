@@ -36,13 +36,13 @@ public class TuroFluids {
 
 
     public static final ForgeFlowingFluid.Properties MILK_COND_PROPERTIES = new ForgeFlowingFluid.Properties(
-            MILK_COND_FLUID, MILK_COND_FLOWING, FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
+            () -> MILK_COND_FLUID.get(), () -> MILK_COND_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL)
             .density(15).luminosity(2).viscosity(5).sound(SoundEvents.HONEY_DRINK).overlay(WATER_OVERLAY_RL)
             .color(0xbf7a3816)).slopeFindDistance(2).levelDecreasePerBlock(2)
-            .block(TuroFluids.MILK_COND_BLOCK).bucket(TuroItems.MILK_COND_BUCKET);
+            .block(() -> TuroFluids.MILK_COND_BLOCK.get()).bucket(() -> TuroItems.MILK_COND_BUCKET.get());
 
     public static final RegistryObject<LiquidBlock> MILK_COND_BLOCK = registerBlockWithoutItem(TuroBlocks.BLOCKS,"milk_cond",
-            () -> new LiquidBlock(TuroFluids.MILK_COND_FLUID, BlockBehaviour.Properties.of(Material.WATER)
+            () -> new LiquidBlock(() -> TuroFluids.MILK_COND_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER)
                     .noCollission().strength(100f).noDrops()));
 
 public static void register(IEventBus eventBus) {

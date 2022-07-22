@@ -2,13 +2,9 @@ package com.olesteep.turorudi.block;
 
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.block.custom.TuroFlammableRotatedPillarBlock;
-import com.olesteep.turorudi.item.TuroCreativeTab;
-import com.olesteep.turorudi.item.TuroItems;
 import com.olesteep.turorudi.world.feature.tree.OrangeTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -21,26 +17,26 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.function.Supplier;
+import static com.olesteep.turorudi.event.BlockRegisters.registerBlock;
 
 public class OrangeTree {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<Block> ORANGE_LOG = registerBlock("orange_log",
+    public static final RegistryObject<Block> ORANGE_LOG = registerBlock(BLOCKS, "orange_log",
             () -> new TuroFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG))
     );
-    public static final RegistryObject<Block> ORANGE_WOOD = registerBlock("orange_wood",
+    public static final RegistryObject<Block> ORANGE_WOOD = registerBlock(BLOCKS, "orange_wood",
             () -> new TuroFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD))
     );
-    public static final RegistryObject<Block> STRIPPED_ORANGE_LOG = registerBlock("stripped_orange_log",
+    public static final RegistryObject<Block> STRIPPED_ORANGE_LOG = registerBlock(BLOCKS, "stripped_orange_log",
             () -> new TuroFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG))
     );
-    public static final RegistryObject<Block> STRIPPED_ORANGE_WOOD = registerBlock("stripped_orange_wood",
+    public static final RegistryObject<Block> STRIPPED_ORANGE_WOOD = registerBlock(BLOCKS, "stripped_orange_wood",
             () -> new TuroFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD))
     );
 
-    public static final RegistryObject<Block> ORANGE_PLANKS = registerBlock("orange_planks",
+    public static final RegistryObject<Block> ORANGE_PLANKS = registerBlock(BLOCKS, "orange_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
@@ -58,7 +54,7 @@ public class OrangeTree {
                 }
             });
 
-    public static final RegistryObject<Block> ORANGE_LEAVES = registerBlock("orange_leaves",
+    public static final RegistryObject<Block> ORANGE_LEAVES = registerBlock(BLOCKS, "orange_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
@@ -76,21 +72,9 @@ public class OrangeTree {
                 }
             });
 
-    public static final RegistryObject<Block> ORANGE_SAPLING = registerBlock("orange_sapling",
+    public static final RegistryObject<Block> ORANGE_SAPLING = registerBlock(BLOCKS, "orange_sapling",
             () -> new SaplingBlock(new OrangeTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING))
     );
-
-    private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
-    }
-
-    private static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-
-        TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(TuroCreativeTab.TUROTAB)));
-    }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

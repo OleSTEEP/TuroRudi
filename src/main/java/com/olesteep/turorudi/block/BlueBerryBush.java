@@ -24,12 +24,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.function.Supplier;
+import static com.olesteep.turorudi.event.BlockRegisters.registerBlock;
+import static com.olesteep.turorudi.event.BlockRegisters.registerBlockWithoutItem;
 
 public class BlueBerryBush {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<Block> BLBERRY_BUSH = registerBlock(
+    public static final RegistryObject<Block> BLBERRY_BUSH = registerBlockWithoutItem(BLOCKS,"blueberry_bush",
             () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).randomTicks().noCollission()
                     .sound(SoundType.SWEET_BERRY_BUSH)) {
 
@@ -55,11 +56,6 @@ public class BlueBerryBush {
             }
         }
     });
-
-    private static <T extends Block> RegistryObject<T> registerBlock(Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register("blueberry_bush", block);
-        return toReturn;
-    }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

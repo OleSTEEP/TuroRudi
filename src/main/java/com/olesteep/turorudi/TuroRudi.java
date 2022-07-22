@@ -20,15 +20,22 @@ public class TuroRudi {
     public TuroRudi() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        ApricotBush.register(eventBus);
-        BlueBerryBush.register(eventBus);
+        //Blocks
         CherryTree.register(eventBus);
-        LemonBush.register(eventBus);
         OrangeTree.register(eventBus);
         PalmTree.register(eventBus);
         TuroBlocks.register(eventBus);
+
+        //Fluids
         TuroFluids.register(eventBus);
+
+        //Items
+        ApricotBush.register(eventBus);
+        BlueBerryBush.register(eventBus);
+        LemonBush.register(eventBus);
         TuroItems.register(eventBus);
+
+        //TuroRudies
         Alexandrov.register(eventBus);
         Pottyos.register(eventBus);
         Svitlogorie.register(eventBus);

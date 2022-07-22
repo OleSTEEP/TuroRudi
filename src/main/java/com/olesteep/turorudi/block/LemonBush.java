@@ -1,17 +1,13 @@
 package com.olesteep.turorudi.block;
 
 import com.olesteep.turorudi.TuroRudi;
-import com.olesteep.turorudi.item.TuroCreativeTab;
 import com.olesteep.turorudi.item.TuroItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
@@ -25,12 +21,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.function.Supplier;
+import static com.olesteep.turorudi.event.BlockRegisters.registerBlock;
+import static com.olesteep.turorudi.event.BlockRegisters.registerBlockWithoutItem;
 
 public class LemonBush {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<Block> LEMON_BUSH = registerBlock(
+    public static final RegistryObject<Block> LEMON_BUSH = registerBlockWithoutItem(BLOCKS, "lemon_bush",
             () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).randomTicks().noCollission()
                     .sound(SoundType.SWEET_BERRY_BUSH)) {
 
@@ -56,11 +53,6 @@ public class LemonBush {
                     }
                 }
             });
-
-    private static <T extends Block> RegistryObject<T> registerBlock(Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register("lemon_bush", block);
-        return toReturn;
-    }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

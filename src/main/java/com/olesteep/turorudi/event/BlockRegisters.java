@@ -19,8 +19,7 @@ public class BlockRegisters {
     }
 
     public static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties().tab(TuroCreativeTab.TUROTAB)));
+        TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(TuroCreativeTab.TUROTAB)));
     }
 
     public static <T extends Block> RegistryObject<T> registerBlockWithoutItem(DeferredRegister<Block> BLOCKS, String name, Supplier<T> block) {

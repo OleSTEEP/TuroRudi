@@ -31,22 +31,14 @@ import static com.olesteep.turorudi.event.BlockRegisters.registerBlockWithoutIte
 public class BlueBerryBush {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<Block> BLBERRY_BUSH = registerBlockWithoutItem(BLOCKS,"blueberry_bush",
-            () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).randomTicks().noCollission()
-                    .sound(SoundType.SWEET_BERRY_BUSH)) {
-
+    public static final RegistryObject<Block> BLBERRY_BUSH = registerBlockWithoutItem(BLOCKS,"blueberry_bush", () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH)) {
         @Override
         public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter block, @NotNull BlockPos pos, @NotNull BlockState state) {
             return new ItemStack(TuroItems.BLBERRY.get());
         }
 
         @Override
-        public @NotNull InteractionResult use(@NotNull BlockState blockState,
-                                              @NotNull Level level,
-                                              @NotNull BlockPos blockPos,
-                                              @NotNull Player player,
-                                              @NotNull InteractionHand interactionHand,
-                                              @NotNull BlockHitResult blockHitResult) {
+        public @NotNull InteractionResult use(@NotNull BlockState blockState, @NotNull Level level, @NotNull BlockPos blockPos, @NotNull Player player, @NotNull InteractionHand interactionHand, @NotNull BlockHitResult blockHitResult) {
             int i = blockState.getValue(AGE);
             boolean flag = i == 3;
             if (!flag && player.getItemInHand(interactionHand).is(Items.BONE_MEAL)) {

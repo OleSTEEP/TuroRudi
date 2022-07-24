@@ -27,15 +27,13 @@ public class TuroTreeGeneration {
         }
 
         if(types.contains(BiomeDictionary.Type.HOT)) {
-            List<Holder<PlacedFeature>> base =
-                    event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+            List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(TuroPlacedFeatures.ORANGE_PLACED);
         }
 
         if(types.contains(BiomeDictionary.Type.BEACH)) {
-            List<Holder<PlacedFeature>> base =
-                    event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+            List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(TuroPlacedFeatures.PALM_PLACED);
         }

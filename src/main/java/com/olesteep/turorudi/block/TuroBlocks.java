@@ -26,9 +26,7 @@ import static com.olesteep.turorudi.event.BlockRegisters.registerBlockWithoutIte
 public class TuroBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
-
-    public static final RegistryObject<Block> COCONUT_BLOCK = registerBlockWithoutItem(BLOCKS, "coconut",
-            () -> new CocoaBlock(BlockBehaviour.Properties.copy(Blocks.COCOA)) {
+    public static final RegistryObject<Block> COCONUT_BLOCK = registerBlockWithoutItem(BLOCKS, "coconut", () -> new CocoaBlock(BlockBehaviour.Properties.copy(Blocks.COCOA)) {
         @Override
         public boolean canSurvive(@NotNull BlockState blockState, @NotNull LevelReader levelReader, @NotNull BlockPos blockPos) {
             BlockState blockstate = levelReader.getBlockState(blockPos.relative(blockState.getValue(FACING)));
@@ -36,8 +34,7 @@ public class TuroBlocks {
         }
     });
 
-    public static final RegistryObject<Block> BANANA_BLOCK = registerBlockWithoutItem(BLOCKS, "banana",
-            () -> new CocoaBlock(BlockBehaviour.Properties.copy(Blocks.COCOA)) {
+    public static final RegistryObject<Block> BANANA_BLOCK = registerBlockWithoutItem(BLOCKS, "banana", () -> new CocoaBlock(BlockBehaviour.Properties.copy(Blocks.COCOA)) {
         @Override
         public boolean canSurvive(@NotNull BlockState blockState, @NotNull LevelReader levelReader, @NotNull BlockPos blockPos) {
             BlockState blockstate = levelReader.getBlockState(blockPos.relative(blockState.getValue(FACING)));
@@ -45,17 +42,9 @@ public class TuroBlocks {
         }
     });
 
-    public static final RegistryObject<Block> MILK_FAT_BLOCK = registerBlock(BLOCKS, "milk_fat_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.CAKE)
-                    .strength(3f)));
-
-    public static final RegistryObject<Block> TURO_BLOCK = registerBlock(BLOCKS, "turorudi_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.CAKE)
-                    .strength(3f)));
-
-    public static final RegistryObject<Block> TURO_BAD_BLOCK = registerBlock(BLOCKS, "turorudi_bad_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.CAKE)
-                    .strength(3f)));
+    public static final RegistryObject<Block> MILK_FAT_BLOCK = registerBlock(BLOCKS, "milk_fat_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(3f)));
+    public static final RegistryObject<Block> TURO_BLOCK = registerBlock(BLOCKS, "turorudi_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(3f)));
+    public static final RegistryObject<Block> TURO_BAD_BLOCK = registerBlock(BLOCKS, "turorudi_bad_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(3f)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

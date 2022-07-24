@@ -14,6 +14,9 @@ public class Pottyos {
     public static final RegistryObject<Item> POTTYOS_VANILLA = ITEMS.register("pottyos",
             () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA)));
 
+    public static final RegistryObject<Item> POTTYOS_MILK = ITEMS.register("pottyos_milk",
+            () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA_MILK)));
+
     public static final RegistryObject<Item> POTTYOS_STRAW = ITEMS.register("pottyos_strawberry",
             () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_STRAW)));
 

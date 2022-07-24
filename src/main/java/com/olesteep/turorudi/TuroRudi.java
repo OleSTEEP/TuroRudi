@@ -3,6 +3,7 @@ package com.olesteep.turorudi;
 import com.olesteep.turorudi.block.*;
 import com.olesteep.turorudi.fluid.TuroFluids;
 import com.olesteep.turorudi.item.*;
+import com.olesteep.turorudi.world.feature.treedecorators.TuroTreeDecoratorType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.common.MinecraftForge;
@@ -29,6 +30,9 @@ public class TuroRudi {
         BlueBerryBush.register(eventBus);
         LemonBush.register(eventBus);
         TuroItems.register(eventBus);
+
+        //Decorators
+        TuroTreeDecoratorType.register(eventBus);
 
         //TuroRudies
         Alexandrov.register(eventBus);

@@ -28,4 +28,8 @@ public class TuroPlacedFeatures {
     public static final Holder<PlacedFeature> ORANGE_PLACED = PlacementUtils.register("orange_placed",
             TuroConfiguredFeatures.ORANGE_SPAWN, VegetationPlacements.treePlacement(
                     PlacementUtils.countExtra(0, 0.025f, 1)));
+
+    public static final Holder<PlacedFeature> PALM_PLACED = PlacementUtils.register("palm_placed",
+            TuroConfiguredFeatures.PALM_SPAWN, VegetationPlacements.treePlacement(
+                    PlacementUtils.countExtra(0, 0.5f, 1)));
 }

@@ -5,15 +5,15 @@
         "banana": "turorudi:block/banana_stage0"
     },
     "elements": [
-        {   "from": [ 6.5, 7, 12.5 ],
-            "to": [ 9.5, 12, 16.5 ],
+        {   "from": [ 6.5, 7, 12 ],
+            "to": [ 9.5, 12, 15 ],
             "faces": {
                 "down":  { "uv": [  0, 0,  3, 3 ], "texture": "#banana" },
                 "up":    { "uv": [  0, 0,  3, 3 ], "texture": "#banana" },
-                "north": { "uv": [ 11, 3, 15, 9 ], "texture": "#banana" },
-                "south": { "uv": [ 11, 3, 15, 9 ], "texture": "#banana" },
-                "west":  { "uv": [ 11, 3, 15, 9 ], "texture": "#banana" },
-                "east":  { "uv": [ 11, 3, 15, 9 ], "texture": "#banana" }
+                "north": { "uv": [ 12, 3, 15, 9 ], "texture": "#banana" },
+                "south": { "uv": [ 12, 3, 15, 9 ], "texture": "#banana" },
+                "west":  { "uv": [ 12, 3, 15, 9 ], "texture": "#banana" },
+                "east":  { "uv": [ 12, 3, 15, 9 ], "texture": "#banana" }
             }
         },
         {   "from": [ 8, 12, 12 ],

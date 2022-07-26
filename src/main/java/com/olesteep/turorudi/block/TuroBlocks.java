@@ -5,6 +5,7 @@ import com.olesteep.turorudi.block.custom.TuroBananaBlock;
 import com.olesteep.turorudi.block.custom.TuroCoconutBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,9 +21,9 @@ public class TuroBlocks {
 
     public static final RegistryObject<Block> COCONUT_BLOCK = registerBlockWithoutItem(BLOCKS, "coconut", () -> new TuroCoconutBlock(BlockBehaviour.Properties.copy(Blocks.COCOA)));
     public static final RegistryObject<Block> BANANA_BLOCK = registerBlockWithoutItem(BLOCKS, "banana", () -> new TuroBananaBlock(BlockBehaviour.Properties.copy(Blocks.COCOA)));
-    public static final RegistryObject<Block> MILK_FAT_BLOCK = registerBlock(BLOCKS, "milk_fat_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(3f)));
-    public static final RegistryObject<Block> TURO_BLOCK = registerBlock(BLOCKS, "turorudi_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(3f)));
-    public static final RegistryObject<Block> TURO_BAD_BLOCK = registerBlock(BLOCKS, "turorudi_bad_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(3f)));
+    public static final RegistryObject<Block> MILK_FAT_BLOCK = registerBlock(BLOCKS, "milk_fat_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(0.8F).sound(SoundType.SLIME_BLOCK)));
+    public static final RegistryObject<Block> TURO_BLOCK = registerBlock(BLOCKS, "turorudi_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL)));
+    public static final RegistryObject<Block> TURO_BAD_BLOCK = registerBlock(BLOCKS, "turorudi_bad_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class TuroFoliagePlacerType {
     public static final DeferredRegister<FoliagePlacerType<?>> FOLIAGE = DeferredRegister.create(ForgeRegistries.FOLIAGE_PLACER_TYPES, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<FoliagePlacerType<?>> PALM_DECORATOR = FOLIAGE.register("palm_foliage", () -> new FoliagePlacerType(PalmFoliagePlacer.CODEC));
+    public static final RegistryObject<FoliagePlacerType<?>> PALM_FOLIAGE_PLACER = FOLIAGE.register("palm_foliage", () -> new FoliagePlacerType(PalmFoliagePlacer.CODEC));
 
     public static void register(IEventBus eventBus) {
         FOLIAGE.register(eventBus);

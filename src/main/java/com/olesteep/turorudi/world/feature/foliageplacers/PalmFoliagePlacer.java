@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 import java.util.function.BiConsumer;
@@ -22,8 +23,8 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         super(p_161343_, p_161344_);
     }
 
-    protected FoliagePlacerType<?> type() {
-        return FoliagePlacerType.ACACIA_FOLIAGE_PLACER;
+    protected @NotNull FoliagePlacerType<?> type() {
+        return TuroFoliagePlacerType.PALM_FOLIAGE_PLACER.get();
     }
 
     protected void createFoliage(LevelSimulatedReader WorldReader, BiConsumer<BlockPos, BlockState> AcceptedLocations, Random Rand, TreeConfiguration TreeConf, int p_161350_, FoliagePlacer.FoliageAttachment p_161351_, int p_161352_, int p_161353_, int p_161354_) {

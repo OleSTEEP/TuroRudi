@@ -2,7 +2,7 @@ package com.olesteep.turorudi.event;
 
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.block.*;
-import com.olesteep.turorudi.fluid.TuroFluids;
+import com.olesteep.turorudi.fluid.TuroFluidCondensedMilkHolder;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.api.distmarker.Dist;
@@ -21,9 +21,9 @@ public class TuroEventClientBusEvents {
         ItemBlockRenderTypes.setRenderLayer(TuroBlocks.COCONUT_BLOCK.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_SAPLING.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_BLOCK.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_FLUID.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(TuroFluids.MILK_COND_FLOWING.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(TuroFluidCondensedMilkHolder.BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(TuroFluidCondensedMilkHolder.STILL.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(TuroFluidCondensedMilkHolder.FLOWING.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(LemonBush.LEMON_BUSH.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(OrangeTree.ORANGE_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(OrangeTree.ORANGE_SAPLING.get(), RenderType.cutout());

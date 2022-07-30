@@ -1,0 +1,5 @@
+{
+  "type": "turorudi:vegetal",
+  "biomes": "#forge:is_cold",
+  "feature": "turorudi:blueberry_bush_placed"
+}

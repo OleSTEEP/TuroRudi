@@ -1,0 +1,5 @@
+{
+  "type": "turorudi:vegetal",
+  "biomes": "#minecraft:is_beach",
+  "feature": "turorudi:palm_placed"
+}

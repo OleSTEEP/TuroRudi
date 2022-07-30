@@ -1,8 +1,10 @@
 package com.olesteep.turorudi;
 
 import com.olesteep.turorudi.block.*;
-import com.olesteep.turorudi.fluid.TuroFluids;
+import com.olesteep.turorudi.fluid.TuroFluidCondensedMilkHolder;
 import com.olesteep.turorudi.item.*;
+import com.olesteep.turorudi.world.biomemods.TuroBiomeModifiers;
+import com.olesteep.turorudi.world.feature.TuroPlacedFeatures;
 import com.olesteep.turorudi.world.feature.foliageplacers.TuroFoliagePlacerType;
 import com.olesteep.turorudi.world.feature.treedecorators.TuroTreeDecoratorType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +19,9 @@ public class TuroRudi {
     public TuroRudi() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        //Biome modifiers
+        TuroBiomeModifiers.register((eventBus));
+
         //Blocks
         CherryTree.register(eventBus);
         OrangeTree.register(eventBus);
@@ -27,7 +32,7 @@ public class TuroRudi {
         TuroTreeDecoratorType.register(eventBus);
 
         //Fluids
-        TuroFluids.register(eventBus);
+        TuroFluidCondensedMilkHolder.register(eventBus);
 
         //Foliage placers
         TuroFoliagePlacerType.register(eventBus);
@@ -37,6 +42,9 @@ public class TuroRudi {
         BlueBerryBush.register(eventBus);
         LemonBush.register(eventBus);
         TuroItems.register(eventBus);
+
+        //Placed features
+        TuroPlacedFeatures.register(eventBus);
 
         //TuroRudies
         Alexandrov.register(eventBus);

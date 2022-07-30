@@ -1,0 +1,5 @@
+{
+  "type": "turorudi:vegetal",
+  "biomes": "#forge:is_hot",
+  "feature": "turorudi:apricot_bush_placed"
+}

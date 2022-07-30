@@ -1,0 +1,5 @@
+{
+  "type": "turorudi:vegetal",
+  "biomes": "#minecraft:is_overworld",
+  "feature": "turorudi:cherry_placed"
+}

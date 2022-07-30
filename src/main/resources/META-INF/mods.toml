@@ -37,6 +37,6 @@ This mod add to game TuroRudi
     modId="minecraft"
     mandatory=true
 
-    versionRange="[1.18.1,1.19)"
+    versionRange="[1.18.1,1.20)"
     ordering="NONE"
     side="BOTH"

@@ -1,7 +1,8 @@
 package com.olesteep.turorudi.tags;
 
-import net.minecraft.core.Registry;
+import com.olesteep.turorudi.TuroRudi;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 
@@ -13,11 +14,7 @@ public class TuroBlockTags {
     private TuroBlockTags() {
     }
 
-    private static TagKey<Block> create(String string) {
-        return TagKey.create(Registry.BLOCK_REGISTRY, new ResourceLocation(string));
-    }
-
-    public static TagKey<Block> create(ResourceLocation name) {
-        return TagKey.create(Registry.BLOCK_REGISTRY, name);
+    private static TagKey<Block> create(String name) {
+        return BlockTags.create(new ResourceLocation(TuroRudi.MOD_ID, name));
     }
 }

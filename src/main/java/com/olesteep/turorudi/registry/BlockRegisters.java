@@ -1,4 +1,4 @@
-package com.olesteep.turorudi.event;
+package com.olesteep.turorudi.registry;
 
 import com.olesteep.turorudi.item.TuroCreativeTab;
 import com.olesteep.turorudi.item.TuroItems;

@@ -17,7 +17,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.olesteep.turorudi.event.BlockRegisters.registerBlock;
+import static com.olesteep.turorudi.registry.BlockRegisters.registerBlock;
 
 public class CherryTree {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);

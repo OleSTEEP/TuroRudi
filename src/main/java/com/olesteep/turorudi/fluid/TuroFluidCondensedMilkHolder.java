@@ -1,7 +1,7 @@
 package com.olesteep.turorudi.fluid;
 
 import com.olesteep.turorudi.TuroRudi;
-import com.olesteep.turorudi.event.BlockRegisters;
+import com.olesteep.turorudi.registry.BlockRegisters;
 import com.olesteep.turorudi.fluid.block.CondensedMilkFluidBlock;
 import com.olesteep.turorudi.item.TuroCreativeTab;
 import net.minecraft.resources.ResourceLocation;

@@ -13,8 +13,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.olesteep.turorudi.event.BlockRegisters.registerBlock;
-import static com.olesteep.turorudi.event.BlockRegisters.registerBlockWithoutItem;
+import static com.olesteep.turorudi.registry.BlockRegisters.registerBlock;
+import static com.olesteep.turorudi.registry.BlockRegisters.registerBlockWithoutItem;
 
 public class TuroBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);

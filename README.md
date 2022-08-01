@@ -9,7 +9,8 @@ Game version - 1.19.x
 * Svitlogorie
 * Vkusnoteevo
 * Vologosha
-  (this list will be updated in the future)
+
+(this list will be updated in the future)
 
 ### Credits
 * Mojang

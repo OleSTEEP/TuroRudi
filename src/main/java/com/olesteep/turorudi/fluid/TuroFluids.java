@@ -17,7 +17,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.olesteep.turorudi.event.BlockRegisters.registerBlockWithoutItem;
+import static com.olesteep.turorudi.registry.BlockRegisters.registerBlockWithoutItem;
 
 public class TuroFluids {
     public static final ResourceLocation WATER_STILL_RL = new ResourceLocation("block/water_still");

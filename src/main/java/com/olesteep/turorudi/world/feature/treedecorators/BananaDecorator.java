@@ -28,16 +28,16 @@ public class BananaDecorator extends TreeDecorator {
         return TuroTreeDecoratorType.BANANA_DECORATOR.get();
     }
 
-    public void place(@NotNull LevelSimulatedReader WorldReader, @NotNull BiConsumer<BlockPos, BlockState> AcceptedLocations, Random Rand, @NotNull List<BlockPos> Logs, @NotNull List<BlockPos> Leaves) {
-        if (!(Rand.nextFloat() >= this.probability)) {
-            int i = Logs.get(0).getY();
-            Logs.stream().filter((p_69980_) -> p_69980_.getY() - i <= 2).forEach((p_161728_) -> {
+    public void place(@NotNull LevelSimulatedReader worldReader, @NotNull BiConsumer<BlockPos, BlockState> acceptedLocations, Random random, @NotNull List<BlockPos> logs, @NotNull List<BlockPos> leaves) {
+        if (!(random.nextFloat() >= this.probability)) {
+            int i = logs.get(0).getY();
+            logs.stream().filter((p_69980_) -> p_69980_.getY() - i <= 2).forEach((p_161728_) -> {
                 for(Direction direction : Direction.Plane.HORIZONTAL) {
-                    if (Rand.nextFloat() <= 0.25F) {
+                    if (random.nextFloat() <= 0.25F) {
                         Direction direction1 = direction.getOpposite();
                         BlockPos blockpos = p_161728_.offset(direction1.getStepX(), 0, direction1.getStepZ());
-                        if (Feature.isAir(WorldReader, blockpos)) {
-                            AcceptedLocations.accept(blockpos, TuroBlocks.BANANA_BLOCK.get().defaultBlockState().setValue(CocoaBlock.AGE, Rand.nextInt(3)).setValue(CocoaBlock.FACING, direction));
+                        if (Feature.isAir(worldReader, blockpos)) {
+                            acceptedLocations.accept(blockpos, TuroBlocks.BANANA_BLOCK.get().defaultBlockState().setValue(CocoaBlock.AGE, random.nextInt(3)).setValue(CocoaBlock.FACING, direction));
                         }
                     }
                 }

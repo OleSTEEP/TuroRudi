@@ -46,10 +46,24 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().above(p_161354_).south(1).west(1),radius - 2, height - 1, flag);
 
         //Layer 3
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().above(p_161354_).north(2),radius - 2, height - 2, flag);
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().above(p_161354_).south(2),radius - 2, height - 2, flag);
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().above(p_161354_).west(2),radius - 2, height - 2, flag);
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().above(p_161354_).east(2),radius - 2, height - 2, flag);
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().above(p_161354_).north(1).east(1),radius - 2, height - 2, flag);
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().above(p_161354_).north(1).west(1),radius - 2, height - 2, flag);
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().above(p_161354_).south(1).east(1),radius - 2, height - 2, flag);
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().above(p_161354_).south(1).west(1),radius - 2, height - 2, flag);
         this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().north(3),radius - 2,   height - 2, flag);
         this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().south(3),radius - 2,   height - 2, flag);
         this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().west(3), radius - 2,   height - 2, flag);
         this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().east(3), radius - 2,   height - 2, flag);
+
+        //Layer 4
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().north(3),radius - 2,   height - 3, flag);
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().south(3),radius - 2,   height - 3, flag);
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().west(3), radius - 2,   height - 3, flag);
+        this.placeLeavesRow(worldReader, acceptedLocations, random, treeConfiguration, attachment.pos().east(3), radius - 2,   height - 3, flag);
     }
 
     public int foliageHeight(@NotNull Random random, int height, @NotNull TreeConfiguration treeConfiguration) {

@@ -30,7 +30,7 @@ public class CoconutDecorator extends TreeDecorator {
 
     public void place(@NotNull LevelSimulatedReader worldReader, @NotNull BiConsumer<BlockPos, BlockState> acceptedLocations, Random random, @NotNull List<BlockPos> logs, @NotNull List<BlockPos> leaves) {
         if (!(random.nextFloat() >= this.probability)) {
-            int i = logs.get(0).getY();
+            int i = leaves.get(0).getY();
             logs.stream().filter((p_69980_) -> p_69980_.getY() - i <= 2).forEach((p_161728_) -> {
                 for(Direction direction : Direction.Plane.HORIZONTAL) {
                     if (random.nextFloat() <= 0.25F) {

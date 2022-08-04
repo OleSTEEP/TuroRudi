@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "turorudi:coconut_item",
-    "tropicraft:coconut_chunk"
+    "turorudi:coconut_item"
   ]
 }

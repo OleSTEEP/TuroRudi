@@ -21,9 +21,6 @@ public class TuroEventClientBusEvents {
         ItemBlockRenderTypes.setRenderLayer(TuroBlocks.COCONUT_BLOCK.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(CherryTree.CHERRY_SAPLING.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(TuroFluidCondensedMilkHolder.BLOCK.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(TuroFluidCondensedMilkHolder.STILL.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(TuroFluidCondensedMilkHolder.FLOWING.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(LemonBush.LEMON_BUSH.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(OrangeTree.ORANGE_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(OrangeTree.ORANGE_SAPLING.get(), RenderType.cutout());

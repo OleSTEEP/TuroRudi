@@ -1,6 +1,6 @@
 modLoader="javafml"
 
-loaderVersion="[40,)"
+loaderVersion="[41,)"
 
 license="All rights reserved"
 
@@ -27,7 +27,7 @@ Minecraft mod that adds delicious treats to the game - TuroRudi.
 
     mandatory=true
 
-    versionRange="[40,)"
+    versionRange="[41,)"
 
     ordering="NONE"
 

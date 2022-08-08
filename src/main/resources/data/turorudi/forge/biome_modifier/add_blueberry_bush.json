@@ -1,5 +1,5 @@
 {
   "type": "turorudi:vegetal",
-  "biomes": "#forge:is_cold",
+  "biomes": "#minecraft:is_taiga",
   "feature": "turorudi:blueberry_bush_placed"
 }

@@ -4,6 +4,8 @@ import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.fluid.block.CondensedMilkFluidBlock;
 import com.olesteep.turorudi.item.TuroCreativeTab;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -13,6 +15,7 @@ import net.minecraft.world.level.material.FlowingFluid;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.client.extensions.common.IClientFluidTypeExtensions;
+import net.minecraftforge.common.SoundAction;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fluids.FluidType;
 import net.minecraftforge.fluids.ForgeFlowingFluid;
@@ -65,6 +68,22 @@ public class TuroFluidCondensedMilkHolder {
                 }
             });
         }
+
+        @Override
+        public SoundEvent getSound(SoundAction action) {
+            return SoundEvents.HONEY_DRINK;
+        }
+
+        @Override
+        public int getDensity() {
+            return 3000;
+        }
+
+        @Override
+        public int getViscosity() {
+            return 6000;
+        }
+
     });
 
     private static ForgeFlowingFluid.Properties makeProperties() {

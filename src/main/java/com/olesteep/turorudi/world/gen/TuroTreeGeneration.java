@@ -20,8 +20,7 @@ public class TuroTreeGeneration {
         Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
         if(types.contains(BiomeDictionary.Type.OVERWORLD)) {
-            List<Holder<PlacedFeature>> base =
-                    event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
+            List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(TuroPlacedFeatures.CHERRY_PLACED);
         }
@@ -32,7 +31,7 @@ public class TuroTreeGeneration {
             base.add(TuroPlacedFeatures.ORANGE_PLACED);
         }
 
-        if(types.contains(BiomeDictionary.Type.BEACH)) {
+        if(!(types.contains(BiomeDictionary.Type.COLD)) & types.contains(BiomeDictionary.Type.BEACH)) {
             List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
             base.add(TuroPlacedFeatures.PALM_PLACED);

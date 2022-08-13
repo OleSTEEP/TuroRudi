@@ -2,7 +2,7 @@
 
 Minecraft mod that adds delicious treats to the game - TuroRudi. The mod is at an early stage of development, but is already playable on most mod packs.
 
-[![License: LGPL](https://img.shields.io/badge/License-LGPL-green.svg)](https://opensource.org/licenses/LGPL)
+[![License: LGPL](https://img.shields.io/badge/License-LGPL-green.svg)](https://opensource.org/licenses/LGPL-2.1)
 
 ### TuroRudies
 * **B. YU. Alexandrov** ![alexandrov](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/alexandrov.png)

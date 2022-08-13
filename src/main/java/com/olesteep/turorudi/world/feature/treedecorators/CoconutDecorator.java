@@ -31,11 +31,11 @@ public class CoconutDecorator extends TreeDecorator {
     public void place(@NotNull LevelSimulatedReader worldReader, @NotNull BiConsumer<BlockPos, BlockState> acceptedLocations, Random random, @NotNull List<BlockPos> logs, @NotNull List<BlockPos> leaves) {
         if (!(random.nextFloat() >= this.probability)) {
             int i = leaves.get(0).getY();
-            logs.stream().filter((p_69980_) -> p_69980_.getY() - i <= 2).forEach((p_161728_) -> {
+            logs.stream().filter((log) -> i - log.getY() == -1).forEach((log) -> {
                 for(Direction direction : Direction.Plane.HORIZONTAL) {
-                    if (random.nextFloat() <= 0.25F) {
+                    if (random.nextFloat() <= 0.75F) {
                         Direction direction1 = direction.getOpposite();
-                        BlockPos blockpos = p_161728_.offset(direction1.getStepX(), 0, direction1.getStepZ());
+                        BlockPos blockpos = log.offset(direction1.getStepX(), 0, direction1.getStepZ());
                         if (Feature.isAir(worldReader, blockpos)) {
                             acceptedLocations.accept(blockpos, TuroBlocks.COCONUT_BLOCK.get().defaultBlockState().setValue(CocoaBlock.AGE, random.nextInt(3)).setValue(CocoaBlock.FACING, direction));
                         }

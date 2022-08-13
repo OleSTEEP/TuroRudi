@@ -89,7 +89,9 @@ public class TuroFluidCondensedMilkHolder {
     private static ForgeFlowingFluid.Properties makeProperties() {
         return new ForgeFlowingFluid.Properties(FLUID_TYPE, STILL, FLOWING)
                 .bucket(BUCKET)
-                .block(BLOCK);
+                .block(BLOCK)
+                .slopeFindDistance(2)
+                .levelDecreasePerBlock(2);
     }
 
     public static void register(IEventBus eventBus) {

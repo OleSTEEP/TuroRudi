@@ -24,19 +24,19 @@ public class BananaDecorator extends TreeDecorator {
         return TuroTreeDecoratorType.BANANA_DECORATOR.get();
     }
 
-    public void place(TreeDecorator.Context p_226028_) {
-        RandomSource randomsource = p_226028_.random();
+    public void place(TreeDecorator.Context placeContext) {
+        RandomSource randomsource = placeContext.random();
         if (!(randomsource.nextFloat() >= this.probability)) {
-            List<BlockPos> leaves = p_226028_.leaves();
-            List<BlockPos> logs = p_226028_.logs();
+            List<BlockPos> leaves = placeContext.leaves();
+            List<BlockPos> logs = placeContext.logs();
             int i = leaves.get(0).getY();
-            logs.stream().filter((p_69980_) -> p_69980_.getY() - i <= 2).forEach((p_226026_) -> {
+            logs.stream().filter((log) -> i - log.getY() == -1).forEach((log) -> {
                 for(Direction direction : Direction.Plane.HORIZONTAL) {
-                    if (randomsource.nextFloat() <= 0.25F) {
+                    if (randomsource.nextFloat() <= 0.75F) {
                         Direction direction1 = direction.getOpposite();
-                        BlockPos blockpos = p_226026_.offset(direction1.getStepX(), 0, direction1.getStepZ());
-                        if (p_226028_.isAir(blockpos)) {
-                            p_226028_.setBlock(blockpos, TuroBlocks.BANANA_BLOCK.get().defaultBlockState().setValue(TuroBananaBlock.AGE, randomsource.nextInt(3)).setValue(TuroBananaBlock.FACING, direction));
+                        BlockPos blockpos = log.offset(direction1.getStepX(), 0, direction1.getStepZ());
+                        if (placeContext.isAir(blockpos)) {
+                            placeContext.setBlock(blockpos, TuroBlocks.BANANA_BLOCK.get().defaultBlockState().setValue(TuroBananaBlock.AGE, randomsource.nextInt(3)).setValue(TuroBananaBlock.FACING, direction));
                         }
                     }
                 }

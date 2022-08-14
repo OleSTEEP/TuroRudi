@@ -4,7 +4,7 @@ Minecraft mod that adds delicious treats to the game - curd snacks. The mod is a
 
 [![License: LGPL](https://img.shields.io/badge/License-LGPL-green.svg)](https://opensource.org/licenses/LGPL-2.1)
 
-### TuroRudies
+### Curd snacks
 * **B. YU. Alexandrov** ![alexandrov](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/alexandrov.png)
 * **Pottyos** ![pottyos](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/pottyos.png)
 * **Svitlogorie** ![svitlogorie](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/svitlogorie.png)

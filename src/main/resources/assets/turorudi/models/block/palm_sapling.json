@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "turorudi:block/palm_sapling"
-  }
+  },
+  "render_type": "cutout"
 }

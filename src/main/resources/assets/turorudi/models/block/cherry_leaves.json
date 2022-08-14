@@ -2,5 +2,6 @@
   "parent": "minecraft:block/leaves",
   "textures": {
     "all": "turorudi:block/cherry_leaves"
-  }
+  },
+  "render_type": "cutout"
 }

@@ -2,5 +2,6 @@
   "parent": "minecraft:block/cross",
   "textures": {
     "cross": "turorudi:block/apricot_bush_stage1"
-  }
+  },
+  "render_type": "cutout"
 }

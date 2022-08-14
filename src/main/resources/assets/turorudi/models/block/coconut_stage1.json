@@ -23,5 +23,6 @@
                 "east": { "uv": [ 16, 0, 12, 4 ], "texture": "#coconut" }
             }
         }
-    ]
+    ],
+    "render_type": "cutout"
 }

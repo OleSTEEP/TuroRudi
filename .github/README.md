@@ -1,6 +1,6 @@
 # TuroRudi [![](https://cf.way2muchnoise.eu/full_655840_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/turorudi) [![](http://cf.way2muchnoise.eu/versions/655840.svg)](https://www.curseforge.com/minecraft/mc-mods/turorudi)
 
-Minecraft mod that adds delicious treats to the game - TuroRudi. The mod is at an early stage of development, but is already playable on most mod packs.
+Minecraft mod that adds delicious treats to the game - curd snacks. The mod is at an early stage of development, but is already playable on most mod packs.
 
 [![License: LGPL](https://img.shields.io/badge/License-LGPL-green.svg)](https://opensource.org/licenses/LGPL-2.1)
 

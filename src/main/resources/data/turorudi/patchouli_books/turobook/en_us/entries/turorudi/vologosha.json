@@ -1,0 +1,79 @@
+{
+  "name": "turorudi.turorudi.vologosha.guide.name",
+  "icon": "turorudi:vologosha",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.vologosha.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_vologosha"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vologosha.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vologosha"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vologosha_banana.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vologosha_banana"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vologosha_blueberry.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vologosha_blueberry"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vologosha_cherry.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vologosha_cherry"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vologosha_cocoa.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vologosha_cocoa"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vologosha_condensed.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vologosha_condensed"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vologosha_orange.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vologosha_orange"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vologosha_strawberry.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vologosha_strawberry"
+    }
+  ]
+}

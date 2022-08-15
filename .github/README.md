@@ -13,6 +13,8 @@ Minecraft mod that adds delicious treats to the game - curd snacks. The mod is a
 
 (this list will be updated in the future)
 
+This mod support patchouli documentation. If you want read some mod docs, install patchouli mod!
+
 ### Credits
 * Mojang
 * Forge

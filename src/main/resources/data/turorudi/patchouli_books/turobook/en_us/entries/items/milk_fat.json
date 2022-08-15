@@ -1,0 +1,15 @@
+{
+  "name": "item.turorudi.milk_fat",
+  "icon": "turorudi:milk_fat",
+  "category": "turorudi:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "items.turorudi.milk_fat.guide"
+    },
+    {
+      "type": "patchouli:smelting",
+      "recipe": "turorudi:milk_fat"
+    }
+  ]
+}

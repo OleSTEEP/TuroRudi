@@ -1,0 +1,15 @@
+{
+  "name": "item.turorudi.banana_item",
+  "icon": "turorudi:banana_item",
+  "category": "turorudi:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "items.turorudi.banana.guide"
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["turorudi:textures/patchouli_images/banana_palm_screenshot.png"]
+    }
+  ]
+}

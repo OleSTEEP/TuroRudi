@@ -1,0 +1,95 @@
+{
+  "name": "turorudi.turorudi.alexandrov.guide.name",
+  "icon": "turorudi:alexandrov26",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.alexandrov.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_alexandrov"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.alexandrov5.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:alexandrov5"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.alexandrov26.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:alexandrov26"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.alexandrov_chocoless.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:alexandrov_chocoless"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.alexandrov_condensed.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:alexandrov_condensed"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.alexandrov_milk5.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:alexandrov_milk5"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.alexandrov_milk26.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:alexandrov_milk26"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.alexandrov_potato.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:alexandrov_potato"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.alexandrov_souffle.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:alexandrov_souffle"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.alexandrov_souffle_milk.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:alexandrov_souffle_milk"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.alexandrov_white.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:alexandrov_white"
+    }
+  ]
+}

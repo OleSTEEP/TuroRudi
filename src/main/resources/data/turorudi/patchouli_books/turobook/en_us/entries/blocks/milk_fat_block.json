@@ -1,0 +1,15 @@
+{
+  "name": "block.turorudi.milk_fat_block",
+  "icon": "turorudi:milk_fat_block",
+  "category": "turorudi:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "blocks.turorudi.milk_fat_block.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:milk_fat_block"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "item.turorudi.glaze",
+  "icon": "turorudi:glaze",
+  "category": "turorudi:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "items.turorudi.glaze.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:glaze"
+    }
+  ]
+}

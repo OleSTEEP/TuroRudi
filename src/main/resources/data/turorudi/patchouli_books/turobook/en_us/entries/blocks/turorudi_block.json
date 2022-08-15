@@ -1,0 +1,15 @@
+{
+  "name": "block.turorudi.turorudi_block",
+  "icon": "turorudi:turorudi_block",
+  "category": "turorudi:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "blocks.turorudi.turorudi_block.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:turorudi_block"
+    }
+  ]
+}

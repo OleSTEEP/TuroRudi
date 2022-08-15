@@ -1,0 +1,19 @@
+{
+  "name": "item.turorudi.curd",
+  "icon": "turorudi:curd",
+  "category": "turorudi:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "items.turorudi.curd.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:curd"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:curd_bad"
+    }
+  ]
+}

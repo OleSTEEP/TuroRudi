@@ -1,0 +1,15 @@
+{
+  "name": "item.turorudi.apricot",
+  "icon": "turorudi:apricot",
+  "category": "turorudi:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "items.turorudi.apricot.guide"
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["turorudi:textures/patchouli_images/apricot_bush_screenshot.png"]
+    }
+  ]
+}

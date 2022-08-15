@@ -1,0 +1,14 @@
+{
+  "name": "item.turorudi.milk_condensed_bucket",
+  "icon": "turorudi:milk_condensed_bucket",
+  "category": "turorudi:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "items.turorudi.milk_condensed_bucket.guide"
+    },    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:milk_condensed_bucket"
+    }
+  ]
+}

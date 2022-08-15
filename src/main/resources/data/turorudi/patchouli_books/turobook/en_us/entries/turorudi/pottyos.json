@@ -1,0 +1,47 @@
+{
+  "name": "turorudi.turorudi.pottyos.guide.name",
+  "icon": "turorudi:pottyos",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.pottyos.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_pottyos"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.pottyos.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:pottyos"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.pottyos_milk.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:pottyos_milk"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.pottyos_strawberry.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:pottyos_strawberry"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.pottyos_apricot.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:pottyos_apricot"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "name": "turorudi.turorudi.svitlogorie.guide.name",
+  "icon": "turorudi:svitlogorie",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.svitlogorie.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_svitlogorie"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.svitlogorie.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:svitlogorie"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.svitlogorie_cocoa.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:svitlogorie_cocoa"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.svitlogorie_coconut.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:svitlogorie_coconut"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.svitlogorie_coconut_glaze.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:svitlogorie_coconut_glaze"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.svitlogorie_glaze.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:svitlogorie_glaze"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.svitlogorie_lemon.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:svitlogorie_lemon"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.svitlogorie_potato.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:svitlogorie_potato"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.svitlogorie_strawberry.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:svitlogorie_strawberry"
+    }
+  ]
+}

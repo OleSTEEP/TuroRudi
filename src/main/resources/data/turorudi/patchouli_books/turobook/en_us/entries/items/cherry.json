@@ -1,0 +1,15 @@
+{
+  "name": "item.turorudi.cherry",
+  "icon": "turorudi:cherry",
+  "category": "turorudi:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "items.turorudi.cherry.guide"
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["turorudi:textures/patchouli_images/cherry_tree_screenshot.png"]
+    }
+  ]
+}

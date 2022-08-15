@@ -1,0 +1,39 @@
+{
+  "name": "turorudi.turorudi.vkusnoteevo.guide.name",
+  "icon": "turorudi:vkusnoteevo",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.vkusnoteevo.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_vkusnoteevo"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vkusnoteevo.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vkusnoteevo"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vkusnoteevo_cocoa.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vkusnoteevo_cocoa"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.vkusnoteevo_condensed.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:vkusnoteevo_condensed"
+    }
+  ]
+}

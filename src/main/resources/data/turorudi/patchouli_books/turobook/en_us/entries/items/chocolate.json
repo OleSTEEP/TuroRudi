@@ -1,0 +1,27 @@
+{
+  "name": "item.turorudi.chocolate",
+  "icon": "turorudi:chocolate",
+  "category": "turorudi:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "items.turorudi.chocolate.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:chocolate"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:chocolate_bad"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:chocolate_milk"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:chocolate_white"
+    }
+  ]
+}

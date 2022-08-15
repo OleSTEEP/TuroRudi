@@ -1,0 +1,15 @@
+{
+  "name": "item.turorudi.orange",
+  "icon": "turorudi:orange",
+  "category": "turorudi:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "items.turorudi.orange.guide"
+    },
+    {
+      "type": "patchouli:image",
+      "images": ["turorudi:textures/patchouli_images/orange_tree_screenshot.png"]
+    }
+  ]
+}

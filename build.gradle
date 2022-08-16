@@ -16,7 +16,7 @@ plugins {
 apply plugin: 'net.minecraftforge.gradle'
 
 
-version = '0.2-1.18'
+version = '0.3-1.18'
 group = 'com.olesteep.turorudi' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'turorudi'
 

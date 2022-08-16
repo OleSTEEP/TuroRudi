@@ -8,7 +8,7 @@ public class TuroCreativeTab {
     public static final CreativeModeTab TUROTAB = new CreativeModeTab("turotab") {
         @Override
         public @NotNull ItemStack makeIcon() {
-            return new ItemStack(Svitlogorie.SVITL_VANILLA.get());
+            return new ItemStack(Alexandrov.ALEX_VANILLA26.get());
         }
     };
 }

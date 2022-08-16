@@ -45,8 +45,7 @@ public class BlueBerryBush {
             } else if (i > 1) {
                 int j = 1 + level.random.nextInt(2);
                 popResource(level, blockPos, new ItemStack(TuroItems.BLBERRY.get(), j + (flag ? 1 : 0)));
-                level.playSound(null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS,
-                        1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+                level.playSound(null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
                 level.setBlock(blockPos, blockState.setValue(AGE, 1), 2);
                 return InteractionResult.sidedSuccess(level.isClientSide);
             } else {

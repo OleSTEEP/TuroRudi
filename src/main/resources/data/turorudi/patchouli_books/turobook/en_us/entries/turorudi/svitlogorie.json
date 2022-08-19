@@ -45,6 +45,14 @@
     },
     {
       "type": "patchouli:text",
+      "text": "effects.turorudi.svitlogorie_cookie.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:svitlogorie_cookie"
+    },
+    {
+      "type": "patchouli:text",
       "text": "effects.turorudi.svitlogorie_glaze.guide"
     },
     {

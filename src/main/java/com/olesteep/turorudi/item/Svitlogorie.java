@@ -14,6 +14,7 @@ public class Svitlogorie {
     public static final RegistryObject<Item> SVITL_COCOA = ITEMS.register("svitlogorie_cocoa", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_COCOA)));
     public static final RegistryObject<Item> SVITL_COCO = ITEMS.register("svitlogorie_coconut", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_COCO)));
     public static final RegistryObject<Item> SVITL_COCO_GLAZE = ITEMS.register("svitlogorie_coconut_glaze", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_COCO_GLAZE)));
+    public static final RegistryObject<Item> SVITL_COOKIE = ITEMS.register("svitlogorie_cookie", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_COOKIE)));
     public static final RegistryObject<Item> SVITL_VANILLA_GLAZE = ITEMS.register("svitlogorie_glaze", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_GLAZE)));
     public static final RegistryObject<Item> SVITL_LEMON = ITEMS.register("svitlogorie_lemon", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_LEMON)));
     public static final RegistryObject<Item> SVITL_POTATO = ITEMS.register("svitlogorie_potato", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_POTATO)));

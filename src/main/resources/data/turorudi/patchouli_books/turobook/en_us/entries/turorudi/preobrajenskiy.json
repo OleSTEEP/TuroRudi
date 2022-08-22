@@ -1,0 +1,39 @@
+{
+  "name": "turorudi.turorudi.preobrajenskiy.guide.name",
+  "icon": "turorudi:preobrajenskiy",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.preobrajenskiy.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_preobrajenskiy"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.preobrajenskiy.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:preobrajenskiy"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.preobrajenskiy_cocoa.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:preobrajenskiy_cocoa"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.preobrajenskiy_premium.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:preobrajenskiy_premium"
+    }
+  ]
+}

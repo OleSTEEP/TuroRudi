@@ -75,6 +75,10 @@
   "item.turorudi.pottyos_apricot": "Pöttyös Túró Rudi съ абрикосом",
   "item.turorudi.pottyos_strawberry": "Pöttyös Túró Rudi съ клубникой",
 
+  "item.turorudi.preobrajenskiy": "Преображенскій",
+  "item.turorudi.preobrajenskiy_cocoa": "Преображенскій съ какао",
+  "item.turorudi.preobrajenskiy_premium": "Преображенскій преміумъ",
+
   "item.turorudi.svitlogorie": "Свитлогорье",
   "item.turorudi.svitlogorie_cocoa": "Свитлогорье съ какао",
   "item.turorudi.svitlogorie_coconut": "Свитлогорье съ кокосомъ",
@@ -99,6 +103,7 @@
   "item.turorudi.vologosha_strawberry": "Вологоша съ клубникой",
 
   "item.turorudi.package_alexandrov": "Обёртка Б.Ю. Александров",
+  "item.turorudi.package_preobrajenskiy": "Обёртка Преображенскій",
   "item.turorudi.package_pottyos": "Обёртка Pöttyös Túró Rudi",
   "item.turorudi.package_svitlogorie": "Обёртка Свитлогорье",
   "item.turorudi.package_vkusnoteevo": "Обёртка Вкуснотеево",
@@ -132,6 +137,8 @@
   "turorudi.turorudi.alexandrov.guide": "Наверное самый известный из всех сырков въ странах СНГ... Этот сырокъ славится своим вкусом и дорогой обёрткой (и ценой). Различные вариации сырка и их реццепты можно увидеть дальше",
   "turorudi.turorudi.pottyos.guide.name": "Pöttyös Túró Rudi",
   "turorudi.turorudi.pottyos.guide": "Знаменитый иностранный сырокъ. Возможно Вы заметили-с, но модъ называется въ честь него. Имеет отличительную форму въ виде трубочки.",
+  "turorudi.turorudi.preobrajenskiy.guide.name": "Преображенскій",
+  "turorudi.turorudi.preobrajenskiy.guide": "Сырокъ российского молочного комбината \"Преображенскій\". Былъ довольно распространённымъ из-за своихъ лозунга и низкой цены. Самъ по себе низкого качества и очень сладкий. Также имеет преміумъ вариантъ, который оказался не намного лучше...",
   "turorudi.turorudi.svitlogorie.guide.name": "Свитлогорье",
   "turorudi.turorudi.svitlogorie.guide": "Один изъ лучших сырков въ СНГ по качеству родом из Белоруссии (по говорам). Имеетъ множество разновидностей и даже сотрудничествъ (здесь их нетъ...). Забавый фактъ: это самый первый сырокъ въ этом моде и любимый сырокъ автора мода.",
   "turorudi.turorudi.vkusnoteevo.guide.name": "Вкуснотеево",
@@ -159,6 +166,9 @@
   "effects.turorudi.pottyos_milk.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщенiе: 1.0,$(br) * Приливъ здравія II (2 мин.)",
   "effects.turorudi.pottyos_strawberry.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщенiе: 1.0,$(br) * Возстановленіе II (2 мин.)",
   "effects.turorudi.pottyos_apricot.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщенiе: 1.0,$(br) * Огнестойкость II (2 мин.)",
+  "effects.turorudi.preobrajenskiy.guide": "Эффекты:$(br) * Питательность: 4 ед.,$(br) * Насыщенiе: 0.8,$(br) * Сопротивленіе I (1 мин.),$(br) * Слабость I (20 сек.)",
+  "effects.turorudi.preobrajenskiy_cocoa.guide": "Эффекты:$(br) * Питательность: 4 ед.,$(br) * Насыщенiе: 0.8,$(br) * Рѣзвость I (1 мин.),$(br) * Слабость I (20 сек.)",
+  "effects.turorudi.preobrajenskiy_premium.guide": "Эффекты:$(br) * Питательность: 6 ед.,$(br) * Насыщенiе: 1.0,$(br) * Сопротивленіе I (75 сек.),$(br) * Слабость I (20 сек.)",
   "effects.turorudi.svitlogorie.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщенiе: 1.0,$(br) * Сопротивленіе II (2 мин.)",
   "effects.turorudi.svitlogorie_cocoa.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщенiе: 1.0,$(br) * Рѣзвость II (2 мин.)",
   "effects.turorudi.svitlogorie_coconut.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщенiе: 1.0,$(br) * Спѣшка III (2 мин.)",

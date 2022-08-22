@@ -41,6 +41,7 @@ public class TuroRudi {
         //TuroRudies
         Alexandrov.register(eventBus);
         Pottyos.register(eventBus);
+        Preobrajenskiy.register(eventBus);
         Svitlogorie.register(eventBus);
         Vkusnoteevo.register(eventBus);
         Vologosha.register(eventBus);

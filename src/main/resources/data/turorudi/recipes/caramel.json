@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:sugar"
+  },
+  "result": "turorudi:caramel",
+  "count": 1,
+  "experience": 0.35,
+  "cookingtime": 200
+}

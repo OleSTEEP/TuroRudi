@@ -1,0 +1,47 @@
+{
+  "name": "turorudi.turorudi.corenovka.guide.name",
+  "icon": "turorudi:corenovka",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.corenovka.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_corenovka"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.corenovka.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:corenovka"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.corenovka_caramel.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:corenovka_caramel"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.corenovka_orange.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:corenovka_orange"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.corenovka_lemon_lime.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:corenovka_lemon_lime"
+    }
+  ]
+}

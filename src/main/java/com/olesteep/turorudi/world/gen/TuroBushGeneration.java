@@ -28,8 +28,9 @@ public class TuroBushGeneration {
         if(types.contains(BiomeDictionary.Type.HOT)) {
             List<Holder<PlacedFeature>> base = event.getGeneration().getFeatures(GenerationStep.Decoration.VEGETAL_DECORATION);
 
-            base.add(TuroPlacedFeatures.LEMON_BUSH_PLACED);
             base.add(TuroPlacedFeatures.APRICOT_BUSH_PLACED);
+            base.add(TuroPlacedFeatures.LEMON_BUSH_PLACED);
+            base.add(TuroPlacedFeatures.LIME_BUSH_PLACED);
         }
     }
 }

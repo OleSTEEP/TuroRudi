@@ -23,6 +23,12 @@ public class TuroRudi {
         PalmTree.register(eventBus);
         TuroBlocks.register(eventBus);
 
+        // Bushes
+        ApricotBush.register(eventBus);
+        BlueBerryBush.register(eventBus);
+        LemonBush.register(eventBus);
+        LimeBush.register(eventBus);
+
         //Decorators
         TuroTreeDecoratorType.register(eventBus);
 
@@ -33,9 +39,6 @@ public class TuroRudi {
         TuroFoliagePlacerType.register(eventBus);
 
         //Items
-        ApricotBush.register(eventBus);
-        BlueBerryBush.register(eventBus);
-        LemonBush.register(eventBus);
         TuroItems.register(eventBus);
 
         //TuroRudies

@@ -1,10 +1,7 @@
 package com.olesteep.turorudi.item;
 
 import com.olesteep.turorudi.TuroRudi;
-import com.olesteep.turorudi.block.ApricotBush;
-import com.olesteep.turorudi.block.BlueBerryBush;
-import com.olesteep.turorudi.block.LemonBush;
-import com.olesteep.turorudi.block.TuroBlocks;
+import com.olesteep.turorudi.block.*;
 import com.olesteep.turorudi.fluid.TuroFluids;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
@@ -33,6 +30,7 @@ public class TuroItems {
     public static final RegistryObject<Item> MILK_COND_BUCKET = ITEMS.register("milk_condensed_bucket", () -> new BucketItem(TuroFluids.MILK_COND_FLUID, new Item.Properties().tab(TuroCreativeTab.TUROTAB).stacksTo(1)));
     public static final RegistryObject<Item> MILK_FAT = ITEMS.register("milk_fat", () -> new Item(new Item.Properties().food(TuroFoods.MILK_FAT).tab(TuroCreativeTab.TUROTAB)));
     public static final RegistryObject<Item> LEMON = ITEMS.register("lemon", () -> new ItemNameBlockItem(LemonBush.LEMON_BUSH.get(), new Item.Properties().food(TuroFoods.LEMON).tab(TuroCreativeTab.TUROTAB)));
+    public static final RegistryObject<Item> LIME = ITEMS.register("lime", () -> new ItemNameBlockItem(LimeBush.LIME_BUSH.get(), new Item.Properties().food(TuroFoods.LIME).tab(TuroCreativeTab.TUROTAB)));
     public static final RegistryObject<Item> ORANGE = ITEMS.register("orange", () -> new Item(new Item.Properties().food(TuroFoods.ORANGE).tab(TuroCreativeTab.TUROTAB)));
 
     public static void register(IEventBus eventBus) {

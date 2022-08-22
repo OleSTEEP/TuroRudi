@@ -37,10 +37,13 @@ public class TuroRudi {
         //Foliage placers
         TuroFoliagePlacerType.register(eventBus);
 
-        //Items
+        //Bushes
         ApricotBush.register(eventBus);
         BlueBerryBush.register(eventBus);
         LemonBush.register(eventBus);
+        LimeBush.register(eventBus);
+
+        //Items
         TuroItems.register(eventBus);
 
         //Placed features

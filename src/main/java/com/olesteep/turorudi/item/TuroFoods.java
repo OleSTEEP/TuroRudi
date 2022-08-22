@@ -17,6 +17,7 @@ public class TuroFoods {
     public static final FoodProperties GLAZE = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.15F).build();
     public static final FoodProperties MILK_FAT = (new FoodProperties.Builder()).nutrition(1).saturationMod(0.15F).effect(new MobEffectInstance(MobEffects.HUNGER, 200, 0), 0.3F).build();
     public static final FoodProperties LEMON = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 2), 1.0F).build();
+    public static final FoodProperties LIME = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).effect(new MobEffectInstance(MobEffects.CONFUSION, 150, 2), 1.0F).build();
     public static final FoodProperties ORANGE = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).build();
     public static final FoodProperties TURO_BASE = (new FoodProperties.Builder()).nutrition(3).saturationMod(0.5F).build();
     public static final FoodProperties TURO_BAD = (new FoodProperties.Builder()).nutrition(2).saturationMod(0.3F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
@@ -53,8 +54,8 @@ public class TuroFoods {
     public static final FoodProperties TURO_COCOA_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_COCO_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.DIG_SPEED, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_COCO_GLAZE_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.DIG_SPEED, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
-    public static final FoodProperties TURO_COOKIE_BAD = (new FoodProperties.Builder()).nutrition(6).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.JUMP, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_COND_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.SLOW_FALLING, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
+    public static final FoodProperties TURO_COOKIE_BAD = (new FoodProperties.Builder()).nutrition(6).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.JUMP, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_GLAZE_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.ABSORPTION, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_LEMON_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 1200, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();
     public static final FoodProperties TURO_ORANGE_BAD = (new FoodProperties.Builder()).nutrition(4).saturationMod(0.8F).effect(new MobEffectInstance(MobEffects.SATURATION, 1500, 0), 1.0F).effect(new MobEffectInstance(MobEffects.WEAKNESS, 400, 0), 1.0F).build();

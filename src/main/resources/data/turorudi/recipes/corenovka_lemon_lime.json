@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "BCL",
+    " P "
+  ],
+  "key": {
+    "S": {
+      "item": "turorudi:chocolate"
+    },
+    "C": {
+      "item": "turorudi:turorudi"
+    },
+    "P": {
+      "item": "turorudi:package_corenovka"
+    },
+    "B": {
+      "item": "turorudi:lemon"
+    },
+    "L": {
+      "item": "turorudi:lime"
+    }
+  },
+  "result": {
+    "item": "turorudi:corenovka_lemon_lime"
+  }
+}

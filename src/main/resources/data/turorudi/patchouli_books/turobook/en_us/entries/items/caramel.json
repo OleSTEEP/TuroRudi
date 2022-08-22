@@ -1,0 +1,15 @@
+{
+  "name": "item.turorudi.caramel",
+  "icon": "turorudi:caramel",
+  "category": "turorudi:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "items.turorudi.caramel.guide"
+    },
+    {
+      "type": "patchouli:smelting",
+      "recipe": "turorudi:caramel"
+    }
+  ]
+}

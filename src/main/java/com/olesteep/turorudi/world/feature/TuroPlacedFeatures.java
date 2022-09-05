@@ -14,6 +14,6 @@ public class TuroPlacedFeatures {
     public static final Holder<PlacedFeature> CHERRY_PLACED = PlacementUtils.register("cherry_placed", TuroConfiguredFeatures.CHERRY_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.0125f, 1)));
     public static final Holder<PlacedFeature> LEMON_BUSH_PLACED = PlacementUtils.register("lemon_bush_placed", TuroConfiguredFeatures.PATCH_LEMON_BUSH, RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
     public static final Holder<PlacedFeature> LIME_BUSH_PLACED = PlacementUtils.register("lime_bush_placed", TuroConfiguredFeatures.PATCH_LIME_BUSH, RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
-    public static final Holder<PlacedFeature> ORANGE_PLACED = PlacementUtils.register("orange_placed", TuroConfiguredFeatures.ORANGE_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.025f, 1)));
-    public static final Holder<PlacedFeature> PALM_PLACED = PlacementUtils.register("palm_placed", TuroConfiguredFeatures.PALM_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.5f, 1)));
+    public static final Holder<PlacedFeature> ORANGE_PLACED = PlacementUtils.register("orange_placed", TuroConfiguredFeatures.ORANGE_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.25f, 1)));
+    public static final Holder<PlacedFeature> PALM_PLACED = PlacementUtils.register("palm_placed", TuroConfiguredFeatures.PALM_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.25f, 1)));
 }

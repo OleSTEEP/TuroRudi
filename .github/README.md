@@ -6,7 +6,9 @@ Minecraft mod that adds delicious treats to the game - curd snacks. The mod is a
 
 ### Curd snacks
 * **B. YU. Alexandrov** ![alexandrov](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/alexandrov.png)
+* **Cow from Corenovka** ![corenovka](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/corenovka.png)
 * **Pottyos** ![pottyos](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/pottyos.png)
+* **Preobrajenskiy** ![preobrajenskiy](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/preobrajenskiy.png)
 * **Svitlogorie** ![svitlogorie](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/svitlogorie.png)
 * **Vkusnoteevo** ![vkusnoteevo](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/vkusnoteevo.png)
 * **Vologosha** ![vologosha](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/vologosha.png)

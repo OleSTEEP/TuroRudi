@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "turorudi:block/orange_planks",
+    "top": "turorudi:block/orange_planks",
+    "side": "turorudi:block/orange_planks"
+  }
+}

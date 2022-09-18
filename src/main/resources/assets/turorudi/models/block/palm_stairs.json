@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "turorudi:block/palm_planks",
+    "top": "turorudi:block/palm_planks",
+    "side": "turorudi:block/palm_planks"
+  }
+}

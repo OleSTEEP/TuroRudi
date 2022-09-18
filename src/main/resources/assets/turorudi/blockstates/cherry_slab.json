@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "turorudi:block/cherry_slab"
+    },
+    "type=double": {
+      "model": "turorudi:block/cherry_planks"
+    },
+    "type=top": {
+      "model": "turorudi:block/cherry_slab_top"
+    }
+  }
+}

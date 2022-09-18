@@ -27,7 +27,7 @@ public class TuroFluids {
 
     public static final DeferredRegister<Fluid> FLUIDS = DeferredRegister.create(ForgeRegistries.FLUIDS, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<FlowingFluid> MILK_COND_FLUID = FLUIDS.register("milk_condensed_fluid", () -> new ForgeFlowingFluid.Source(TuroFluids.MILK_COND_PROPERTIES));
+    public static final RegistryObject<FlowingFluid> MILK_COND_FLUID = FLUIDS.register("milk_condensed", () -> new ForgeFlowingFluid.Source(TuroFluids.MILK_COND_PROPERTIES));
     public static final RegistryObject<FlowingFluid> MILK_COND_FLOWING = FLUIDS.register("milk_condensed_flowing", () -> new ForgeFlowingFluid.Flowing(TuroFluids.MILK_COND_PROPERTIES));
     public static final ForgeFlowingFluid.Properties MILK_COND_PROPERTIES = new ForgeFlowingFluid.Properties(() -> MILK_COND_FLUID.get(), () -> MILK_COND_FLOWING.get(), FluidAttributes.builder(WATER_STILL_RL, WATER_FLOWING_RL).density(3000).luminosity(2).viscosity(6000).sound(SoundEvents.HONEY_DRINK).overlay(WATER_OVERLAY_RL).color(0xbf7a3816)).slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> TuroFluids.MILK_COND_BLOCK.get()).bucket(() -> TuroItems.MILK_COND_BUCKET.get());
     public static final RegistryObject<LiquidBlock> MILK_COND_BLOCK = registerBlockWithoutItem(TuroBlocks.BLOCKS,"milk_cond", () -> new CondensedMilkFluidBlock(() -> TuroFluids.MILK_COND_FLUID.get(), BlockBehaviour.Properties.of(Material.WATER).noCollission().strength(100f).noDrops()));

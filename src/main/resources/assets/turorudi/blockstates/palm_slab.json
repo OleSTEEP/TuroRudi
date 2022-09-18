@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "turorudi:block/palm_slab"
+    },
+    "type=double": {
+      "model": "turorudi:block/palm_planks"
+    },
+    "type=top": {
+      "model": "turorudi:block/palm_slab_top"
+    }
+  }
+}

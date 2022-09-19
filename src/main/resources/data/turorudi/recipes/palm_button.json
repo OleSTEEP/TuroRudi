@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "ingredients": [
+    {
+      "item": "turorudi:palm_planks"
+    }
+  ],
+  "result": {
+    "item": "turorudi:palm_button"
+  }
+}

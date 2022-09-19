@@ -19,6 +19,7 @@ import static com.olesteep.turorudi.registry.BlockRegisters.registerBlock;
 public class CherryTree {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
+    public static final RegistryObject<Block> CHERRY_BUTTON = registerBlock(BLOCKS, "cherry_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)));
     public static final RegistryObject<Block> CHERRY_FENCE = registerBlock(BLOCKS, "cherry_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<Block> CHERRY_FENCE_GATE = registerBlock(BLOCKS, "cherry_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));
     public static final RegistryObject<Block> CHERRY_LOG = registerBlock(BLOCKS, "cherry_log", () -> new TuroFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
@@ -56,6 +57,7 @@ public class CherryTree {
         }
     });
 
+    public static final RegistryObject<Block> CHERRY_PRESSURE_PLATE = registerBlock(BLOCKS, "cherry_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)));
     public static final RegistryObject<Block> CHERRY_SAPLING = registerBlock(BLOCKS, "cherry_sapling", () -> new SaplingBlock(new CherryTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> CHERRY_SLAB = registerBlock(BLOCKS, "cherry_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
     public static final RegistryObject<Block> CHERRY_STAIRS = registerBlock(BLOCKS, "cherry_stairs", () -> new StairBlock(() -> CHERRY_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));

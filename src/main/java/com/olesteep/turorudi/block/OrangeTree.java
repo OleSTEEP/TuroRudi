@@ -19,6 +19,7 @@ import static com.olesteep.turorudi.registry.BlockRegisters.registerBlock;
 public class OrangeTree {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
+    public static final RegistryObject<Block> ORANGE_BUTTON = registerBlock(BLOCKS, "orange_button", () -> new WoodButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON)));
     public static final RegistryObject<Block> ORANGE_FENCE = registerBlock(BLOCKS, "orange_fence", () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE)));
     public static final RegistryObject<Block> ORANGE_FENCE_GATE = registerBlock(BLOCKS, "orange_fence_gate", () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE)));
     public static final RegistryObject<Block> ORANGE_LOG = registerBlock(BLOCKS, "orange_log", () -> new TuroFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
@@ -56,6 +57,7 @@ public class OrangeTree {
         }
     });
 
+    public static final RegistryObject<Block> ORANGE_PRESSURE_PLATE = registerBlock(BLOCKS, "orange_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE)));
     public static final RegistryObject<Block> ORANGE_SAPLING = registerBlock(BLOCKS, "orange_sapling", () -> new SaplingBlock(new OrangeTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> ORANGE_SLAB = registerBlock(BLOCKS, "orange_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SLAB)));
     public static final RegistryObject<Block> ORANGE_STAIRS = registerBlock(BLOCKS, "orange_stairs", () -> new StairBlock(() -> ORANGE_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)));

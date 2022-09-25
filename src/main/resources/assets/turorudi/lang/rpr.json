@@ -58,7 +58,11 @@
   "block.turorudi.stripped_orange_wood": "Обтёсанное апельсиновое древо",
   "block.turorudi.stripped_palm_log": "Обтёсанное бревно пальмы",
   "block.turorudi.stripped_palm_wood": "Обтёсанная пальма",
+
   "fluid.turorudi.milk_condensed": "Сгущёное молоко",
+
+  "entity.minecraft.villager.turorudi.turomaker": "Сыроваръ",
+
   "item.turorudi.apricot": "Абрикосъ",
   "item.turorudi.banana_item": "Бананъ",
   "item.turorudi.blueberry": "Черника",

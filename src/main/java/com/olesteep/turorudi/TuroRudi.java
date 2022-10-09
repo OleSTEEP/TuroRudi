@@ -8,6 +8,7 @@ import com.olesteep.turorudi.world.biomemods.TuroBiomeModifiers;
 import com.olesteep.turorudi.world.feature.TuroPlacedFeatures;
 import com.olesteep.turorudi.world.feature.foliageplacers.TuroFoliagePlacerType;
 import com.olesteep.turorudi.world.feature.treedecorators.TuroTreeDecoratorType;
+import com.olesteep.turorudi.world.village.TuroVillagePools;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.common.MinecraftForge;
@@ -70,6 +71,7 @@ public class TuroRudi {
 
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(TuroVillagers::registerPOIs);
+        TuroVillagePools.init();
     }
 }
 

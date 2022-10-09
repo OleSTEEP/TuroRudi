@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.olesteep.turorudi.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.turorudi.refmap.json",
+  "mixins": [
+    "SingleJigsawAccess"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}

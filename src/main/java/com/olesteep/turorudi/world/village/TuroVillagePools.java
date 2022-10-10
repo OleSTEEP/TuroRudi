@@ -3,7 +3,6 @@ package com.olesteep.turorudi.world.village;
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Either;
 import com.mojang.datafixers.util.Pair;
-import com.mojang.logging.LogUtils;
 import com.mojang.serialization.Lifecycle;
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.mixin.SingleJigsawAccess;
@@ -16,7 +15,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.structure.pools.StructurePoolElement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
-import org.slf4j.Logger;
 
 import java.util.List;
 import java.util.OptionalInt;
@@ -26,8 +24,6 @@ import java.util.stream.Collectors;
 
 // Thanks https://github.com/BluSunrize/ImmersiveEngineering/blob/1.18.2/src/main/java/blusunrize/immersiveengineering/common/world/Villages.java for example
 public class TuroVillagePools {
-
-    static Logger LOGGER = LogUtils.getLogger();
     public static void init()
     {
         PlainVillagePools.bootstrap();
@@ -38,7 +34,7 @@ public class TuroVillagePools {
 
         // Register engineer's houses for each biome
         for(String biome : new String[]{"plains"/*, "snowy", "savanna", "desert", "taiga"*/})
-            addToPool(new ResourceLocation("village/"+biome+"/houses"), new ResourceLocation(TuroRudi.MOD_ID, "village/houses/"+biome+"_turohouse"), 1);
+            addToPool(new ResourceLocation("village/"+biome+"/houses"), new ResourceLocation(TuroRudi.MOD_ID, "village/houses/"+biome+"_turohouse"), 50);
     }
 
     private static void addToPool(ResourceLocation pool, ResourceLocation toAdd, int weight)
@@ -60,6 +56,5 @@ public class TuroVillagePools {
 
         ResourceLocation name = old.getName();
         ((WritableRegistry<StructureTemplatePool>)BuiltinRegistries.TEMPLATE_POOL).registerOrOverride(OptionalInt.of(id), ResourceKey.create(BuiltinRegistries.TEMPLATE_POOL.key(), name), new StructureTemplatePool(pool, name, newPieceList), Lifecycle.stable());
-        LOGGER.info("POOL - {},{},{}", pool, name, newPieceList);
     }
 }

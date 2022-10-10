@@ -33,8 +33,8 @@ public class TuroVillagePools {
         TaigaVillagePools.bootstrap();
 
         // Register engineer's houses for each biome
-        for(String biome : new String[]{"plains"/*, "snowy", "savanna", "desert", "taiga"*/})
-            addToPool(new ResourceLocation("village/"+biome+"/houses"), new ResourceLocation(TuroRudi.MOD_ID, "village/houses/"+biome+"_turohouse"), 50);
+        for(String biome : new String[]{"plains", "snowy", "savanna", "desert", "taiga"})
+            addToPool(new ResourceLocation("village/"+biome+"/houses"), new ResourceLocation(TuroRudi.MOD_ID, "village/houses/"+biome+"_turohouse"), 3);
     }
 
     private static void addToPool(ResourceLocation pool, ResourceLocation toAdd, int weight)

@@ -32,7 +32,7 @@ public class TuroVillagePools {
         DesertVillagePools.bootstrap();
         TaigaVillagePools.bootstrap();
 
-        // Register engineer's houses for each biome
+        // Register turomaker's house for each biome
         for(String biome : new String[]{"plains", "snowy", "savanna", "desert", "taiga"})
             addToPool(new ResourceLocation("village/"+biome+"/houses"), new ResourceLocation(TuroRudi.MOD_ID, "village/houses/"+biome+"_turohouse"), 3);
     }

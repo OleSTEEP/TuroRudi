@@ -33,7 +33,7 @@ public class BlueBerryBush {
     public static final RegistryObject<Block> BLBERRY_BUSH = registerBlockWithoutItem(BLOCKS,"blueberry_bush", () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH)) {
         @Override
         public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter block, @NotNull BlockPos pos, @NotNull BlockState state) {
-            return new ItemStack(TuroItems.BLBERRY.get());
+            return new ItemStack(TuroItems.BLUEBERRY.get());
         }
 
         @Override
@@ -44,7 +44,7 @@ public class BlueBerryBush {
                 return InteractionResult.PASS;
             } else if (i > 1) {
                 int j = 1 + level.random.nextInt(2);
-                popResource(level, blockPos, new ItemStack(TuroItems.BLBERRY.get(), j + (flag ? 1 : 0)));
+                popResource(level, blockPos, new ItemStack(TuroItems.BLUEBERRY.get(), j + (flag ? 1 : 0)));
                 level.playSound(null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
                 level.setBlock(blockPos, blockState.setValue(AGE, 1), 2);
                 return InteractionResult.sidedSuccess(level.isClientSide);

@@ -15,7 +15,7 @@ public class TuroItems {
     public static final RegistryObject<Item> TURORUDI_BAD = ITEMS.register("turorudi_bad", () -> new Item(new Item.Properties().food(TuroFoods.TURO_BAD).tab(TuroCreativeTab.TUROTAB)));
     public static final RegistryObject<Item> APRICOT = ITEMS.register("apricot", () -> new ItemNameBlockItem(ApricotBush.APRICOT_BUSH.get(), (new Item.Properties()).food(TuroFoods.APRICOT).tab(TuroCreativeTab.TUROTAB)));
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana_item", () -> new ItemNameBlockItem(TuroBlocks.BANANA_BLOCK.get(), new Item.Properties().food(TuroFoods.BANANA).tab(TuroCreativeTab.TUROTAB)));
-    public static final RegistryObject<Item> BLBERRY = ITEMS.register("blueberry", () -> new ItemNameBlockItem(BlueBerryBush.BLBERRY_BUSH.get(), (new Item.Properties()).food(TuroFoods.BLBERRY).tab(TuroCreativeTab.TUROTAB)));
+    public static final RegistryObject<Item> BLUEBERRY = ITEMS.register("blueberry", () -> new ItemNameBlockItem(BlueBerryBush.BLBERRY_BUSH.get(), (new Item.Properties()).food(TuroFoods.BLBERRY).tab(TuroCreativeTab.TUROTAB)));
     public static final RegistryObject<Item> CARAMEL = ITEMS.register("caramel", () -> new Item(new Item.Properties().food(TuroFoods.CARAMEL).tab(TuroCreativeTab.TUROTAB)));
     public static final RegistryObject<Item> CHERRY = ITEMS.register("cherry", () -> new Item(new Item.Properties().food(TuroFoods.CHERRY).tab(TuroCreativeTab.TUROTAB)));
     public static final RegistryObject<Item> CHOCOLATE = ITEMS.register("chocolate", () -> new Item(new Item.Properties().food(TuroFoods.CHOCOLATE).tab(TuroCreativeTab.TUROTAB)));

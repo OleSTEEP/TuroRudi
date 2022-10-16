@@ -1,3 +1,12 @@
+/*
+ * BluSunrize
+ * Copyright (c) 2020
+ *
+ * This code is licensed under "Blu's License of Common Sense"
+ * Details can be found in the license file on https://github.com/BluSunrize/ImmersiveEngineering
+ *
+ */
+
 package com.olesteep.turorudi.mixin;
 
 import com.mojang.datafixers.util.Either;

@@ -21,3 +21,5 @@ This mod support patchouli documentation. If you want read some mod docs, instal
 * Mojang
 * Forge
 * Kaupenjoe (for forge guide)
+* Cyclic ([fluid effects](https://github.com/OleSTEEP/TuroRudi/blob/1.18/src/main/java/com/olesteep/turorudi/fluid/block/CondensedMilkFluidBlock.java))
+* ImmersiveEngineering ([villager's house spawn](https://github.com/OleSTEEP/TuroRudi/blob/1.18/src/main/java/com/olesteep/turorudi/world/village/TuroVillagePools.java)) ([mixin](https://github.com/OleSTEEP/TuroRudi/blob/1.18/src/main/java/com/olesteep/turorudi/mixin/SingleJigsawAccess.java))

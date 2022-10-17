@@ -3,6 +3,7 @@ package com.olesteep.turorudi.villager;
 import com.google.common.collect.ImmutableSet;
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.block.TuroBlocks;
+import com.olesteep.turorudi.data.TuroList;
 import com.olesteep.turorudi.item.*;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.sounds.SoundEvents;
@@ -41,100 +42,53 @@ public class TuroVillagers {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             // Sold
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(4)), new ItemStack(TuroItems.BANANA.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(4)), new ItemStack(TuroItems.BLUEBERRY.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(5)), new ItemStack(TuroItems.CARAMEL.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(4)), new ItemStack(TuroItems.CHERRY.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(TuroItems.CHOCOLATE.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(4)), new ItemStack(TuroItems.CHOCOLATE_BAD.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(TuroItems.CHOCOLATE_MILK.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(TuroItems.CHOCOLATE_WHITE.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(4)), new ItemStack(TuroItems.COCO.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(3)), new ItemStack(TuroItems.CURD.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(4)), new ItemStack(TuroItems.CURD_BAD.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(5)), new ItemStack(TuroItems.GLAZE.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(TuroItems.MILK_COND_BUCKET.get(), 1),4,12,0.18F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(5)), new ItemStack(TuroItems.MILK_FAT.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(4)), new ItemStack(TuroItems.LEMON.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(4)), new ItemStack(TuroItems.LIME.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(4)), new ItemStack(TuroItems.ORANGE.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(7)), new ItemStack(TuroItems.TURORUDI.get(), nonNullRandom(5)),4,12,0.18F));
-            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(4)), new ItemStack(TuroItems.TURORUDI_BAD.get(), nonNullRandom(5)),4,12,0.18F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.BANANA.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.BLUEBERRY.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 4), new ItemStack(TuroItems.CARAMEL.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.CHERRY.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 5), new ItemStack(TuroItems.CHOCOLATE.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.CHOCOLATE_BAD.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 5), new ItemStack(TuroItems.CHOCOLATE_MILK.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 5), new ItemStack(TuroItems.CHOCOLATE_WHITE.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.COCO.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 2), new ItemStack(TuroItems.CURD.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.CURD_BAD.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 4), new ItemStack(TuroItems.GLAZE.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 5), new ItemStack(TuroItems.MILK_COND_BUCKET.get(), 1),4,12,0.18F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 4), new ItemStack(TuroItems.MILK_FAT.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.LEMON.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.LIME.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.ORANGE.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 6), new ItemStack(TuroItems.TURORUDI.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.TURORUDI_BAD.get(), nonNullRandom()),4,12,0.18F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 8), new ItemStack(TuroList.getRandGood(), nonNullRandom()),4,12,0.12F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 4), new ItemStack(TuroList.getRandBad(), nonNullRandom()),4,12,0.16F));
 
             // Buy
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.BANANA.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(4)),4,12,0.09F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.BLUEBERRY.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(4)),4,12,0.09F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CARAMEL.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(5)),4,12,0.09F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CHERRY.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(4)),4,12,0.09F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CHOCOLATE.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(6)),4,12,0.09F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CHOCOLATE_BAD.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(4)),4,12,0.09F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CHOCOLATE_MILK.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(6)),4,12,0.09F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CHOCOLATE_WHITE.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(6)),4,12,0.09F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.COCO.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(4)),4,12,0.09F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CURD.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(3)),4,12,0.09F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CURD_BAD.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(4)),4,12,0.09F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.GLAZE.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(5)),4,12,0.09F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.MILK_COND_BUCKET.get(), 1), new ItemStack(Items.EMERALD, nonNullRandom(6)),4,12,0.09F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.MILK_FAT.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(5)),4,12,0.09F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.LEMON.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(4)),4,12,0.09F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.LIME.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(4)),4,12,0.09F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.ORANGE.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(4)),4,12,0.09F));
-            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.TURORUDI.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(7)),4,12,0.09F));
-            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.TURORUDI_BAD.get(), nonNullRandom(5)), new ItemStack(Items.EMERALD, nonNullRandom(4)),4,12,0.09F));
-
-            // Turorudi
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Alexandrov.ALEX_VANILLA5.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Alexandrov.ALEX_VANILLA26.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Alexandrov.ALEX_CHOCOLESS.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Alexandrov.ALEX_COND.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Alexandrov.ALEX_MILK5.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Alexandrov.ALEX_MILK26.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Alexandrov.ALEX_POTATO.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Alexandrov.ALEX_SOUFFLE.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Alexandrov.ALEX_SOUFFLE_MILK.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Alexandrov.ALEX_WHITE.get(), nonNullRandom(5)),4,12,0.12F));
-
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Corenovka.CORENOVKA_VANILLA.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Corenovka.CORENOVKA_CARAMEL.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Corenovka.CORENOVKA_ORANGE.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Corenovka.CORENOVKA_LEMON_LIME.get(), nonNullRandom(5)),4,12,0.12F));
-
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Pottyos.POTTYOS_VANILLA.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Pottyos.POTTYOS_MILK.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Pottyos.POTTYOS_STRAW.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Pottyos.POTTYOS_APRICOT.get(), nonNullRandom(5)),4,12,0.12F));
-
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(Preobrajenskiy.PREOBR_VANILLA.get(), nonNullRandom(5)),4,12,0.16F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(Preobrajenskiy.PREOBR_COCOA.get(), nonNullRandom(5)),4,12,0.16F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(7)), new ItemStack(Preobrajenskiy.PREOBR_PREM_VANILLA.get(), nonNullRandom(5)),4,12,0.16F));
-
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Svitlogorie.SVITL_VANILLA.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Svitlogorie.SVITL_COCOA.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Svitlogorie.SVITL_COCO.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Svitlogorie.SVITL_COCO_GLAZE.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Svitlogorie.SVITL_COOKIE.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Svitlogorie.SVITL_VANILLA_GLAZE.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Svitlogorie.SVITL_LEMON.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Svitlogorie.SVITL_POTATO.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Svitlogorie.SVITL_STRAW.get(), nonNullRandom(5)),4,12,0.12F));
-
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Vkusnoteevo.VKUSN_VANILLA.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Vkusnoteevo.VKUSN_COCOA.get(), nonNullRandom(5)),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(10)), new ItemStack(Vkusnoteevo.VKUSN_COND.get(), nonNullRandom(5)),4,12,0.12F));
-
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(Vologosha.VOLOG_VANILLA.get(), nonNullRandom(5)),4,12,0.16F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(Vologosha.VOLOG_BANANA.get(), nonNullRandom(5)),4,12,0.16F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(Vologosha.VOLOG_BLBERRY.get(), nonNullRandom(5)),4,12,0.16F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(Vologosha.VOLOG_CHERRY.get(), nonNullRandom(5)),4,12,0.16F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(Vologosha.VOLOG_COCOA.get(), nonNullRandom(5)),4,12,0.16F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(Vologosha.VOLOG_COND.get(), nonNullRandom(5)),4,12,0.16F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(Vologosha.VOLOG_ORANGE.get(), nonNullRandom(5)),4,12,0.16F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, nonNullRandom(6)), new ItemStack(Vologosha.VOLOG_STRAW.get(), nonNullRandom(5)),4,12,0.16F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.BANANA.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.BLUEBERRY.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CARAMEL.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 3),4,12,0.09F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CHERRY.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CHOCOLATE.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 3),4,12,0.09F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CHOCOLATE_BAD.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CHOCOLATE_MILK.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 3),4,12,0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CHOCOLATE_WHITE.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 3),4,12,0.09F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.COCO.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CURD.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.CURD_BAD.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.GLAZE.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 3),4,12,0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.MILK_COND_BUCKET.get(), 1), new ItemStack(Items.EMERALD, 3),4,12,0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.MILK_FAT.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 3),4,12,0.09F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.LEMON.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.LIME.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.ORANGE.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.TURORUDI.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 4),4,12,0.09F));
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.TURORUDI_BAD.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));
         }
     }
 
-    private static int nonNullRandom(Integer nextInt) {
-        int randNum = new Random().nextInt(nextInt);
+    private static int nonNullRandom() {
+        int randNum = new Random().nextInt(5);
         if(randNum == 0){
             randNum = randNum + 1;
         }

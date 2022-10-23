@@ -49,6 +49,7 @@ public class TuroRudi {
         Corenovka.register(eventBus);
         Pottyos.register(eventBus);
         Preobrajenskiy.register(eventBus);
+        Rostagroexport.register(eventBus);
         Svitlogorie.register(eventBus);
         Vkusnoteevo.register(eventBus);
         Vologosha.register(eventBus);

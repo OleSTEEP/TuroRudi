@@ -1,0 +1,55 @@
+{
+  "name": "turorudi.turorudi.rostagroexport.guide.name",
+  "icon": "turorudi:rostagroexport",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.rostagroexport.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_rostagroexport"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.rostagroexport.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:rostagroexport"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.rostagroexport5.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:rostagroexport5"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.rostagroexport_cocoa.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:rostagroexport_cocoa"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.rostagroexport_coconut.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:rostagroexport_coconut"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.rostagroexport_condensed.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:rostagroexport_condensed"
+    }
+  ]
+}

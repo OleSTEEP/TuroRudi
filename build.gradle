@@ -17,7 +17,7 @@ plugins {
 }
 apply plugin: 'org.spongepowered.mixin'
 
-version = '0.3-1.19'
+version = '0.4-1.19'
 group = 'com.olesteep.turorudi' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'turorudi'
 

@@ -9,6 +9,7 @@ Minecraft mod that adds delicious treats to the game - curd snacks. The mod is a
 * **Cow from Corenovka** ![corenovka](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/corenovka.png)
 * **Pottyos** ![pottyos](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/pottyos.png)
 * **Preobrajenskiy** ![preobrajenskiy](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/preobrajenskiy.png)
+* **Rostagroexport** ![rostagroexport](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/rostagroexport.png)
 * **Svitlogorie** ![svitlogorie](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/svitlogorie.png)
 * **Vkusnoteevo** ![vkusnoteevo](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/vkusnoteevo.png)
 * **Vologosha** ![vologosha](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/vologosha.png)
@@ -21,5 +22,5 @@ This mod support patchouli documentation. If you want read some mod docs, instal
 * Mojang
 * Forge
 * Kaupenjoe (for forge guide)
-* Cyclic ([fluid effects](https://github.com/OleSTEEP/TuroRudi/blob/1.18/src/main/java/com/olesteep/turorudi/fluid/block/CondensedMilkFluidBlock.java)) ([1.19 fluid](https://github.com/OleSTEEP/TuroRudi/blob/1.19/src/main/java/com/olesteep/turorudi/fluid/TuroFluidCondensedMilkHolder.java))
+* Cyclic ([fluid effects](https://github.com/OleSTEEP/TuroRudi/blob/1.18/src/main/java/com/olesteep/turorudi/fluid/block/CondensedMilkFluidBlock.java))
 * ImmersiveEngineering ([villager's house spawn](https://github.com/OleSTEEP/TuroRudi/blob/1.18/src/main/java/com/olesteep/turorudi/world/village/TuroVillagePools.java)) ([mixin](https://github.com/OleSTEEP/TuroRudi/blob/1.18/src/main/java/com/olesteep/turorudi/mixin/SingleJigsawAccess.java))

@@ -84,11 +84,11 @@ public class TuroRudi {
         DateTimeFormatter dtf_month = DateTimeFormatter.ofPattern("MM");
         LocalDateTime now = LocalDateTime.now();
 
-        TuroVillagers.registerPOIs();
+        event.enqueueWork(TuroVillagers::registerPOIs);
         TuroVillagePools.init();
 
         if (Integer.parseInt(dtf_day.format(now)) >= 20 && Integer.parseInt(dtf_month.format(now)) == 10) {
-            TuroHW.registerPOIs();
+            event.enqueueWork(TuroHW::registerPOIs);
         }
     }
 }

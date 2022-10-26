@@ -153,7 +153,8 @@
   "blocks.turorudi.guide.description": "Узнайте о здешнихъ блокахъ всё!",
   "blocks.turorudi.milk_fat_block.guide": "По своим свойствам очень походит на блок слизи. Создаётся изъ 9-ти кусочковъ молочнаго жира.",
   "blocks.turorudi.turorudi_bad_block.guide": "Очень много плохого сырка. Возможно, это отбраковка съ какой-то молочной фермы... Негодники. Выглядитъ и пахнетъ-съ не хорошо.",
-  "blocks.turorudi.turorudi_block.guide": "Весьма большой сырокъ. Столько сырка, Вы, сударь, наверное, не осилите...",
+  "blocks.turorudi.turorudi_block.guide": "Весьма большой сырокъ. Столько сырка, Вы, сударь, наверное, не осилите, но вотъ сыроваръ сможетъ сделать изъ него много маленькихъ сырковъ...",
+  "blocks.turorudi.turorudi_block_dark.guide": "Ты и въ прямь соединилъ этотъ большой сырокъ со светильникомъ Джека? Охъ, сударь, жди беды... И не подумай показывать его кретьянамъ!",
   "items.turorudi.guide.name": "Предметы",
   "items.turorudi.guide.description": "Узнайте о здешнихъ предметахъ всё!",
   "items.turorudi.apricot.guide": "Диковинный фруктъ. Можно найти на абрикосовыхъ кустахъ въ тёплыхъ бiомахъ (напримеръ: джунгли или саванна)",
@@ -241,6 +242,18 @@
   "effects.turorudi.vologosha_condensed.guide": "Эффекты:$(br) * Питательность: 4 ед.,$(br) * Насыщенiе: 0.8,$(br) * Плавное паденіе I (1 мин.),$(br) * Слабость I (20 сек.)",
   "effects.turorudi.vologosha_orange.guide": "Эффекты:$(br) * Питательность: 4 ед.,$(br) * Насыщенiе: 0.8,$(br) * Насыщеніе I (1 мин.),$(br) * Слабость I (20 сек.)",
   "effects.turorudi.vologosha_strawberry.guide": "Эффекты:$(br) * Питательность: 4 ед.,$(br) * Насыщенiе: 0.8,$(br) * Возстановленіе I (1 мин.),$(br) * Слабость I (20 сек.)",
+
+  "block.turorudi.turorudi_block_dark": "Тёмный сырковый блокъ",
+  "entity.minecraft.villager.turorudi.turomaker_dark": "Тёмный сыроваръ",
+  "item.turorudi.alexandrov5_dark": "Тёмный Б.Ю. Александровъ 5%",
+  "item.turorudi.alexandrov26_dark": "Тёмный Б.Ю. Александровъ 26%",
+  "item.turorudi.corenovka_dark": "Тёмная Коровка изъ Кореновки",
+  "item.turorudi.pottyos_dark": "Тёмный Pöttyös Túró Rudi",
+  "item.turorudi.preobrajenskiy_dark": "Тёмный Преображенскій",
+  "item.turorudi.rostagroexport_dark": "Тёмный Ростагроэкспортъ",
+  "item.turorudi.svitlogorie_dark": "Тёмный Свитлогорье",
+  "item.turorudi.vkusnoteevo_dark": "Тёмный Вкуснотеево",
+  "item.turorudi.vologosha_dark": "Тёмный Вологоша",
 
   "itemGroup.turotab": "TuroRudi"
 }

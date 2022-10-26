@@ -153,7 +153,8 @@
   "blocks.turorudi.guide.description": "Learn all about blocks in this mod!",
   "blocks.turorudi.milk_fat_block.guide": "Its properties are very similar to the slime block. Crafted with 9 Milk Fat.",
   "blocks.turorudi.turorudi_bad_block.guide": "Lots of bad curd snack. Perhaps this is a culling from some dairy plant... It looks and smells not very good.",
-  "blocks.turorudi.turorudi_block.guide": "Veeery big curd snack. You probably won't be able to eat that much curd snack...",
+  "blocks.turorudi.turorudi_block.guide": "Veeery big curd snack. You probably won't be able to eat that much curd snack, but Turomaker can make a lot of small curd snacks out of it ...",
+  "blocks.turorudi.turorudi_block_dark.guide": "Did you really pair that big curd snack with Jack O'Lantern? Oh, wait for trouble my friend... Don't even try to show it to the villagers!",
   "items.turorudi.guide.name": "Items",
   "items.turorudi.guide.description": "Learn all about items in this mod!",
   "items.turorudi.apricot.guide": "An interesting fruit. Can be found on apricot bushes in warm biomes (for example: jungle or savanna)",
@@ -241,6 +242,18 @@
   "effects.turorudi.vologosha_condensed.guide": "Effects:$(br) * Nutrition: 4 p.,$(br) * Saturation: 0.8,$(br) * Slow Falling I (1 min.),$(br) * Weakness I (20 sec.)",
   "effects.turorudi.vologosha_orange.guide": "Effects:$(br) * Nutrition: 4 p.,$(br) * Saturation: 0.8,$(br) * Saturation I (1 min.),$(br) * Weakness I (20 sec.)",
   "effects.turorudi.vologosha_strawberry.guide": "Effects:$(br) * Nutrition: 4 p.,$(br) * Saturation: 0.8,$(br) * Regeneration I (1 min.),$(br) * Weakness I (20 sec.)",
+
+  "block.turorudi.turorudi_block_dark": "Dark block of curd snack",
+  "entity.minecraft.villager.turorudi.turomaker_dark": "Dark Turomaker",
+  "item.turorudi.alexandrov5_dark": "Dark B.YU. Alexandrov 5%",
+  "item.turorudi.alexandrov26_dark": "Dark B.YU. Alexandrov 26%",
+  "item.turorudi.corenovka_dark": "Dark Cow from Corenovka",
+  "item.turorudi.pottyos_dark": "Dark Pöttyös Túró Rudi",
+  "item.turorudi.preobrajenskiy_dark": "Dark Preobrajenskiy",
+  "item.turorudi.rostagroexport_dark": "Dark Rostagroexport",
+  "item.turorudi.svitlogorie_dark": "Dark Svitlogorie",
+  "item.turorudi.vkusnoteevo_dark": "Dark Vkusnoteevo",
+  "item.turorudi.vologosha_dark": "Dark Vologosha",
 
   "itemGroup.turotab": "TuroRudi"
 }

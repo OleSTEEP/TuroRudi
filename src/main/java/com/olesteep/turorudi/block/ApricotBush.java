@@ -43,6 +43,7 @@ public class ApricotBush {
             boolean flag = i == 3;
             if (!flag && player.getItemInHand(interactionHand).is(Items.BONE_MEAL)) {
                 return InteractionResult.PASS;
+
             } else if (i > 1) {
                 int j = 1 + level.random.nextInt(2);
                 popResource(level, blockPos, new ItemStack(TuroItems.APRICOT.get(), j + (flag ? 1 : 0)));

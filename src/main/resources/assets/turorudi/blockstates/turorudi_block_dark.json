@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "turorudi:block/turorudi_block_dark",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "turorudi:block/turorudi_block_dark"
+    },
+    "facing=south": {
+      "model": "turorudi:block/turorudi_block_dark",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "turorudi:block/turorudi_block_dark",
+      "y": 270
+    }
+  }
+}

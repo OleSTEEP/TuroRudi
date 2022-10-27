@@ -5,7 +5,6 @@ import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.data.TuroLists;
 import com.olesteep.turorudi.item.TuroCreativeTab;
 import com.olesteep.turorudi.item.TuroFoods;
-import com.olesteep.turorudi.item.TuroItems;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -132,7 +131,7 @@ public class TuroHW {
     }
 
     public static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(TuroCreativeTab.TUROTAB)));
+        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(TuroCreativeTab.TUROTAB)));
     }
 
     public static void registerPOIs() {

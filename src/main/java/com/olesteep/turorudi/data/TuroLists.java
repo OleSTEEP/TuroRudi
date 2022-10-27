@@ -1,12 +1,14 @@
 package com.olesteep.turorudi.data;
 
 import com.olesteep.turorudi.item.*;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 
 import java.util.Random;
 
-public class TuroList {
-    public static Random random = new Random();
+public class TuroLists {
+    public static Random RANDOM = new Random();
 
     public static Item getRandGood() {
         Item[] list = {Alexandrov.ALEX_VANILLA5.get(),
@@ -45,7 +47,7 @@ public class TuroList {
                 Vkusnoteevo.VKUSN_COCOA.get(),
                 Vkusnoteevo.VKUSN_COND.get()
         };
-        int item = random.nextInt(list.length);
+        int item = RANDOM.nextInt(list.length);
         return list[item];
     }
 
@@ -62,7 +64,40 @@ public class TuroList {
                 Vologosha.VOLOG_ORANGE.get(),
                 Vologosha.VOLOG_STRAW.get()
         };
-        int item = random.nextInt(list.length);
+        int item = RANDOM.nextInt(list.length);
         return list[item];
+    }
+
+    public static MobEffect getRandEffect() {
+        MobEffect[] list = {MobEffects.MOVEMENT_SPEED,
+                MobEffects.MOVEMENT_SLOWDOWN,
+                MobEffects.DIG_SPEED,
+                MobEffects.DIG_SLOWDOWN,
+                MobEffects.DAMAGE_BOOST,
+                MobEffects.JUMP,
+                MobEffects.CONFUSION,
+                MobEffects.REGENERATION,
+                MobEffects.DAMAGE_RESISTANCE,
+                MobEffects.FIRE_RESISTANCE,
+                MobEffects.WATER_BREATHING,
+                MobEffects.INVISIBILITY,
+                MobEffects.BLINDNESS,
+                MobEffects.NIGHT_VISION,
+                MobEffects.HUNGER,
+                MobEffects.WEAKNESS,
+                MobEffects.POISON,
+                MobEffects.WITHER,
+                MobEffects.HEALTH_BOOST,
+                MobEffects.ABSORPTION,
+                MobEffects.SATURATION,
+                MobEffects.GLOWING,
+                MobEffects.LEVITATION,
+                MobEffects.SLOW_FALLING,
+                MobEffects.CONDUIT_POWER,
+                MobEffects.DOLPHINS_GRACE
+
+        };
+        int effect = RANDOM.nextInt(list.length);
+        return list[effect];
     }
 }

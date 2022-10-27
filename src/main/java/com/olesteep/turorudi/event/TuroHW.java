@@ -2,14 +2,17 @@ package com.olesteep.turorudi.event;
 
 import com.google.common.collect.ImmutableSet;
 import com.olesteep.turorudi.TuroRudi;
+import com.olesteep.turorudi.data.TuroLists;
 import com.olesteep.turorudi.item.TuroCreativeTab;
 import com.olesteep.turorudi.item.TuroFoods;
 import com.olesteep.turorudi.item.TuroItems;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -20,6 +23,7 @@ import net.minecraft.world.level.block.CarvedPumpkinBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -33,6 +37,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 import java.util.function.Supplier;
 
@@ -98,8 +103,23 @@ public class TuroHW {
         }
     }
 
-    private static int nonNullRandom(Integer price) {
-        int randNum = new Random().nextInt(price);
+    @SubscribeEvent
+    protected static void onFoodEaten(LivingEntityUseItemEvent.Finish event) {
+        if (event.getEntity() instanceof Player player) {
+
+            switch (player.getMainHandItem().getItem().toString()) {
+                case ("alexandrov5_dark"), ("corenovka_dark"), ("pottyos_dark"), ("svitlogorie_dark"), ("vkusnoteevo_dark") ->
+                        player.addEffect(new MobEffectInstance(Objects.requireNonNull(TuroLists.getRandEffect()), nonNullRandom(1200), 1));
+                case ("alexandrov26_dark"), ("rostagroexport_dark") ->
+                        player.addEffect(new MobEffectInstance(Objects.requireNonNull(TuroLists.getRandEffect()), nonNullRandom(1500), 1));
+                case ("preobrajenskiy_dark"), ("vologosha_dark") ->
+                        player.addEffect(new MobEffectInstance(TuroLists.getRandEffect(), 600, 1));
+            }
+        }
+    }
+
+    private static int nonNullRandom(Integer limit) {
+        int randNum = new Random().nextInt(limit);
         if(randNum == 0){
             randNum = randNum + 1;
         }

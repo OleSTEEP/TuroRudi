@@ -3,7 +3,7 @@ package com.olesteep.turorudi.villager;
 import com.google.common.collect.ImmutableSet;
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.block.TuroBlocks;
-import com.olesteep.turorudi.data.TuroList;
+import com.olesteep.turorudi.data.TuroLists;
 import com.olesteep.turorudi.item.*;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.sounds.SoundEvents;
@@ -61,8 +61,8 @@ public class TuroVillagers {
             trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.ORANGE.get(), nonNullRandom()),4,12,0.18F));
             trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 6), new ItemStack(TuroItems.TURORUDI.get(), nonNullRandom()),4,12,0.18F));
             trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 3), new ItemStack(TuroItems.TURORUDI_BAD.get(), nonNullRandom()),4,12,0.18F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 8), new ItemStack(TuroList.getRandGood(), nonNullRandom()),4,12,0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 4), new ItemStack(TuroList.getRandBad(), nonNullRandom()),4,12,0.16F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 8), new ItemStack(TuroLists.getRandGood(), nonNullRandom()),4,12,0.12F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.EMERALD, 4), new ItemStack(TuroLists.getRandBad(), nonNullRandom()),4,12,0.16F));
 
             // Buy
             trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(TuroItems.BANANA.get(), nonNullRandom()), new ItemStack(Items.EMERALD, 2),4,12,0.09F));

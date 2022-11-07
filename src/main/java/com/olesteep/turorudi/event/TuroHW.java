@@ -3,7 +3,7 @@ package com.olesteep.turorudi.event;
 import com.google.common.collect.ImmutableSet;
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.data.TuroLists;
-import com.olesteep.turorudi.item.TuroCreativeTab;
+import com.olesteep.turorudi.item.TuroCreativeTabs;
 import com.olesteep.turorudi.item.TuroFoods;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.sounds.SoundEvents;
@@ -46,15 +46,15 @@ public class TuroHW {
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister.create(ForgeRegistries.PROFESSIONS, TuroRudi.MOD_ID);
 
     public static final RegistryObject<Block> TURO_BLOCK_DARK = registerBlock(BLOCKS, "turorudi_block_dark", () -> new CarvedPumpkinBlock(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL).lightLevel((level) -> 15)));
-    public static final RegistryObject<Item> ALEX_5_DARK = ITEMS.register("alexandrov5_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA)));
-    public static final RegistryObject<Item> ALEX_26_DARK = ITEMS.register("alexandrov26_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA_FAT)));
-    public static final RegistryObject<Item> CORENOVKA_DARK = ITEMS.register("corenovka_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA)));
-    public static final RegistryObject<Item> POTTYOS_DARK = ITEMS.register("pottyos_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA)));
-    public static final RegistryObject<Item> PREOBR_DARK = ITEMS.register("preobrajenskiy_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA_BAD)));
-    public static final RegistryObject<Item> ROSTAGRO_DARK = ITEMS.register("rostagroexport_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA_FAT)));
-    public static final RegistryObject<Item> SVITL_DARK = ITEMS.register("svitlogorie_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA)));
-    public static final RegistryObject<Item> VKUSN_DARK = ITEMS.register("vkusnoteevo_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA)));
-    public static final RegistryObject<Item> VOLOG_DARK = ITEMS.register("vologosha_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTab.TUROTAB).food(TuroFoods.TURO_VANILLA_BAD)));
+    public static final RegistryObject<Item> ALEX_5_DARK = ITEMS.register("alexandrov5_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.ITEMTAB).food(TuroFoods.TURO_VANILLA)));
+    public static final RegistryObject<Item> ALEX_26_DARK = ITEMS.register("alexandrov26_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.ITEMTAB).food(TuroFoods.TURO_VANILLA_FAT)));
+    public static final RegistryObject<Item> CORENOVKA_DARK = ITEMS.register("corenovka_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.ITEMTAB).food(TuroFoods.TURO_VANILLA)));
+    public static final RegistryObject<Item> POTTYOS_DARK = ITEMS.register("pottyos_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.ITEMTAB).food(TuroFoods.TURO_VANILLA)));
+    public static final RegistryObject<Item> PREOBR_DARK = ITEMS.register("preobrajenskiy_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.ITEMTAB).food(TuroFoods.TURO_VANILLA_BAD)));
+    public static final RegistryObject<Item> ROSTAGRO_DARK = ITEMS.register("rostagroexport_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.ITEMTAB).food(TuroFoods.TURO_VANILLA_FAT)));
+    public static final RegistryObject<Item> SVITL_DARK = ITEMS.register("svitlogorie_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.ITEMTAB).food(TuroFoods.TURO_VANILLA)));
+    public static final RegistryObject<Item> VKUSN_DARK = ITEMS.register("vkusnoteevo_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.ITEMTAB).food(TuroFoods.TURO_VANILLA)));
+    public static final RegistryObject<Item> VOLOG_DARK = ITEMS.register("vologosha_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.ITEMTAB).food(TuroFoods.TURO_VANILLA_BAD)));
     public static final RegistryObject<PoiType> TUROMAKER_DARK_POI = POI_TYPES.register("turomaker_dark_poi", () -> new PoiType("turomaker_dark_poi", PoiType.getBlockStates(TURO_BLOCK_DARK.get()), 1, 1));
     public static final RegistryObject<VillagerProfession> TUROMAKER_DARK = VILLAGER_PROFESSIONS.register("turomaker_dark", () -> new VillagerProfession("turomaker_dark", TUROMAKER_DARK_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
 
@@ -131,7 +131,7 @@ public class TuroHW {
     }
 
     public static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(TuroCreativeTab.TUROTAB)));
+        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(TuroCreativeTabs.ITEMTAB)));
     }
 
     public static void registerPOIs() {

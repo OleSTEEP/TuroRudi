@@ -255,5 +255,6 @@
   "item.turorudi.vkusnoteevo_dark": "Тёмный Вкуснотеево",
   "item.turorudi.vologosha_dark": "Тёмный Вологоша",
 
-  "itemGroup.turotab": "TuroRudi"
+  "itemGroup.itemtab": "TuroRudi предметы",
+  "itemGroup.snacktab": "TuroRudi сырки"
 }

@@ -255,5 +255,6 @@
   "item.turorudi.vkusnoteevo_dark": "Dark Vkusnoteevo",
   "item.turorudi.vologosha_dark": "Dark Vologosha",
 
-  "itemGroup.turotab": "TuroRudi"
+  "itemGroup.itemtab": "TuroRudi items",
+  "itemGroup.snacktab": "TuroRudi curd snacks"
 }

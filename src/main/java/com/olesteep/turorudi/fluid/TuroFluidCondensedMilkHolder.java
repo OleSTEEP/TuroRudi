@@ -2,7 +2,7 @@ package com.olesteep.turorudi.fluid;
 
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.fluid.block.CondensedMilkFluidBlock;
-import com.olesteep.turorudi.item.TuroCreativeTab;
+import com.olesteep.turorudi.item.TuroCreativeTabs;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -40,7 +40,7 @@ public class TuroFluidCondensedMilkHolder {
     public static RegistryObject<FlowingFluid> STILL = FLUIDS.register("milk_condensed", () -> new ForgeFlowingFluid.Source(makeProperties()));
     public static RegistryObject<FlowingFluid> FLOWING = FLUIDS.register("milk_condensed_flowing", () -> new ForgeFlowingFluid.Flowing(makeProperties()));
     public static RegistryObject<LiquidBlock> BLOCK = BLOCKS.register("milk_condensed_block", () -> new CondensedMilkFluidBlock(STILL, Block.Properties.of(Material.WATER).noCollission().strength(100.0F).noLootTable()));
-    public static RegistryObject<Item> BUCKET = ITEMS.register("milk_condensed_bucket", () -> new BucketItem(STILL, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(TuroCreativeTab.TUROTAB)));
+    public static RegistryObject<Item> BUCKET = ITEMS.register("milk_condensed_bucket", () -> new BucketItem(STILL, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(TuroCreativeTabs.ITEMTAB)));
     public static RegistryObject<FluidType> FLUID_TYPE = FLUID_TYPES.register("milk_condensed", () -> new FluidType(FluidType.Properties.create()) {
 
         @Override

@@ -114,6 +114,7 @@
   "item.turorudi.rostagroexport_cocoa": "Ростагроэкспорт с какао",
   "item.turorudi.rostagroexport_coconut": "Ростагроэкспорт с кокосом",
   "item.turorudi.rostagroexport_condensed": "Ростагроэкспорт с молоком сгущёным варёным",
+  "item.turorudi.rostagroexport_potato": "Ростагроэкспорт Картошка",
 
   "item.turorudi.svitlogorie": "Свитлогорье",
   "item.turorudi.svitlogorie_cocoa": "Свитлогорье с какао",
@@ -222,6 +223,7 @@
   "effects.turorudi.rostagroexport_cocoa.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщение: 1.0,$(br) * Скорость II (2 мин.)",
   "effects.turorudi.rostagroexport_coconut.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщение: 1.0,$(br) * Спешка III (2 мин.)",
   "effects.turorudi.rostagroexport_condensed.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщение: 1.0,$(br) * Медленное падение II (2 мин.)",
+  "effects.turorudi.rostagroexport_potato.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщение: 1.0,$(br) * Ночное зрение II (2 мин.)",
   "effects.turorudi.svitlogorie.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщение: 1.0,$(br) * Сопротивление II (2 мин.)",
   "effects.turorudi.svitlogorie_cocoa.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщение: 1.0,$(br) * Скорость II (2 мин.)",
   "effects.turorudi.svitlogorie_coconut.guide": "Эффекты:$(br) * Питательность: 8 ед.,$(br) * Насыщение: 1.0,$(br) * Спешка III (2 мин.)",

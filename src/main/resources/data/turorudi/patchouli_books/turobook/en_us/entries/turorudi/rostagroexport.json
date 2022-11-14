@@ -50,6 +50,14 @@
     {
       "type": "patchouli:crafting",
       "recipe": "turorudi:rostagroexport_condensed"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.rostagroexport_potato.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:rostagroexport_potato"
     }
   ]
 }

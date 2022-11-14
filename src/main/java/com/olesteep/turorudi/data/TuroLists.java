@@ -34,6 +34,7 @@ public class TuroLists {
                 Rostagroexport.ROSTAGRO_COCOA.get(),
                 Rostagroexport.ROSTAGRO_COCO.get(),
                 Rostagroexport.ROSTAGRO_COND.get(),
+                Rostagroexport.ROSTAGRO_POTATO.get(),
                 Svitlogorie.SVITL_VANILLA.get(),
                 Svitlogorie.SVITL_COCOA.get(),
                 Svitlogorie.SVITL_COCO.get(),

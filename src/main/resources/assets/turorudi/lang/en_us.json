@@ -114,6 +114,7 @@
   "item.turorudi.rostagroexport_cocoa": "Rostagroexport with cacao",
   "item.turorudi.rostagroexport_coconut": "Rostagroexport with coconut",
   "item.turorudi.rostagroexport_condensed": "Rostagroexport with condensed milk",
+  "item.turorudi.rostagroexport_potato": "Rostagroexport Potato",
 
   "item.turorudi.svitlogorie": "Svitlogorie",
   "item.turorudi.svitlogorie_cocoa": "Svitlogorie with cocoa",
@@ -222,6 +223,7 @@
   "effects.turorudi.rostagroexport_cocoa.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Speed II (2 min.)",
   "effects.turorudi.rostagroexport_coconut.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Haste III (2 min.)",
   "effects.turorudi.rostagroexport_condensed.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Slow Falling II (2 min.)",
+  "effects.turorudi.rostagroexport_potato.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Night Vision II (2 min.)",
   "effects.turorudi.svitlogorie.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Resistance II (2 min.)",
   "effects.turorudi.svitlogorie_cocoa.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Speed II (2 min.)",
   "effects.turorudi.svitlogorie_coconut.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Haste III (2 min.)",

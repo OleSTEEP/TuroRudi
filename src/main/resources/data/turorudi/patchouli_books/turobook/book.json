@@ -1,7 +1,7 @@
 {
   "name": "guide.title",
   "landing_text": "guide.landing_text",
-  "creative_tab": "turotab",
+  "creative_tab": "itemtab",
   "model": "patchouli:book_cyan",
   "show_progress": false,
   "i18n": true,

@@ -1,0 +1,47 @@
+{
+  "name": "turorudi.turorudi.romashkino.guide.name",
+  "icon": "turorudi:romashkino",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.romashkino.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_romashkino"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.romashkino.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:romashkino"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.romashkino_cocoa.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:romashkino_cocoa"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.romashkino_coconut.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:romashkino_coconut"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.romashkino_condensed.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:romashkino_condensed"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    " C ",
+    " P "
+  ],
+  "key": {
+    "S": {
+      "item": "turorudi:chocolate_bad"
+    },
+    "C": {
+      "item": "turorudi:turorudi_bad"
+    },
+    "P": {
+      "item": "turorudi:package_romashkino"
+    }
+  },
+  "result": {
+    "item": "turorudi:romashkino"
+  }
+}

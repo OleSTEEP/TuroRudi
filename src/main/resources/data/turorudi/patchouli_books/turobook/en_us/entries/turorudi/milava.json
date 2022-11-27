@@ -1,0 +1,47 @@
+{
+  "name": "turorudi.turorudi.milava.guide.name",
+  "icon": "turorudi:milava",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.milava.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_milava"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.milava.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:milava"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.milava_cocoa.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:milava_cocoa"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.milava_condensed.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:milava_condensed"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.milava_potato.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:milava_potato"
+    }
+  ]
+}

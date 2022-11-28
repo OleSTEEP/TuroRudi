@@ -1,0 +1,55 @@
+{
+  "name": "turorudi.turorudi.sirkoff.guide.name",
+  "icon": "turorudi:sirkoff",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.sirkoff.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_sirkoff"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.sirkoff.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:sirkoff"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.sirkoff_coconut.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:sirkoff_coconut"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.sirkoff_condensed.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:sirkoff_condensed"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.sirkoff_strawberry.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:sirkoff_strawberry"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.sirkoff_potato.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:sirkoff_potato"
+    }
+  ]
+}

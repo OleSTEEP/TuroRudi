@@ -1,0 +1,47 @@
+{
+  "name": "turorudi.turorudi.soviet.guide.name",
+  "icon": "turorudi:soviet",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.soviet.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_soviet"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.soviet.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:soviet"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.soviet_caramel.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:soviet_caramel"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.soviet_cocoa.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:soviet_cocoa"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.soviet_condensed.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:soviet_condensed"
+    }
+  ]
+}

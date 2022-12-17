@@ -3,6 +3,7 @@ package com.olesteep.turorudi;
 import com.mojang.logging.LogUtils;
 import com.olesteep.turorudi.block.*;
 import com.olesteep.turorudi.event.TuroHW;
+import com.olesteep.turorudi.event.TuroNY;
 import com.olesteep.turorudi.fluid.TuroFluidCondensedMilkHolder;
 import com.olesteep.turorudi.item.*;
 import com.olesteep.turorudi.villager.TuroVillagers;
@@ -64,6 +65,12 @@ public class TuroRudi {
         if(Integer.parseInt(dtf_day.format(now)) >= 20 && Integer.parseInt(dtf_month.format(now)) == 10) {
             LOGGER.info("// It seems like halloween coming...");
             TuroHW.register(eventBus);
+        }
+
+        //Halloween stuff
+        if(Integer.parseInt(dtf_day.format(now)) >= 15 && Integer.parseInt(dtf_month.format(now)) == 12) {
+            LOGGER.info("// It seems like New Year coming...");
+            TuroNY.register(eventBus);
         }
 
         //Placed features

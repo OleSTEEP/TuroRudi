@@ -1,0 +1,32 @@
+{
+  "new_year_gift_break": {
+    "subtitle": "turorudi.new_year_gift_break",
+    "sounds": [
+      "turorudi:new_year_gift_break"
+    ]
+  },
+  "new_year_gift_step": {
+    "subtitle": "turorudi.new_year_gift_step",
+    "sounds": [
+      "turorudi:new_year_gift_step"
+    ]
+  },
+  "new_year_gift_place": {
+    "subtitle": "turorudi.new_year_gift_place",
+    "sounds": [
+      "turorudi:new_year_gift_place"
+    ]
+  },
+  "new_year_gift_hit": {
+    "subtitle": "turorudi.new_year_gift_hit",
+    "sounds": [
+      "turorudi:new_year_gift_hit"
+    ]
+  },
+  "new_year_gift_fall": {
+    "subtitle": "turorudi.new_year_gift_fall",
+    "sounds": [
+      "turorudi:new_year_gift_fall"
+    ]
+  }
+}

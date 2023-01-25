@@ -12,6 +12,8 @@ Minecraft mod that adds delicious treats to the game - curd snacks. The mod is a
 * **Preobrajenskiy** ![preobrajenskiy](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/preobrajenskiy.png)
 * **Romashkino** ![romashkino](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/romashkino.png) 
 * **Rostagroexport** ![rostagroexport](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/rostagroexport.png)
+* **Sirkoff** ![sirkoff](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/sirkoff.png)
+* **Soviet Traditions** ![soviet](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/soviet.png)
 * **Svitlogorie** ![svitlogorie](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/svitlogorie.png)
 * **Vkusnoteevo** ![vkusnoteevo](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/vkusnoteevo.png)
 * **Vologosha** ![vologosha](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/vologosha.png)

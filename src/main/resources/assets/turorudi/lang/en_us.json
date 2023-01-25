@@ -105,6 +105,9 @@
   "item.turorudi.milava_condensed": "Milava with condensed milk",
   "item.turorudi.milava_potato": "Milava Potato",
 
+  "item.turorudi.milk_station": "Milk Station",
+  "item.turorudi.milk_station_condensed": "Milk Station with condensed milk",
+
   "item.turorudi.pottyos": "Pöttyös Túró Rudi",
   "item.turorudi.pottyos_milk": "Pöttyös Túró Rudi in milk chocolate",
   "item.turorudi.pottyos_apricot": "Pöttyös Túró Rudi with apricot",
@@ -162,6 +165,7 @@
 
   "item.turorudi.package_alexandrov": "B.YU. Alexandrov package",
   "item.turorudi.package_corenovka": "Cow from Corenovka package",
+  "item.turorudi.package_milk_station": "Milk Station package",
   "item.turorudi.package_milava": "Milava package",
   "item.turorudi.package_pottyos": "Pöttyös Túró Rudi package",
   "item.turorudi.package_preobrajenskiy": "Preobrajenskiy package",
@@ -206,6 +210,8 @@
   "turorudi.turorudi.corenovka.guide": "Curd snack dispersed at the Korenovsky dairy plant in Russia. Good quality, but quite expensive.",
   "turorudi.turorudi.milava.guide.name": "Milava",
   "turorudi.turorudi.milava.guide": "Curd snack of the famous Minsk manufacturer. Pretty tasty, chocolate and curd are soft.",
+  "turorudi.turorudi.milk_station.guide.name": "Milk Station",
+  "turorudi.turorudi.milk_station.guide": "Curd snack by the X5 Group company, which owns the Pyaterochka and Perekrestok stores in Russia. Curd snack is of acceptable good quality at a low price.",
   "turorudi.turorudi.pottyos.guide.name": "Pöttyös Túró Rudi",
   "turorudi.turorudi.pottyos.guide": "Cult curd snack. You may have noticed, but the mod is named after him. It has a distinctive tubular shape.",
   "turorudi.turorudi.preobrajenskiy.guide.name": "Preobrajenskiy",
@@ -248,6 +254,8 @@
   "effects.turorudi.milava_cocoa.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Speed II (2 min.)",
   "effects.turorudi.milava_condensed.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Slow Falling II (2 min.)",
   "effects.turorudi.milava_potato.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Night Vision II (2 min.)",
+  "effects.turorudi.milk_station.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Resistance II (2 min.)",
+  "effects.turorudi.milk_station_condensed.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Slow Falling II (2 min.)",
   "effects.turorudi.pottyos.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Resistance II (2 min.)",
   "effects.turorudi.pottyos_milk.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Health Boost II (2 min.)",
   "effects.turorudi.pottyos_strawberry.guide": "Effects:$(br) * Nutrition: 8 p.,$(br) * Saturation: 1.0,$(br) * Regeneration II (2 min.)",

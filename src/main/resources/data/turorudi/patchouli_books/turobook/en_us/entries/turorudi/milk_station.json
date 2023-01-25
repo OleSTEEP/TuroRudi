@@ -1,0 +1,31 @@
+{
+  "name": "turorudi.turorudi.milk_station.guide.name",
+  "icon": "turorudi:milk_station",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.milk_station.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_milk_station"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.milk_station.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:milk_station"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.milk_station_condensed.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:milk_station_condensed"
+    }
+  ]
+}

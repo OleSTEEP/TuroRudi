@@ -29,6 +29,8 @@ public class TuroLists {
                 Milava.MILAVA_COCOA.get(),
                 Milava.MILAVA_COND.get(),
                 Milava.MILAVA_POTATO.get(),
+                MilkStation.MILK_STATION_VANILLA.get(),
+                MilkStation.MILK_STATION_COND.get(),
                 Pottyos.POTTYOS_VANILLA.get(),
                 Pottyos.POTTYOS_MILK.get(),
                 Pottyos.POTTYOS_STRAW.get(),

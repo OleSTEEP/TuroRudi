@@ -80,6 +80,7 @@ public class TuroRudi {
         Alexandrov.register(eventBus);
         Corenovka.register(eventBus);
         Milava.register(eventBus);
+        MilkStation.register(eventBus);
         Pottyos.register(eventBus);
         Preobrajenskiy.register(eventBus);
         Romashkino.register(eventBus);

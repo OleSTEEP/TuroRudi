@@ -6,6 +6,7 @@ import com.olesteep.turorudi.fluid.TuroFluids;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemNameBlockItem;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,7 +29,7 @@ public class TuroItems {
     public static final RegistryObject<Item> CURD = ITEMS.register("curd", () -> new Item(new Item.Properties().food(TuroFoods.CURD).tab(TuroCreativeTabs.ITEMTAB)));
     public static final RegistryObject<Item> CURD_BAD = ITEMS.register("curd_bad", () -> new Item(new Item.Properties().food(TuroFoods.CURD_BAD).tab(TuroCreativeTabs.ITEMTAB)));
     public static final RegistryObject<Item> GLAZE = ITEMS.register("glaze", () -> new Item(new Item.Properties().food(TuroFoods.GLAZE).tab(TuroCreativeTabs.ITEMTAB)));
-    public static final RegistryObject<Item> MILK_COND_BUCKET = ITEMS.register("milk_condensed_bucket", () -> new BucketItem(TuroFluids.MILK_COND_FLUID, new Item.Properties().tab(TuroCreativeTabs.ITEMTAB).stacksTo(1)));
+    public static final RegistryObject<Item> MILK_COND_BUCKET = ITEMS.register("milk_condensed_bucket", () -> new BucketItem(TuroFluids.MILK_COND_FLUID, new Item.Properties().craftRemainder(Items.BUCKET).tab(TuroCreativeTabs.ITEMTAB).stacksTo(1)));
     public static final RegistryObject<Item> MILK_FAT = ITEMS.register("milk_fat", () -> new Item(new Item.Properties().food(TuroFoods.MILK_FAT).tab(TuroCreativeTabs.ITEMTAB)));
     public static final RegistryObject<Item> LEMON = ITEMS.register("lemon", () -> new ItemNameBlockItem(LemonBush.LEMON_BUSH.get(), new Item.Properties().food(TuroFoods.LEMON).tab(TuroCreativeTabs.ITEMTAB)));
     public static final RegistryObject<Item> LIME = ITEMS.register("lime", () -> new ItemNameBlockItem(LimeBush.LIME_BUSH.get(), new Item.Properties().food(TuroFoods.LIME).tab(TuroCreativeTabs.ITEMTAB)));

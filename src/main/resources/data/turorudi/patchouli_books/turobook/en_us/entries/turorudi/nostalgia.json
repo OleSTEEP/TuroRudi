@@ -1,0 +1,63 @@
+{
+  "name": "turorudi.turorudi.nostalgia.guide.name",
+  "icon": "turorudi:nostalgia23",
+  "category": "turorudi:turorudi",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "turorudi.turorudi.nostalgia.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:package_nostalgia"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.nostalgia23.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:nostalgia23"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.nostalgia5.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:nostalgia5"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.nostalgia_berry.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:nostalgia_berry"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.nostalgia_cherry.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:nostalgia_cherry"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.nostalgia_condensed.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:nostalgia_condensed"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "effects.turorudi.nostalgia_potato.guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:nostalgia_potato"
+    }
+  ]
+}

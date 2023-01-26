@@ -71,8 +71,9 @@ public class TuroRudi {
         //TuroRudies
         Alexandrov.register(eventBus);
         Corenovka.register(eventBus);
-        MilkStation.register(eventBus);
         Milava.register(eventBus);
+        MilkStation.register(eventBus);
+        Nostalgia.register(eventBus);
         Pottyos.register(eventBus);
         Preobrajenskiy.register(eventBus);
         Romashkino.register(eventBus);

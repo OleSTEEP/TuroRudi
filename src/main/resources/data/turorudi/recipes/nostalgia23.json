@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "MCM",
+    " P "
+  ],
+  "key": {
+    "S": {
+      "item": "turorudi:chocolate"
+    },
+    "C": {
+      "item": "turorudi:turorudi"
+    },
+    "P": {
+      "item": "turorudi:package_nostalgia"
+    },
+    "M": {
+      "item": "turorudi:milk_fat"
+    }
+  },
+  "result": {
+    "item": "turorudi:nostalgia23"
+  }
+}

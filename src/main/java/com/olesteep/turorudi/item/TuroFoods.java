@@ -29,6 +29,7 @@ public class TuroFoods {
     public static final FoodProperties TURO_VANILLA_FAT_MILK = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.4F).effect(new MobEffectInstance(MobEffects.HEALTH_BOOST, 3000, 1), 1.0F).build();
     public static final FoodProperties TURO_APRICOT = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 2400, 1), 1.0F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 2), 1.0F).build();
     public static final FoodProperties TURO_BANANA = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 2400, 1), 1.0F).effect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 2400, 2), 1.0F).build();
+    public static final FoodProperties TURO_BERRY = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.REGENERATION, 3400, 0), 1.0F).build();
     public static final FoodProperties TURO_BLBERRY = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.CONDUIT_POWER, 2400, 1), 1.0F).build();
     public static final FoodProperties TURO_CARAMEL = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.HEAL, 20, 1), 1.0F).build();
     public static final FoodProperties TURO_CHERRY = (new FoodProperties.Builder()).nutrition(12).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.REGENERATION, 3400, 1), 1.0F).build();
@@ -42,7 +43,6 @@ public class TuroFoods {
     public static final FoodProperties TURO_LEMON_LIME = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3600, 1), 1.0F).build();
     public static final FoodProperties TURO_ORANGE = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.SATURATION, 3000, 1), 1.0F).build();
     public static final FoodProperties TURO_POTATO = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.NIGHT_VISION, 2400, 1), 1.0F).build();
-    public static final FoodProperties TURO_STRAW = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.REGENERATION, 2400, 1), 1.0F).build();
     public static final FoodProperties TURO_SOUFFLE = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.WATER_BREATHING, 2400, 1), 1.0F).build();
     public static final FoodProperties TURO_SOUFFLE_MILK = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 2400, 1), 1.0F).build();
     public static final FoodProperties TURO_WHITE = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.0F).effect(new MobEffectInstance(MobEffects.JUMP, 2400, 1), 1.0F).build();

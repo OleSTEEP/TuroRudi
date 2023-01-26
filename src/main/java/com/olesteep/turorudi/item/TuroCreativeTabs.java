@@ -15,7 +15,7 @@ public class TuroCreativeTabs {
     public static final CreativeModeTab SNACKTAB = new CreativeModeTab("snacktab") {
         @Override
         public @NotNull ItemStack makeIcon() {
-            return new ItemStack(Alexandrov.ALEX_VANILLA26.get());
+            return new ItemStack(Alexandrov.ALEX_VANILLA_26.get());
         }
     };
 }

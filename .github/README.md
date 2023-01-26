@@ -9,6 +9,7 @@ Minecraft mod that adds delicious treats to the game - curd snacks. The mod is a
 * **Cow from Corenovka** ![corenovka](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/corenovka.png)
 * **Milava** ![milava](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/milava.png)
 * **Milk Station** ![milk_station](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/milk_station.png)
+* **Nostalgia** ![nostalgia](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/nostalgia.png)
 * **Pottyos** ![pottyos](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/pottyos.png)
 * **Preobrajenskiy** ![preobrajenskiy](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/preobrajenskiy.png)
 * **Romashkino** ![romashkino](https://github.com/OleSTEEP/TuroRudi/blob/1.18/.github/images/romashkino.png) 

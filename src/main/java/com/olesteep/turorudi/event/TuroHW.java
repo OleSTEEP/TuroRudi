@@ -2,6 +2,7 @@ package com.olesteep.turorudi.event;
 
 import com.google.common.collect.ImmutableSet;
 import com.olesteep.turorudi.TuroRudi;
+import com.olesteep.turorudi.block.TuroBlocks;
 import com.olesteep.turorudi.data.TuroLists;
 import com.olesteep.turorudi.item.TuroCreativeTabs;
 import com.olesteep.turorudi.item.TuroFoods;
@@ -12,14 +13,10 @@ import net.minecraft.world.entity.ai.village.poi.PoiType;
 import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
-import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.Material;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,16 +33,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Objects;
 import java.util.Random;
-import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(modid = TuroRudi.MOD_ID)
 public class TuroHW {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TuroRudi.MOD_ID);
     public static final DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, TuroRudi.MOD_ID);
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister.create(ForgeRegistries.PROFESSIONS, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<Block> TURO_BLOCK_DARK = registerBlock(BLOCKS, "turorudi_block_dark", () -> new CarvedPumpkinBlock(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL).lightLevel((level) -> 15)));
     public static final RegistryObject<Item> ALEX_5_DARK = ITEMS.register("alexandrov5_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.SNACKTAB).food(TuroFoods.TURO_VANILLA)));
     public static final RegistryObject<Item> ALEX_26_DARK = ITEMS.register("alexandrov26_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.SNACKTAB).food(TuroFoods.TURO_VANILLA_FAT)));
     public static final RegistryObject<Item> CORENOVKA_DARK = ITEMS.register("corenovka_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.SNACKTAB).food(TuroFoods.TURO_VANILLA)));
@@ -55,7 +49,7 @@ public class TuroHW {
     public static final RegistryObject<Item> SVITL_DARK = ITEMS.register("svitlogorie_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.SNACKTAB).food(TuroFoods.TURO_VANILLA)));
     public static final RegistryObject<Item> VKUSN_DARK = ITEMS.register("vkusnoteevo_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.SNACKTAB).food(TuroFoods.TURO_VANILLA)));
     public static final RegistryObject<Item> VOLOG_DARK = ITEMS.register("vologosha_dark", () -> new Item(new Item.Properties().tab(TuroCreativeTabs.SNACKTAB).food(TuroFoods.TURO_VANILLA_BAD)));
-    public static final RegistryObject<PoiType> TUROMAKER_DARK_POI = POI_TYPES.register("turomaker_dark_poi", () -> new PoiType("turomaker_dark_poi", PoiType.getBlockStates(TURO_BLOCK_DARK.get()), 1, 1));
+    public static final RegistryObject<PoiType> TUROMAKER_DARK_POI = POI_TYPES.register("turomaker_dark_poi", () -> new PoiType("turomaker_dark_poi", PoiType.getBlockStates(TuroBlocks.TURO_BLOCK_DARK.get()), 1, 1));
     public static final RegistryObject<VillagerProfession> TUROMAKER_DARK = VILLAGER_PROFESSIONS.register("turomaker_dark", () -> new VillagerProfession("turomaker_dark", TUROMAKER_DARK_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
 
     @SubscribeEvent
@@ -124,16 +118,6 @@ public class TuroHW {
         return randNum;
     }
 
-    public static <T extends Block> RegistryObject<T> registerBlock(DeferredRegister<Block> BLOCKS, String name, Supplier<T> block) {
-        RegistryObject<T> toReturn = BLOCKS.register(name, block);
-        registerBlockItem(name, toReturn);
-        return toReturn;
-    }
-
-    public static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(TuroCreativeTabs.ITEMTAB)));
-    }
-
     public static void registerPOIs() {
         try {
             ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, TUROMAKER_DARK_POI.get());
@@ -143,7 +127,6 @@ public class TuroHW {
     }
 
     public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
         POI_TYPES.register(eventBus);
         VILLAGER_PROFESSIONS.register(eventBus);

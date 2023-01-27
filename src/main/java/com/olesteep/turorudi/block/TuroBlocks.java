@@ -3,10 +3,7 @@ package com.olesteep.turorudi.block;
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.block.custom.TuroBananaBlock;
 import com.olesteep.turorudi.block.custom.TuroCoconutBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SlimeBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -14,8 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.olesteep.turorudi.registry.BlockRegisters.registerBlock;
-import static com.olesteep.turorudi.registry.BlockRegisters.registerBlockWithoutItem;
+import static com.olesteep.turorudi.registry.BlockRegisters.*;
 
 public class TuroBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
@@ -25,6 +21,7 @@ public class TuroBlocks {
     public static final RegistryObject<Block> MILK_FAT_BLOCK = registerBlock(BLOCKS, "milk_fat_block", () -> new SlimeBlock(BlockBehaviour.Properties.of(Material.CAKE).strength(0.8F).sound(SoundType.SLIME_BLOCK)));
     public static final RegistryObject<Block> TURO_BLOCK = registerBlock(BLOCKS, "turorudi_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL)));
     public static final RegistryObject<Block> TURO_BAD_BLOCK = registerBlock(BLOCKS, "turorudi_bad_block", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL)));
+    public static final RegistryObject<Block> TURO_BLOCK_DARK = registerEventBlock(BLOCKS, "turorudi_block_dark", () -> new CarvedPumpkinBlock(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(SoundType.WOOL).lightLevel((level) -> 15)));
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

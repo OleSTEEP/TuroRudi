@@ -25,14 +25,15 @@ Minecraft mod that adds delicious treats to the game - curd snacks. The mod is a
 This mod support patchouli documentation. If you want read some mod docs, please, install patchouli mod!
 
 ### Compilation
-If you want to play with the latest features, you need compile this mod:
+If you want to play with the latest features, you need to compile this mod:
 * Download code from this page (or `git clone` it)
 * Download java and add it to PATH
 * Go to downloaded (or cloned) directory
 * `.\gradlew.bat build` for Windows
 * `./gradlew build` for UNIX
 * Mod .jar file will be located in build/libs directory
-(Or you can download experimental versions from `Actions` page)
+
+(Alternatively you can download experimental versions from `Actions` page)
 
 ### Credits
 * Mojang

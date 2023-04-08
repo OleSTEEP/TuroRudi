@@ -10,6 +10,10 @@
     {
       "type": "patchouli:image",
       "images": ["turorudi:textures/patchouli_images/lemon_bush_screenshot.png"]
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "turorudi:yellow_dye_from_lemon"
     }
   ]
 }

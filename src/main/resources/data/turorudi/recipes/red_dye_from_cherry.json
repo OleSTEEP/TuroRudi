@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "red_dye",
+  "ingredients": [
+    {
+      "item": "turorudi:cherry"
+    }
+  ],
+  "result": {
+    "item": "minecraft:red_dye"
+  }
+}

@@ -31,7 +31,10 @@ import static com.olesteep.turorudi.registry.BlockRegisters.registerBlockWithout
 public class ApricotBush {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<Block> APRICOT_BUSH = registerBlockWithoutItem(BLOCKS, "apricot_bush", () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH).randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH)) {
+    public static final RegistryObject<Block> APRICOT_BUSH = registerBlockWithoutItem(
+            BLOCKS, "apricot_bush",
+            () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)
+                    .randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH)) {
         @Override
         public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter block, @NotNull BlockPos pos, @NotNull BlockState state) {
             return new ItemStack(TuroItems.APRICOT.get());
@@ -46,7 +49,8 @@ public class ApricotBush {
             } else if (i > 1) {
                 int j = 1 + level.random.nextInt(2);
                 popResource(level, blockPos, new ItemStack(TuroItems.APRICOT.get(), j + (flag ? 1 : 0)));
-                level.playSound(null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+                level.playSound(null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES,
+                        SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
                 level.setBlock(blockPos, blockState.setValue(AGE, 1), 2);
                 return InteractionResult.sidedSuccess(level.isClientSide);
             } else {

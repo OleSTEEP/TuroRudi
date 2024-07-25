@@ -24,7 +24,9 @@ public interface SingleJigsawAccess
 {
     @Invoker("<init>")
     static LegacySinglePoolElement construct(
-            Either<ResourceLocation, StructureTemplate> either, Holder<StructureProcessorList> holder, StructureTemplatePool.Projection structureTemplatePool
+            Either<ResourceLocation, StructureTemplate> either,
+            Holder<StructureProcessorList> holder,
+            StructureTemplatePool.Projection structureTemplatePool
     )
     {
         throw new UnsupportedOperationException("Replaced by Mixin");

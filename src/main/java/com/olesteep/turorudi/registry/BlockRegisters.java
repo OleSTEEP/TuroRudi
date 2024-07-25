@@ -21,7 +21,8 @@ public class BlockRegisters {
     }
 
     public static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(TuroCreativeTabs.ITEMTAB)));
+        TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties().tab(TuroCreativeTabs.ITEMTAB)));
     }
 
     public static <T extends Block> RegistryObject<T> registerEventBlock(DeferredRegister<Block> BLOCKS, String name, Supplier<T> block) {
@@ -36,7 +37,8 @@ public class BlockRegisters {
         LocalDateTime now = LocalDateTime.now();
 
         if(Integer.parseInt(dtf_day.format(now)) >= 20 && Integer.parseInt(dtf_month.format(now)) == 10) {
-            TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(TuroCreativeTabs.ITEMTAB)));
+            TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(),
+                    new Item.Properties().tab(TuroCreativeTabs.ITEMTAB)));
         }
         else {
             TuroItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));

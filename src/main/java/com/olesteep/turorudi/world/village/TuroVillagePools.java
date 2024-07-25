@@ -34,7 +34,8 @@ public class TuroVillagePools {
 
         // Register turomaker's house for each biome
         for(String biome : new String[]{"plains", "snowy", "savanna", "desert", "taiga"})
-            addToPool(new ResourceLocation("village/"+biome+"/houses"), new ResourceLocation(TuroRudi.MOD_ID, "village/houses/"+biome+"_turohouse"), 3);
+            addToPool(new ResourceLocation("village/"+biome+"/houses"),
+                    new ResourceLocation(TuroRudi.MOD_ID, "village/houses/"+biome+"_turohouse"), 3);
     }
 
     private static void addToPool(ResourceLocation pool, ResourceLocation toAdd, int weight)
@@ -51,10 +52,22 @@ public class TuroVillagePools {
         Object2IntMap<StructurePoolElement> newPieces = new Object2IntLinkedOpenHashMap<>();
         for(StructurePoolElement p : shuffled)
             newPieces.computeInt(p, (StructurePoolElement pTemp, Integer i) -> (i==null?0: i)+1);
-        newPieces.put(SingleJigsawAccess.construct(Either.left(toAdd), ProcessorLists.EMPTY, StructureTemplatePool.Projection.RIGID), weight);
-        List<Pair<StructurePoolElement, Integer>> newPieceList = newPieces.object2IntEntrySet().stream().map(e -> Pair.of(e.getKey(), e.getIntValue())).collect(Collectors.toList());
+        newPieces.put(SingleJigsawAccess.construct(
+                Either.left(toAdd),
+                ProcessorLists.EMPTY,
+                StructureTemplatePool.Projection.RIGID),
+                weight
+        );
+        List<Pair<StructurePoolElement, Integer>> newPieceList = newPieces.object2IntEntrySet().stream()
+                .map(e -> Pair.of(e.getKey(), e.getIntValue())).collect(Collectors.toList());
 
         ResourceLocation name = old.getName();
-        ((WritableRegistry<StructureTemplatePool>)BuiltinRegistries.TEMPLATE_POOL).registerOrOverride(OptionalInt.of(id), ResourceKey.create(BuiltinRegistries.TEMPLATE_POOL.key(), name), new StructureTemplatePool(pool, name, newPieceList), Lifecycle.stable());
+        ((WritableRegistry<StructureTemplatePool>)BuiltinRegistries.TEMPLATE_POOL)
+                .registerOrOverride(
+                        OptionalInt.of(id),
+                        ResourceKey.create(BuiltinRegistries.TEMPLATE_POOL.key(), name),
+                        new StructureTemplatePool(pool, name, newPieceList),
+                        Lifecycle.stable()
+                );
     }
 }

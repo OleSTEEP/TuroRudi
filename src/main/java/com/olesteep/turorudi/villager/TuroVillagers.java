@@ -29,12 +29,32 @@ import java.util.Random;
 
 @Mod.EventBusSubscriber(modid = TuroRudi.MOD_ID)
 public class TuroVillagers {
-    public static final DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, TuroRudi.MOD_ID);
-    public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister.create(ForgeRegistries.VILLAGER_PROFESSIONS, TuroRudi.MOD_ID);
+    public static final DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(
+            ForgeRegistries.POI_TYPES,
+            TuroRudi.MOD_ID
+    );
+    public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister.create(
+            ForgeRegistries.VILLAGER_PROFESSIONS,
+            TuroRudi.MOD_ID
+    );
 
-    public static final RegistryObject<PoiType> TUROMAKER_POI = POI_TYPES.register("turomaker_poi", () -> new PoiType(ImmutableSet.copyOf(TuroBlocks.TURO_BLOCK.get().getStateDefinition().getPossibleStates()), 1, 1));
+    public static final RegistryObject<PoiType> TUROMAKER_POI = POI_TYPES.register(
+            "turomaker_poi",
+            () -> new PoiType(ImmutableSet.copyOf(TuroBlocks.TURO_BLOCK.get().getStateDefinition().getPossibleStates()),
+                    1,
+                    1)
+    );
 
-    public static final RegistryObject<VillagerProfession> TUROMAKER = VILLAGER_PROFESSIONS.register("turomaker", () -> new VillagerProfession("turomaker", x -> x.get() == TUROMAKER_POI.get(), x -> x.get() == TUROMAKER_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_BUTCHER));
+    public static final RegistryObject<VillagerProfession> TUROMAKER = VILLAGER_PROFESSIONS.register(
+            "turomaker",
+            () -> new VillagerProfession(
+                    "turomaker",
+                    x -> x.get() == TUROMAKER_POI.get(),
+                    x -> x.get() == TUROMAKER_POI.get(),
+                    ImmutableSet.of(),
+                    ImmutableSet.of(),
+                    SoundEvents.VILLAGER_WORK_BUTCHER)
+    );
 
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
@@ -98,7 +118,8 @@ public class TuroVillagers {
 
     public static void registerPOIs() {
         try {
-            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class).invoke(null, TUROMAKER_POI.get());
+            ObfuscationReflectionHelper.findMethod(PoiType.class, "registerBlockStates", PoiType.class)
+                    .invoke(null, TUROMAKER_POI.get());
         } catch(InvocationTargetException | IllegalAccessException exception) {
             exception.printStackTrace();
         }

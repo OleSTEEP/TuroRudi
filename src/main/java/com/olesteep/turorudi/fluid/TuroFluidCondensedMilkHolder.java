@@ -37,11 +37,27 @@ public class TuroFluidCondensedMilkHolder {
     public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, TuroRudi.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TuroRudi.MOD_ID);
 
-    public static RegistryObject<FlowingFluid> STILL = FLUIDS.register("milk_condensed", () -> new ForgeFlowingFluid.Source(makeProperties()));
-    public static RegistryObject<FlowingFluid> FLOWING = FLUIDS.register("milk_condensed_flowing", () -> new ForgeFlowingFluid.Flowing(makeProperties()));
-    public static RegistryObject<LiquidBlock> BLOCK = BLOCKS.register("milk_condensed_block", () -> new CondensedMilkFluidBlock(STILL, Block.Properties.of(Material.WATER).noCollission().strength(100.0F).noLootTable()));
-    public static RegistryObject<Item> BUCKET = ITEMS.register("milk_condensed_bucket", () -> new BucketItem(STILL, new Item.Properties().craftRemainder(Items.BUCKET).stacksTo(1).tab(TuroCreativeTabs.ITEMTAB)));
-    public static RegistryObject<FluidType> FLUID_TYPE = FLUID_TYPES.register("milk_condensed", () -> new FluidType(FluidType.Properties.create()) {
+    public static RegistryObject<FlowingFluid> STILL = FLUIDS.register(
+            "milk_condensed",
+            () -> new ForgeFlowingFluid.Source(makeProperties())
+    );
+    public static RegistryObject<FlowingFluid> FLOWING = FLUIDS.register(
+            "milk_condensed_flowing",
+            () -> new ForgeFlowingFluid.Flowing(makeProperties())
+    );
+    public static RegistryObject<LiquidBlock> BLOCK = BLOCKS.register(
+            "milk_condensed_block",
+            () -> new CondensedMilkFluidBlock(STILL, Block.Properties.of(Material.WATER)
+                    .noCollission().strength(100.0F).noLootTable())
+    );
+    public static RegistryObject<Item> BUCKET = ITEMS.register(
+            "milk_condensed_bucket",
+            () -> new BucketItem(STILL, new Item.Properties().craftRemainder(Items.BUCKET)
+                    .stacksTo(1).tab(TuroCreativeTabs.ITEMTAB))
+    );
+    public static RegistryObject<FluidType> FLUID_TYPE = FLUID_TYPES.register(
+            "milk_condensed",
+            () -> new FluidType(FluidType.Properties.create()) {
 
         @Override
         public void initializeClient(Consumer<IClientFluidTypeExtensions> consumer) {

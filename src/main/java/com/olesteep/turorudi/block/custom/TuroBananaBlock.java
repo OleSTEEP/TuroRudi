@@ -17,10 +17,26 @@ public class TuroBananaBlock extends CocoaBlock {
     // (WEST) BACK, DOWN, RIGHT, FRONT, UP, LEFT
     // (NORTH) LEFT, DOWN, BACK, RIGHT, UP, FRONT
     // (SOUTH) RIGHT, DOWN, FRONT, LEFT, UP, BACK
-    protected static final VoxelShape[] EAST_AABB = new VoxelShape[]{Block.box(12.0D, 7.0D, 6.5D, 15.0D, 12.0D, 9.5D), Block.box(11.0D, 5.0D, 6.0D, 15.0D, 12.0D, 10.0D), Block.box(10.0D, 1.0D, 5.5D, 15.0D, 12.0D, 10.5D)};
-    protected static final VoxelShape[] WEST_AABB = new VoxelShape[]{Block.box(1.0D, 7.0D, 6.5D, 4.0D, 12.0D, 9.5D), Block.box(1.0D, 5.0D, 6.0D, 5.0D, 12.0D, 10.0D), Block.box(1.0D, 1.0D, 5.5D, 6.0D, 12.0D, 10.5D)};
-    protected static final VoxelShape[] NORTH_AABB = new VoxelShape[]{Block.box(6.5D, 7.0D, 1.0D, 9.5D, 12.0D, 4.0D), Block.box(6.0D, 5.0D, 1.0D, 10.0D, 12.0D, 5.0D), Block.box(5.5D, 1.0D, 1.0D, 10.5D, 12.0D, 6.0D)};
-    protected static final VoxelShape[] SOUTH_AABB = new VoxelShape[]{Block.box(6.5D, 7.0D, 12.0D, 9.5D, 12.0D, 15.0D), Block.box(6.0D, 5.0D, 11.0D, 10.0D, 12.0D, 15.0D), Block.box(5.5D, 1.0D, 10.0D, 10.5D, 12.0D, 15.0D)};
+    protected static final VoxelShape[] EAST_AABB = new VoxelShape[]{
+            Block.box(12.0D, 7.0D, 6.5D, 15.0D, 12.0D, 9.5D),
+            Block.box(11.0D, 5.0D, 6.0D, 15.0D, 12.0D, 10.0D),
+            Block.box(10.0D, 1.0D, 5.5D, 15.0D, 12.0D, 10.5D)
+    };
+    protected static final VoxelShape[] WEST_AABB = new VoxelShape[]{
+            Block.box(1.0D, 7.0D, 6.5D, 4.0D, 12.0D, 9.5D),
+            Block.box(1.0D, 5.0D, 6.0D, 5.0D, 12.0D, 10.0D),
+            Block.box(1.0D, 1.0D, 5.5D, 6.0D, 12.0D, 10.5D)
+    };
+    protected static final VoxelShape[] NORTH_AABB = new VoxelShape[]{
+            Block.box(6.5D, 7.0D, 1.0D, 9.5D, 12.0D, 4.0D),
+            Block.box(6.0D, 5.0D, 1.0D, 10.0D, 12.0D, 5.0D),
+            Block.box(5.5D, 1.0D, 1.0D, 10.5D, 12.0D, 6.0D)
+    };
+    protected static final VoxelShape[] SOUTH_AABB = new VoxelShape[]{
+            Block.box(6.5D, 7.0D, 12.0D, 9.5D, 12.0D, 15.0D),
+            Block.box(6.0D, 5.0D, 11.0D, 10.0D, 12.0D, 15.0D),
+            Block.box(5.5D, 1.0D, 10.0D, 10.5D, 12.0D, 15.0D)
+    };
 
     public TuroBananaBlock(BlockBehaviour.Properties properties) {
         super(properties);

@@ -17,15 +17,57 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.List;
 
 public class TuroPlacedFeatures {
-    public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, TuroRudi.MOD_ID);
+    public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(
+            Registry.PLACED_FEATURE_REGISTRY,
+            TuroRudi.MOD_ID
+    );
 
-    public static final RegistryObject<PlacedFeature> APRICOT_BUSH_PLACED = PLACED_FEATURES.register("apricot_bush_placed", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_APRICOT_BUSH, List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-    public static final RegistryObject<PlacedFeature> BLBERRY_BUSH_PLACED = PLACED_FEATURES.register("blueberry_bush_placed", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_BLBERRY_BUSH, List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-    public static final RegistryObject<PlacedFeature> CHERRY_PLACED = PLACED_FEATURES.register("cherry_placed", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.CHERRY_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.0125f, 1))));
-    public static final RegistryObject<PlacedFeature> LEMON_BUSH_PLACED = PLACED_FEATURES.register("lemon_bush_placed", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_LEMON_BUSH, List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-    public static final RegistryObject<PlacedFeature> LIME_BUSH_PLACED = PLACED_FEATURES.register("lime_bush_placed", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_LIME_BUSH, List.of(RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome())));
-    public static final RegistryObject<PlacedFeature> ORANGE_PLACED = PLACED_FEATURES.register("orange_placed", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.ORANGE_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.25f, 1))));
-    public static final RegistryObject<PlacedFeature> PALM_PLACED = PLACED_FEATURES.register("palm_placed", () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PALM_SPAWN, VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.25f, 1))));
+    public static final RegistryObject<PlacedFeature> APRICOT_BUSH_PLACED = PLACED_FEATURES.register(
+            "apricot_bush_placed",
+            () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_APRICOT_BUSH,
+                    List.of(RarityFilter.onAverageOnceEvery(16),
+                            InSquarePlacement.spread(),
+                            PlacementUtils.HEIGHTMAP,
+                            BiomeFilter.biome()))
+    );
+    public static final RegistryObject<PlacedFeature> BLBERRY_BUSH_PLACED = PLACED_FEATURES.register(
+            "blueberry_bush_placed",
+            () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_BLBERRY_BUSH,
+                    List.of(RarityFilter.onAverageOnceEvery(32),
+                            InSquarePlacement.spread(),
+                            PlacementUtils.HEIGHTMAP,
+                            BiomeFilter.biome()))
+    );
+    public static final RegistryObject<PlacedFeature> CHERRY_PLACED = PLACED_FEATURES.register(
+            "cherry_placed",
+            () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.CHERRY_SPAWN,
+                    VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.0125f, 1)))
+    );
+    public static final RegistryObject<PlacedFeature> LEMON_BUSH_PLACED = PLACED_FEATURES.register(
+            "lemon_bush_placed",
+            () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_LEMON_BUSH,
+                    List.of(RarityFilter.onAverageOnceEvery(16),
+                            InSquarePlacement.spread(),
+                            PlacementUtils.HEIGHTMAP, BiomeFilter.biome()))
+    );
+    public static final RegistryObject<PlacedFeature> LIME_BUSH_PLACED = PLACED_FEATURES.register(
+            "lime_bush_placed",
+            () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_LIME_BUSH,
+                    List.of(RarityFilter.onAverageOnceEvery(16),
+                            InSquarePlacement.spread(),
+                            PlacementUtils.HEIGHTMAP,
+                            BiomeFilter.biome()))
+    );
+    public static final RegistryObject<PlacedFeature> ORANGE_PLACED = PLACED_FEATURES.register(
+            "orange_placed",
+            () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.ORANGE_SPAWN,
+                    VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.25f, 1)))
+    );
+    public static final RegistryObject<PlacedFeature> PALM_PLACED = PLACED_FEATURES.register(
+            "palm_placed",
+            () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)(Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PALM_SPAWN,
+                    VegetationPlacements.treePlacement(PlacementUtils.countExtra(0, 0.25f, 1)))
+    );
 
     public static void register(IEventBus eventBus) {PLACED_FEATURES.register(eventBus);}
 }

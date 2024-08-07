@@ -1,6 +1,7 @@
 package com.olesteep.turorudi.event;
 
 import com.google.common.collect.ImmutableSet;
+import com.mojang.logging.LogUtils;
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.block.TuroBlocks;
 import com.olesteep.turorudi.data.TuroLists;
@@ -17,7 +18,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CarvedPumpkinBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.Material;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -26,6 +33,7 @@ import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+import org.slf4j.Logger;
 
 import java.lang.reflect.InvocationTargetException;
 import java.time.LocalDateTime;
@@ -34,11 +42,24 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
+import static com.olesteep.turorudi.registry.BlockRegisters.registerEventBlock;
+
 @Mod.EventBusSubscriber(modid = TuroRudi.MOD_ID)
 public class TuroHW {
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, TuroRudi.MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, TuroRudi.MOD_ID);
     public static final DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, TuroRudi.MOD_ID);
     public static final DeferredRegister<VillagerProfession> VILLAGER_PROFESSIONS = DeferredRegister.create(ForgeRegistries.PROFESSIONS, TuroRudi.MOD_ID);
+
+    public static final RegistryObject<Block> TURO_BLOCK_DARK = registerEventBlock(
+            BLOCKS,
+            "turorudi_block_dark",
+            () -> new CarvedPumpkinBlock(BlockBehaviour.Properties.of(Material.CAKE)
+                    .strength(0.5F)
+                    .sound(SoundType.WOOL)
+                    .lightLevel((level) -> 15)
+            )
+    );
 
     public static final RegistryObject<Item> ALEX_5_DARK = ITEMS.register(
             "alexandrov5_dark",
@@ -107,7 +128,7 @@ public class TuroHW {
             "turomaker_dark_poi",
             () -> new PoiType(
                     "turomaker_dark_poi",
-                    PoiType.getBlockStates(TuroBlocks.TURO_BLOCK_DARK.get()),
+                    PoiType.getBlockStates(TURO_BLOCK_DARK.get()),
                     1,
                     1
             )
@@ -125,43 +146,37 @@ public class TuroHW {
 
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
-        DateTimeFormatter dtf_day = DateTimeFormatter.ofPattern("dd");
-        DateTimeFormatter dtf_month = DateTimeFormatter.ofPattern("MM");
-        LocalDateTime now = LocalDateTime.now();
+        if (event.getType() == TUROMAKER_DARK.get()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
-        if(Integer.parseInt(dtf_day.format(now)) >= 20 && Integer.parseInt(dtf_month.format(now)) == 10) {
-            if (event.getType() == TUROMAKER_DARK.get()) {
-                Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+            // Sold
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 39), new ItemStack(Items.ENDER_PEARL, nonNullRandom(5)), 4, 12, 0.06F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 26), new ItemStack(Items.PUMPKIN, 1), 4, 12, 0.10F));
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 39), new ItemStack(Items.PUMPKIN_PIE, 1), 4, 12, 0.09F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.PUMPKIN_SEEDS, nonNullRandom(15)), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.REDSTONE, nonNullRandom(32)), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(10)), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.SPIDER_EYE, nonNullRandom(10)), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.STRING, nonNullRandom(10)), 4, 12, 0.12F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(ALEX_5_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(ALEX_26_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(CORENOVKA_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(POTTYOS_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(PREOBR_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(ROSTAGRO_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(SVITL_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(39)), new ItemStack(VKUSN_DARK.get(), nonNullRandom(5)), 4, 12, 0.12F));
+            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(39)), new ItemStack(VOLOG_DARK.get(), nonNullRandom(5)), 4, 12, 0.12F));
 
-                // Sold
-                trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 39), new ItemStack(Items.ENDER_PEARL, nonNullRandom(5)), 4, 12, 0.06F));
-                trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 26), new ItemStack(Items.PUMPKIN, 1), 4, 12, 0.10F));
-                trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 39), new ItemStack(Items.PUMPKIN_PIE, 1), 4, 12, 0.09F));
-                trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.PUMPKIN_SEEDS, nonNullRandom(15)), 4, 12, 0.12F));
-                trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.REDSTONE, nonNullRandom(32)), 4, 12, 0.12F));
-                trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(10)), 4, 12, 0.12F));
-                trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.SPIDER_EYE, nonNullRandom(10)), 4, 12, 0.12F));
-                trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.STRING, nonNullRandom(10)), 4, 12, 0.12F));
-                trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(ALEX_5_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-                trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(ALEX_26_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-                trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(CORENOVKA_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-                trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(POTTYOS_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-                trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(PREOBR_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-                trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(ROSTAGRO_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-                trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(SVITL_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-                trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(39)), new ItemStack(VKUSN_DARK.get(), nonNullRandom(5)), 4, 12, 0.12F));
-                trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(39)), new ItemStack(VOLOG_DARK.get(), nonNullRandom(5)), 4, 12, 0.12F));
-
-                // Buy
-                trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ENDER_PEARL, nonNullRandom(5)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.06F));
-                trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.PUMPKIN, 1), new ItemStack(Items.EMERALD, 2), 4, 12, 0.10F));
-                trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.PUMPKIN_PIE, 1), new ItemStack(Items.EMERALD, 2), 4, 12, 0.09F));
-                trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.PUMPKIN_SEEDS, nonNullRandom(15)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
-                trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.REDSTONE, nonNullRandom(32)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
-                trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(10)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
-                trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.SPIDER_EYE, nonNullRandom(10)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
-                trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.STRING, nonNullRandom(10)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
-            }
+            // Buy
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ENDER_PEARL, nonNullRandom(5)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.06F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.PUMPKIN, 1), new ItemStack(Items.EMERALD, 2), 4, 12, 0.10F));
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.PUMPKIN_PIE, 1), new ItemStack(Items.EMERALD, 2), 4, 12, 0.09F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.PUMPKIN_SEEDS, nonNullRandom(15)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.REDSTONE, nonNullRandom(32)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(10)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.SPIDER_EYE, nonNullRandom(10)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.STRING, nonNullRandom(10)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
         }
     }
 
@@ -179,6 +194,20 @@ public class TuroHW {
                                 nonNullRandom(1500), 1));
                 case ("preobrajenskiy_dark"), ("vologosha_dark") ->
                         player.addEffect(new MobEffectInstance(TuroLists.getRandEffect(), 600, 1));
+            }
+        }
+    }
+
+    @SubscribeEvent
+    protected static void onDarkBlockCraft(PlayerEvent.ItemCraftedEvent event) {
+        if (event.getCrafting().getItem().equals(TURO_BLOCK_DARK.get().asItem())) {
+            DateTimeFormatter dtf_day = DateTimeFormatter.ofPattern("dd");
+            DateTimeFormatter dtf_month = DateTimeFormatter.ofPattern("MM");
+            LocalDateTime now = LocalDateTime.now();
+
+            if (Integer.parseInt(dtf_day.format(now)) < 20 || Integer.parseInt(dtf_month.format(now)) != 10) {
+                event.getCrafting().setCount(0);
+                event.getPlayer().lavaHurt();
             }
         }
     }
@@ -201,6 +230,7 @@ public class TuroHW {
     }
 
     public static void register(IEventBus eventBus) {
+        BLOCKS.register(eventBus);
         ITEMS.register(eventBus);
         POI_TYPES.register(eventBus);
         VILLAGER_PROFESSIONS.register(eventBus);

@@ -57,10 +57,7 @@ public class TuroRudi {
         TuroItems.register(eventBus);
 
         //Halloween stuff
-        if(Integer.parseInt(dtf_day.format(now)) >= 20 && Integer.parseInt(dtf_month.format(now)) == 10) {
-            LOGGER.info("// It seems like halloween coming...");
-            TuroHW.register(eventBus);
-        }
+        TuroHW.register(eventBus);
 
         //New Year stuff
         TuroNY.register(eventBus);

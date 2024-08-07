@@ -41,11 +41,6 @@ public class TuroBlocks {
             () -> new Block(BlockBehaviour.Properties.of(Material.CAKE)
                     .strength(0.5F).sound(SoundType.WOOL))
     );
-    public static final RegistryObject<Block> TURO_BLOCK_DARK = registerEventBlock(
-            BLOCKS, "turorudi_block_dark",
-            () -> new CarvedPumpkinBlock(BlockBehaviour.Properties.of(Material.CAKE)
-                    .strength(0.5F).sound(SoundType.WOOL).lightLevel((level) -> 15))
-    );
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

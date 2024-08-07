@@ -58,63 +58,54 @@ public class TuroHW {
     public static final RegistryObject<Item> ALEX_5_DARK = ITEMS.register(
             "alexandrov5_dark",
             () -> new Item(new Item.Properties()
-                    .tab(TuroCreativeTabs.SNACKTAB)
                     .food(TuroFoods.TURO_VANILLA)
             )
     );
     public static final RegistryObject<Item> ALEX_26_DARK = ITEMS.register(
             "alexandrov26_dark",
             () -> new Item(new Item.Properties()
-                    .tab(TuroCreativeTabs.SNACKTAB)
                     .food(TuroFoods.TURO_VANILLA_FAT)
             )
     );
     public static final RegistryObject<Item> CORENOVKA_DARK = ITEMS.register(
             "corenovka_dark",
             () -> new Item(new Item.Properties()
-                    .tab(TuroCreativeTabs.SNACKTAB)
                     .food(TuroFoods.TURO_VANILLA)
             )
     );
     public static final RegistryObject<Item> POTTYOS_DARK = ITEMS.register(
             "pottyos_dark",
             () -> new Item(new Item.Properties()
-                    .tab(TuroCreativeTabs.SNACKTAB)
                     .food(TuroFoods.TURO_VANILLA)
             )
     );
     public static final RegistryObject<Item> PREOBR_DARK = ITEMS.register(
             "preobrajenskiy_dark",
             () -> new Item(new Item.Properties()
-                    .tab(TuroCreativeTabs.SNACKTAB)
                     .food(TuroFoods.TURO_VANILLA_BAD)
             )
     );
     public static final RegistryObject<Item> ROSTAGRO_DARK = ITEMS.register(
             "rostagroexport_dark",
             () -> new Item(new Item.Properties()
-                    .tab(TuroCreativeTabs.SNACKTAB)
                     .food(TuroFoods.TURO_VANILLA_FAT)
             )
     );
     public static final RegistryObject<Item> SVITL_DARK = ITEMS.register(
             "svitlogorie_dark",
             () -> new Item(new Item.Properties()
-                    .tab(TuroCreativeTabs.SNACKTAB)
                     .food(TuroFoods.TURO_VANILLA)
             )
     );
     public static final RegistryObject<Item> VKUSN_DARK = ITEMS.register(
             "vkusnoteevo_dark",
             () -> new Item(new Item.Properties()
-                    .tab(TuroCreativeTabs.SNACKTAB)
                     .food(TuroFoods.TURO_VANILLA)
             )
     );
     public static final RegistryObject<Item> VOLOG_DARK = ITEMS.register(
             "vologosha_dark",
             () -> new Item(new Item.Properties()
-                    .tab(TuroCreativeTabs.SNACKTAB)
                     .food(TuroFoods.TURO_VANILLA_BAD)
             )
     );

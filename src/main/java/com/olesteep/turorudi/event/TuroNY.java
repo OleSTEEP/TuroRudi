@@ -125,7 +125,7 @@ public class TuroNY {
     }
 
     public static <T extends Block> void registerBlockItem(String name, RegistryObject<T> block) {
-        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(TuroCreativeTabs.ITEMTAB)));
+        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

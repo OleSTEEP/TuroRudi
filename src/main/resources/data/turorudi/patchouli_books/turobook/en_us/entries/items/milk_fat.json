@@ -6,10 +6,6 @@
     {
       "type": "patchouli:text",
       "text": "items.turorudi.milk_fat.guide"
-    },
-    {
-      "type": "patchouli:smelting",
-      "recipe": "turorudi:milk_fat"
     }
   ]
 }

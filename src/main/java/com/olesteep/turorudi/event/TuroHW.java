@@ -144,33 +144,28 @@ public class TuroHW {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             // Sold
-            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 39), new ItemStack(Items.ENDER_PEARL, nonNullRandom(5)), 4, 12, 0.06F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 26), new ItemStack(Items.PUMPKIN, 1), 4, 12, 0.10F));
-            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 39), new ItemStack(Items.PUMPKIN_PIE, 1), 4, 12, 0.09F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.PUMPKIN_SEEDS, nonNullRandom(15)), 4, 12, 0.12F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.REDSTONE, nonNullRandom(32)), 4, 12, 0.12F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(10)), 4, 12, 0.12F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.SPIDER_EYE, nonNullRandom(10)), 4, 12, 0.12F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.STRING, nonNullRandom(10)), 4, 12, 0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(ALEX_5_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(ALEX_26_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(CORENOVKA_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(POTTYOS_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(PREOBR_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(ROSTAGRO_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(52)), new ItemStack(SVITL_DARK.get(), nonNullRandom(5)), 4, 12, 0.09F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(39)), new ItemStack(VKUSN_DARK.get(), nonNullRandom(5)), 4, 12, 0.12F));
-            trades.get(4).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(39)), new ItemStack(VOLOG_DARK.get(), nonNullRandom(5)), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.PUMPKIN_SEEDS, randRange(2, 5)), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.REDSTONE, randRange(16, 32)), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.SPIDER_EYE, randRange(3, 7)), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 13), new ItemStack(Items.STRING, randRange(7, 10)), 4, 12, 0.12F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, randRange(30, 52)), new ItemStack(ALEX_5_DARK.get(), randRange(2, 5)), 4, 12, 0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, randRange(30, 52)), new ItemStack(ALEX_26_DARK.get(), randRange(2, 5)), 4, 12, 0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, randRange(30, 52)), new ItemStack(CORENOVKA_DARK.get(), randRange(2, 5)), 4, 12, 0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, randRange(30, 52)), new ItemStack(POTTYOS_DARK.get(), randRange(2, 5)), 4, 12, 0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, randRange(30, 52)), new ItemStack(PREOBR_DARK.get(), randRange(2, 5)), 4, 12, 0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, randRange(30, 52)), new ItemStack(ROSTAGRO_DARK.get(), randRange(2, 5)), 4, 12, 0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, randRange(30, 52)), new ItemStack(SVITL_DARK.get(), randRange(2, 5)), 4, 12, 0.09F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, randRange(30, 52)), new ItemStack(VKUSN_DARK.get(), randRange(2, 5)), 4, 12, 0.12F));
+            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, randRange(30, 52)), new ItemStack(VOLOG_DARK.get(), randRange(2, 5)), 4, 12, 0.12F));
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, 24), new ItemStack(Items.PUMPKIN_PIE, 1), 4, 12, 0.09F));
 
             // Buy
-            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ENDER_PEARL, nonNullRandom(5)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.06F));
-            trades.get(2).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.PUMPKIN, 1), new ItemStack(Items.EMERALD, 2), 4, 12, 0.10F));
-            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.PUMPKIN_PIE, 1), new ItemStack(Items.EMERALD, 2), 4, 12, 0.09F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.PUMPKIN_SEEDS, nonNullRandom(15)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.REDSTONE, nonNullRandom(32)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, nonNullRandom(10)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.SPIDER_EYE, nonNullRandom(10)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
-            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.STRING, nonNullRandom(10)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
+            trades.get(3).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ENDER_PEARL, randRange(3, 5)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.06F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.PUMPKIN_SEEDS, randRange(10, 15)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.REDSTONE, randRange(16, 32)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.ROTTEN_FLESH, randRange(10, 20)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.SPIDER_EYE, randRange(7, 14)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
+            trades.get(1).add((trader, rand) -> new MerchantOffer(new ItemStack(Items.STRING, randRange(8, 16)), new ItemStack(Items.EMERALD, 2), 4, 12, 0.12F));
         }
     }
 
@@ -181,12 +176,13 @@ public class TuroHW {
             switch (player.getMainHandItem().getItem().toString()) {
                 case ("alexandrov5_dark"), ("corenovka_dark"), ("pottyos_dark"), ("svitlogorie_dark"), ("vkusnoteevo_dark") ->
                         player.addEffect(new MobEffectInstance(Objects.requireNonNull(TuroLists.getRandEffect()),
-                                nonNullRandom(1200), 1));
+                                randRange(1200, 2400), 1));
                 case ("alexandrov26_dark"), ("rostagroexport_dark") ->
                         player.addEffect(new MobEffectInstance(Objects.requireNonNull(TuroLists.getRandEffect()),
-                                nonNullRandom(1500), 1));
+                                randRange(1500, 3000), 1));
                 case ("preobrajenskiy_dark"), ("vologosha_dark") ->
-                        player.addEffect(new MobEffectInstance(TuroLists.getRandEffect(), 600, 1));
+                        player.addEffect(new MobEffectInstance(TuroLists.getRandEffect(),
+                                randRange(600, 1200), 1));
             }
         }
     }
@@ -205,10 +201,10 @@ public class TuroHW {
         }
     }
 
-    private static int nonNullRandom(Integer limit) {
-        int randNum = new Random().nextInt(limit);
+    private static int randRange(Integer start, Integer end) {
+        int randNum = new Random().nextInt(end - start);
         if(randNum == 0){
-            randNum = randNum + 1;
+            randNum = randNum + start;
         }
         return randNum;
     }

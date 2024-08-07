@@ -222,18 +222,6 @@ public class TuroConfiguredFeatures {
                             new WeightedPlacedFeature(ORANGE_CHECKED_BEES, 0.5F)),
                     ORANGE_CHECKED)
     );
-    public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> PALM_TREE = FeatureUtils.register(
-            "palm",
-            Feature.TREE,
-            new TreeConfigurationBuilder(
-                    BlockStateProvider.simple(PalmTree.PALM_LOG.get()),
-                    new StraightTrunkPlacer(5, 2, 2),
-                    BlockStateProvider.simple(PalmTree.PALM_LEAVES.get()),
-                    new PalmFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0)),
-                    new TwoLayersFeatureSize(1, 0, 2))
-                    .dirt(BlockStateProvider.simple(Blocks.SAND))
-                    .ignoreVines().build()
-    );
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> PALM_TREE_COCO = FeatureUtils.register(
             "palm_coconut",
             Feature.TREE,
@@ -262,11 +250,6 @@ public class TuroConfiguredFeatures {
                     .decorators(ImmutableList.of(new BananaDecorator(0.75F)))
                     .build()
     );
-    public static final Holder<PlacedFeature> PALM_CHECKED = PlacementUtils.register(
-            "palm_checked",
-            PALM_TREE,
-            PlacementUtils.filteredByBlockSurvival(PalmTree.PALM_SAPLING.get())
-    );
     public static final Holder<PlacedFeature> PALM_CHECKED_COCO = PlacementUtils.register(
             "palm_checked_coconut",
             PALM_TREE_COCO,
@@ -281,9 +264,8 @@ public class TuroConfiguredFeatures {
             "palm_spawn",
             Feature.RANDOM_SELECTOR,
             new RandomFeatureConfiguration(
-                    List.of(new WeightedPlacedFeature(PALM_CHECKED_COCO, 0.5F),
-                    new WeightedPlacedFeature(PALM_CHECKED_BANANA, 0.5F)),
-                    PALM_CHECKED)
+                    List.of(new WeightedPlacedFeature(PALM_CHECKED_BANANA, 0.5F)),
+                    PALM_CHECKED_COCO)
     );
     public static final Holder<ConfiguredFeature<RandomPatchConfiguration, ?>> PATCH_APRICOT_BUSH = FeatureUtils.register(
             "patch_apricot_bush",

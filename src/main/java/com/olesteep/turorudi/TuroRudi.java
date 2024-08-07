@@ -62,11 +62,8 @@ public class TuroRudi {
             TuroHW.register(eventBus);
         }
 
-        //New Year's stuff
-        if (Integer.parseInt(dtf_day.format(now)) >= 15 && Integer.parseInt(dtf_month.format(now)) == 12) {
-            LOGGER.info("// It seems like New Year coming...");
-            TuroNY.register(eventBus);
-        }
+        //New Year stuff
+        TuroNY.register(eventBus);
 
         //TuroRudies
         Alexandrov.register(eventBus);

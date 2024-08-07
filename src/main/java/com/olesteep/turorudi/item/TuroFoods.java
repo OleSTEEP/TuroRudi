@@ -74,13 +74,13 @@ public class TuroFoods {
     public static final FoodProperties LEMON = (new FoodProperties.Builder())
             .nutrition(2)
             .saturationMod(0.3F)
-            .effect(new MobEffectInstance(MobEffects.CONFUSION, 200, 2), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.CONFUSION, 100, 2), 1.0F)
             .build();
 
     public static final FoodProperties LIME = (new FoodProperties.Builder())
             .nutrition(2)
             .saturationMod(0.3F)
-            .effect(new MobEffectInstance(MobEffects.CONFUSION, 150, 2), 1.0F)
+            .effect(new MobEffectInstance(MobEffects.CONFUSION, 75, 2), 1.0F)
             .build();
 
     public static final FoodProperties ORANGE = (new FoodProperties.Builder())

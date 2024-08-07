@@ -1,11 +1,8 @@
 package com.olesteep.turorudi.event;
 
 import com.google.common.collect.ImmutableSet;
-import com.mojang.logging.LogUtils;
 import com.olesteep.turorudi.TuroRudi;
-import com.olesteep.turorudi.block.TuroBlocks;
 import com.olesteep.turorudi.data.TuroLists;
-import com.olesteep.turorudi.item.TuroCreativeTabs;
 import com.olesteep.turorudi.item.TuroFoods;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.sounds.SoundEvents;
@@ -33,7 +30,6 @@ import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.slf4j.Logger;
 
 import java.lang.reflect.InvocationTargetException;
 import java.time.LocalDateTime;

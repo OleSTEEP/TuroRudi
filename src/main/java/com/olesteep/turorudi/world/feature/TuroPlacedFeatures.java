@@ -26,7 +26,7 @@ public class TuroPlacedFeatures {
             "apricot_bush_placed",
             () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)
                     (Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_APRICOT_BUSH,
-                    List.of(RarityFilter.onAverageOnceEvery(16),
+                    List.of(RarityFilter.onAverageOnceEvery(64),
                             InSquarePlacement.spread(),
                             PlacementUtils.HEIGHTMAP,
                             BiomeFilter.biome()
@@ -37,7 +37,7 @@ public class TuroPlacedFeatures {
             "blueberry_bush_placed",
             () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)
                     (Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_BLBERRY_BUSH,
-                    List.of(RarityFilter.onAverageOnceEvery(32),
+                    List.of(RarityFilter.onAverageOnceEvery(64),
                             InSquarePlacement.spread(),
                             PlacementUtils.HEIGHTMAP,
                             BiomeFilter.biome()
@@ -49,7 +49,7 @@ public class TuroPlacedFeatures {
             () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)
                     (Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.CHERRY_SPAWN,
                     VegetationPlacements.treePlacement(
-                            PlacementUtils.countExtra(0, 0.0125f, 1)
+                            PlacementUtils.countExtra(0, 0.01f, 1)
                     )
             )
     );
@@ -57,7 +57,7 @@ public class TuroPlacedFeatures {
             "lemon_bush_placed",
             () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)
                     (Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_LEMON_BUSH,
-                    List.of(RarityFilter.onAverageOnceEvery(16),
+                    List.of(RarityFilter.onAverageOnceEvery(64),
                             InSquarePlacement.spread(),
                             PlacementUtils.HEIGHTMAP, BiomeFilter.biome()
                     )
@@ -67,7 +67,7 @@ public class TuroPlacedFeatures {
             "lime_bush_placed",
             () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)
                     (Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.PATCH_LIME_BUSH,
-                    List.of(RarityFilter.onAverageOnceEvery(16),
+                    List.of(RarityFilter.onAverageOnceEvery(64),
                             InSquarePlacement.spread(),
                             PlacementUtils.HEIGHTMAP,
                             BiomeFilter.biome()
@@ -79,7 +79,7 @@ public class TuroPlacedFeatures {
             () -> new PlacedFeature((Holder<ConfiguredFeature<?,?>>)
                     (Holder<? extends ConfiguredFeature<?,?>>) TuroConfiguredFeatures.ORANGE_SPAWN,
                     VegetationPlacements.treePlacement(
-                            PlacementUtils.countExtra(0, 0.25f, 1)
+                            PlacementUtils.countExtra(0, 0.1f, 1)
                     )
             )
     );

@@ -33,7 +33,9 @@ public class BlueBerryBush {
     public static final RegistryObject<Block> BLBERRY_BUSH = registerBlockWithoutItem(
             BLOCKS, "blueberry_bush",
             () -> new SweetBerryBushBlock(BlockBehaviour.Properties.copy(Blocks.SWEET_BERRY_BUSH)
-                    .randomTicks().noCollission().sound(SoundType.SWEET_BERRY_BUSH)) {
+                    .randomTicks()
+                    .noCollission()
+                    .sound(SoundType.SWEET_BERRY_BUSH)) {
         @Override
         public @NotNull ItemStack getCloneItemStack(@NotNull BlockGetter block, @NotNull BlockPos pos, @NotNull BlockState state) {
             return new ItemStack(TuroItems.BLUEBERRY.get());

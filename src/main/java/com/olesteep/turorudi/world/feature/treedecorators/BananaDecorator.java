@@ -13,7 +13,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class BananaDecorator extends TreeDecorator {
-    public static final Codec<BananaDecorator> CODEC = Codec.floatRange(0.0F, 1.0F).fieldOf("probability").xmap(BananaDecorator::new, (p_69989_) -> p_69989_.probability).codec();
+    public static final Codec<BananaDecorator> CODEC = Codec.floatRange(0.0F, 1.0F)
+            .fieldOf("probability")
+            .xmap(BananaDecorator::new, (p_69989_) -> p_69989_.probability)
+            .codec();
     private final float probability;
 
     public BananaDecorator(float p_69976_) {

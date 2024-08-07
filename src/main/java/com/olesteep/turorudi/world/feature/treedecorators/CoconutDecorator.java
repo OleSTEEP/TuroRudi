@@ -13,7 +13,10 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class CoconutDecorator extends TreeDecorator {
-    public static final Codec<CoconutDecorator> CODEC = Codec.floatRange(0.0F, 1.0F).fieldOf("probability").xmap(CoconutDecorator::new, (p_69989_) -> p_69989_.probability).codec();
+    public static final Codec<CoconutDecorator> CODEC = Codec.floatRange(0.0F, 1.0F)
+            .fieldOf("probability")
+            .xmap(CoconutDecorator::new, (p_69989_) -> p_69989_.probability)
+            .codec();
     private final float probability;
 
     public CoconutDecorator(float p_69976_) {

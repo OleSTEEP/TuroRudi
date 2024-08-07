@@ -24,6 +24,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePla
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.BeehiveDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.FancyTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.ForkingTrunkPlacer;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
@@ -37,8 +38,7 @@ public class TuroConfiguredFeatures {
             new TreeConfigurationBuilder(BlockStateProvider.simple(CherryTree.CHERRY_LOG.get()),
                     new FancyTrunkPlacer(3, 11, 0),
                     BlockStateProvider.simple(CherryTree.CHERRY_LEAVES.get()),
-                    new FancyFoliagePlacer(ConstantInt.of(2),
-                            ConstantInt.of(4), 4),
+                    new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
                     new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))
                     .ignoreVines().build()
     );
@@ -48,10 +48,9 @@ public class TuroConfiguredFeatures {
             new TreeConfigurationBuilder(BlockStateProvider.simple(CherryTree.CHERRY_LOG.get()),
                     new FancyTrunkPlacer(3, 11, 0),
                     BlockStateProvider.simple(CherryTree.CHERRY_LEAVES.get()),
-                    new FancyFoliagePlacer(ConstantInt.of(2),
-                            ConstantInt.of(4), 4),
-                    new TwoLayersFeatureSize(0, 0, 0,
-                            OptionalInt.of(4))).decorators(List.of(new BeehiveDecorator(0.002F)))
+                    new FancyFoliagePlacer(ConstantInt.of(2), ConstantInt.of(4), 4),
+                    new TwoLayersFeatureSize(0, 0, 0, OptionalInt.of(4)))
+                    .decorators(List.of(new BeehiveDecorator(0.002F)))
                     .ignoreVines().build()
     );
     public static final Holder<ConfiguredFeature<TreeConfiguration, ?>> CHERRY_TREE_BEES_002 = FeatureUtils.register(
@@ -244,7 +243,8 @@ public class TuroConfiguredFeatures {
                     .dirt(BlockStateProvider.simple(Blocks.SAND))
                     .decorators(ImmutableList.of(new BananaDecorator(0.75F)))
                     .ignoreVines()
-                    .build());
+                    .build()
+    );
     public static final Holder<PlacedFeature> PALM_CHECKED = PlacementUtils.register(
             "palm_checked",
             PALM_TREE,

@@ -19,8 +19,15 @@ public class TuroBiomeModifiers {
 
     public static RegistryObject<Codec<TuroVegetalBiomeModifier>> VEGETAL_MODIFIER = BIOME_MODIFIERS.register(
             "vegetal",
-            () -> RecordCodecBuilder.create(builder -> builder.group(Biome.LIST_CODEC.fieldOf("biomes").forGetter(TuroVegetalBiomeModifier::biomes),
-                    PlacedFeature.CODEC.fieldOf("feature").forGetter(TuroVegetalBiomeModifier::feature)).apply(builder, TuroVegetalBiomeModifier::new)));
+            () -> RecordCodecBuilder.create(builder -> builder.group(
+                    Biome.LIST_CODEC.fieldOf("biomes")
+                            .forGetter(TuroVegetalBiomeModifier::biomes),
+                    PlacedFeature.CODEC.fieldOf("feature")
+                            .forGetter(TuroVegetalBiomeModifier::feature)
+                    )
+                    .apply(builder, TuroVegetalBiomeModifier::new)
+            )
+    );
 
     public static void register(IEventBus eventBus) {BIOME_MODIFIERS.register(eventBus);}
 }

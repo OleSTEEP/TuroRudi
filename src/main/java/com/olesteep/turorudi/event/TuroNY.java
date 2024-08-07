@@ -1,5 +1,6 @@
 package com.olesteep.turorudi.event;
 
+import com.mojang.logging.LogUtils;
 import com.olesteep.turorudi.TuroRudi;
 import com.olesteep.turorudi.item.TuroCreativeTabs;
 import com.olesteep.turorudi.villager.TuroVillagers;
@@ -7,12 +8,15 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.inventory.MerchantMenu;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.MerchantOffer;
+import net.minecraft.world.item.trading.MerchantOffers;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -22,6 +26,7 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.util.ForgeSoundType;
+import net.minecraftforge.event.entity.player.PlayerContainerEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -30,10 +35,13 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
+import org.jline.utils.Log;
+import org.slf4j.Logger;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(modid = TuroRudi.MOD_ID)
@@ -64,21 +72,44 @@ public class TuroNY {
         }
     });
 
+    private static boolean isTuroVillager(MerchantOffers offers) {
+        // Check if villager has trades from mod -> It is a mod villager
+        for (MerchantOffer offer : offers) {
+            if (Objects.equals(offer.getResult().getItem().getCreatorModId(offer.getResult()), TuroRudi.MOD_ID) ||
+                    Objects.equals(offer.getCostA().getItem().getCreatorModId(offer.getResult()), TuroRudi.MOD_ID)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     @SubscribeEvent
-    public static void addCustomTrades(VillagerTradesEvent event) {
-        DateTimeFormatter dtf_day = DateTimeFormatter.ofPattern("dd");
-        DateTimeFormatter dtf_month = DateTimeFormatter.ofPattern("MM");
-        LocalDateTime now = LocalDateTime.now();
+    public static void updateMerchant(PlayerContainerEvent.Open event) {
+        if (event.getContainer().getClass() == MerchantMenu.class) {
+            MerchantOffers offers = ((MerchantMenu) event.getContainer()).getOffers();
+            if (isTuroVillager(offers)) {
+                DateTimeFormatter dtf_day = DateTimeFormatter.ofPattern("dd");
+                DateTimeFormatter dtf_month = DateTimeFormatter.ofPattern("MM");
+                LocalDateTime now = LocalDateTime.now();
 
-        if (Integer.parseInt(dtf_day.format(now)) >= 15 && Integer.parseInt(dtf_month.format(now)) == 12) {
-            if (event.getType() == TuroVillagers.TUROMAKER.get()) {
-                Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
-
-                trades.get(1).add((trader, random) -> new MerchantOffer(
+                MerchantOffer giftOffer = new MerchantOffer(
                         new ItemStack(Items.EMERALD, 4),
                         new ItemStack(NYGIFT.get(), 1),
-                        999, 6, 0.02F)
-                );
+                        999, 6, 0.02F);
+
+                if (Integer.parseInt(dtf_day.format(now)) >= 15 && Integer.parseInt(dtf_month.format(now)) == 12) {
+                    boolean has = false;
+                    for (MerchantOffer i : offers) { // Check if trade already added
+                        if (i.getResult().getItem().equals(NYGIFT.get().asItem())) has = true;
+                    }
+                    if (!has) {
+                        // Add NewYear event trade
+                        offers.add(giftOffer);
+                    }
+                } else {
+                    // Remove NewYear event trade
+                    offers.removeIf(i -> i.getResult().getItem().equals(NYGIFT.get().asItem()));
+                }
             }
         }
     }

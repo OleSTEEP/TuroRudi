@@ -1,15 +1,9 @@
 package com.olesteep.turorudi.event;
 
-import com.mojang.logging.LogUtils;
 import com.olesteep.turorudi.TuroRudi;
-import com.olesteep.turorudi.item.TuroCreativeTabs;
-import com.olesteep.turorudi.villager.TuroVillagers;
-import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.world.entity.npc.Villager;
-import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.inventory.MerchantMenu;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -27,7 +21,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.util.ForgeSoundType;
 import net.minecraftforge.event.entity.player.PlayerContainerEvent;
-import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -35,12 +28,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
-import org.jline.utils.Log;
-import org.slf4j.Logger;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 import java.util.Objects;
 import java.util.function.Supplier;
 

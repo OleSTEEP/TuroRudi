@@ -46,9 +46,15 @@ public class TuroNY {
     public static final RegistryObject<SoundEvent> NYGIFT_PLACE = registerSoundEvent("new_year_gift_place");
     public static final RegistryObject<SoundEvent> NYGIFT_HIT = registerSoundEvent("new_year_gift_hit");
     public static final RegistryObject<SoundEvent> NYGIFT_FALL = registerSoundEvent("new_year_gift_fall");
-    public static final SoundType NYGIFT_SOUNDS = new ForgeSoundType(1.0F, 1.25F, NYGIFT_BREAK, NYGIFT_STEP, NYGIFT_PLACE, NYGIFT_HIT, NYGIFT_FALL);
+    public static final SoundType NYGIFT_SOUNDS = new ForgeSoundType(
+            1.0F, 1.25F, NYGIFT_BREAK, NYGIFT_STEP, NYGIFT_PLACE, NYGIFT_HIT, NYGIFT_FALL
+    );
 
-    public static final RegistryObject<Block> NYGIFT = registerBlock("new_year_gift", () -> new Block(BlockBehaviour.Properties.of(Material.CAKE).strength(0.5F).sound(NYGIFT_SOUNDS)) {
+    public static final RegistryObject<Block> NYGIFT = registerBlock(
+            "new_year_gift",
+            () -> new Block(BlockBehaviour.Properties.of(Material.CAKE)
+                    .strength(0.5F)
+                    .sound(NYGIFT_SOUNDS)) {
 
         private static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 8.0D, 12.0D);
 
@@ -68,7 +74,11 @@ public class TuroNY {
             if (event.getType() == TuroVillagers.TUROMAKER.get()) {
                 Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
-                trades.get(1).add((trader, random) -> new MerchantOffer(new ItemStack(Items.EMERALD, 4), new ItemStack(NYGIFT.get(), 1), 999, 6, 0.02F));
+                trades.get(1).add((trader, random) -> new MerchantOffer(
+                        new ItemStack(Items.EMERALD, 4),
+                        new ItemStack(NYGIFT.get(), 1),
+                        999, 6, 0.02F)
+                );
             }
         }
     }

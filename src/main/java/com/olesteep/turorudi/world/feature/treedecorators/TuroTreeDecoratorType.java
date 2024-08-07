@@ -10,8 +10,14 @@ import net.minecraftforge.registries.RegistryObject;
 public class TuroTreeDecoratorType {
     public static final DeferredRegister<TreeDecoratorType<?>> DECORATORS = DeferredRegister.create(ForgeRegistries.TREE_DECORATOR_TYPES, TuroRudi.MOD_ID);
 
-    public static final RegistryObject<TreeDecoratorType<?>> BANANA_DECORATOR = DECORATORS.register("banana_decorator", () -> new TreeDecoratorType(BananaDecorator.CODEC));
-    public static final RegistryObject<TreeDecoratorType<?>> COCONUT_DECORATOR = DECORATORS.register("coconut_decorator", () -> new TreeDecoratorType(CoconutDecorator.CODEC));
+    public static final RegistryObject<TreeDecoratorType<?>> BANANA_DECORATOR = DECORATORS.register(
+            "banana_decorator",
+            () -> new TreeDecoratorType(BananaDecorator.CODEC)
+    );
+    public static final RegistryObject<TreeDecoratorType<?>> COCONUT_DECORATOR = DECORATORS.register(
+            "coconut_decorator",
+            () -> new TreeDecoratorType(CoconutDecorator.CODEC)
+    );
 
     public static void register(IEventBus eventBus) {
         DECORATORS.register(eventBus);

@@ -37,7 +37,13 @@ public class BananaDecorator extends TreeDecorator {
                         Direction direction1 = direction.getOpposite();
                         BlockPos blockpos = log.offset(direction1.getStepX(), 0, direction1.getStepZ());
                         if (Feature.isAir(worldReader, blockpos)) {
-                            acceptedLocations.accept(blockpos, TuroBlocks.BANANA_BLOCK.get().defaultBlockState().setValue(CocoaBlock.AGE, random.nextInt(3)).setValue(CocoaBlock.FACING, direction));
+                            acceptedLocations.accept(
+                                    blockpos,
+                                    TuroBlocks.BANANA_BLOCK.get()
+                                            .defaultBlockState()
+                                            .setValue(CocoaBlock.AGE, random.nextInt(3))
+                                            .setValue(CocoaBlock.FACING, direction)
+                            );
                         }
                     }
                 }
